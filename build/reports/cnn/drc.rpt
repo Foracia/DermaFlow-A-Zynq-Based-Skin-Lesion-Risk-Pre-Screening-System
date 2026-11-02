@@ -1,0 +1,54 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Thu Oct 29 23:52:35 2026
+| Host         : FallenStarStasion running 64-bit major release  (build 9200)
+| Command      : report_drc -file drc.rpt
+| Design       : cnn_accel_axi
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: cnn_accel_axi
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 3
++-----------+----------+--------------------+--------+
+| Rule      | Severity | Description        | Checks |
++-----------+----------+--------------------+--------+
+| DPIP-1    | Warning  | Input pipelining   | 1      |
+| RTSTAT-10 | Warning  | No routable loads  | 1      |
+| ZPS7-1    | Warning  | PS7 block required | 1      |
++-----------+----------+--------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-1#1 Warning
+Input pipelining  
+DSP core/head_8_U0/grp_head_8_Pipeline_HeadGroups_HeadLanes_fu_87/mac_muladd_8s_7s_21s_22_4_1_U292/grouped_network_mac_muladd_8s_7s_21s_22_4_1_DSP48_0_U/p_reg_reg input core/head_8_U0/grp_head_8_Pipeline_HeadGroups_HeadLanes_fu_87/mac_muladd_8s_7s_21s_22_4_1_U292/grouped_network_mac_muladd_8s_7s_21s_22_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+34 net(s) have no routable loads. The problem bus(es) and/or net(s) are core/head_8_U0/regslice_both_y_U/m_axis_tvalid, s_axi_arready
+s_axi_rdata[31:0].
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

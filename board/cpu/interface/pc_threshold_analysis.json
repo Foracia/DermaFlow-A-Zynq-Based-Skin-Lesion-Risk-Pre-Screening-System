@@ -1,0 +1,175 @@
+{
+  "target_recall_rule": "threshold is the minimum positive validation probability rank needed to attain recall >= 0.90; selected using val only",
+  "validation_candidates": {
+    "FP32": {
+      "fit_T": 0.8832379804831932,
+      "val_NLL": 0.2458700404208705,
+      "n_recall_required": 234,
+      "n_positive": 260,
+      "metrics_at_selected_val_threshold": {
+        "n": 342,
+        "temperature": 0.8832379804831932,
+        "threshold": 0.7098302503219471,
+        "auc": 0.9345215759849906,
+        "TP": 234,
+        "FN": 26,
+        "TN": 71,
+        "FP": 11,
+        "positive_recall": 0.9,
+        "specificity": 0.8658536585365854,
+        "balanced_accuracy": 0.8829268292682927,
+        "macro_f1": 0.8600143813264008,
+        "precision": 0.9551020408163265,
+        "NLL": 0.2458700404208705,
+        "per_disease_correct_rate": {
+          "ACK": 0.8854166666666666,
+          "BCC": 0.936,
+          "MEL": 0.5555555555555556,
+          "NEV": 0.9090909090909091,
+          "SCC": 0.9,
+          "SEK": 0.8157894736842105
+        }
+      },
+      "original_delivery_T": 0.8835169076919556,
+      "metrics_at_original_frozen_threshold": {
+        "n": 342,
+        "temperature": 0.8835169076919556,
+        "threshold": 0.7097623636691894,
+        "auc": 0.9345215759849906,
+        "TP": 234,
+        "FN": 26,
+        "TN": 71,
+        "FP": 11,
+        "positive_recall": 0.9,
+        "specificity": 0.8658536585365854,
+        "balanced_accuracy": 0.8829268292682927,
+        "macro_f1": 0.8600143813264008,
+        "precision": 0.9551020408163265,
+        "NLL": 0.2458700543977933,
+        "per_disease_correct_rate": {
+          "ACK": 0.8854166666666666,
+          "BCC": 0.936,
+          "MEL": 0.5555555555555556,
+          "NEV": 0.9090909090909091,
+          "SCC": 0.9,
+          "SEK": 0.8157894736842105
+        }
+      }
+    },
+    "KL_INT8": {
+      "fit_T": 0.8904876994104525,
+      "val_NLL": 0.24901267587476839,
+      "n_recall_required": 234,
+      "n_positive": 260,
+      "metrics_at_selected_val_threshold": {
+        "n": 342,
+        "temperature": 0.8904876994104525,
+        "threshold": 0.697673760670338,
+        "auc": 0.9340994371482177,
+        "TP": 234,
+        "FN": 26,
+        "TN": 70,
+        "FP": 12,
+        "positive_recall": 0.9,
+        "specificity": 0.8536585365853658,
+        "balanced_accuracy": 0.8768292682926829,
+        "macro_f1": 0.8557090198516677,
+        "precision": 0.9512195121951219,
+        "NLL": 0.24901267587476839,
+        "per_disease_correct_rate": {
+          "ACK": 0.875,
+          "BCC": 0.936,
+          "MEL": 0.6666666666666666,
+          "NEV": 0.8863636363636364,
+          "SCC": 0.9,
+          "SEK": 0.8157894736842105
+        }
+      },
+      "original_delivery_T": 0.8835169076919556,
+      "metrics_at_original_frozen_threshold": {
+        "n": 342,
+        "temperature": 0.8835169076919556,
+        "threshold": 0.7097623636691894,
+        "auc": 0.9340994371482177,
+        "TP": 232,
+        "FN": 28,
+        "TN": 71,
+        "FP": 11,
+        "positive_recall": 0.8923076923076924,
+        "specificity": 0.8658536585365854,
+        "balanced_accuracy": 0.8790806754221389,
+        "macro_f1": 0.8534977977439232,
+        "precision": 0.9547325102880658,
+        "NLL": 0.24902135901052277,
+        "per_disease_correct_rate": {
+          "ACK": 0.8645833333333334,
+          "BCC": 0.928,
+          "MEL": 0.6666666666666666,
+          "NEV": 0.9090909090909091,
+          "SCC": 0.9,
+          "SEK": 0.8157894736842105
+        }
+      }
+    },
+    "ACIQ_INT8": {
+      "fit_T": 0.9209824166454172,
+      "val_NLL": 0.2587366216716701,
+      "n_recall_required": 234,
+      "n_positive": 260,
+      "metrics_at_selected_val_threshold": {
+        "n": 342,
+        "temperature": 0.9209824166454172,
+        "threshold": 0.7077806111680031,
+        "auc": 0.9235928705440901,
+        "TP": 234,
+        "FN": 26,
+        "TN": 69,
+        "FP": 13,
+        "positive_recall": 0.9,
+        "specificity": 0.8414634146341463,
+        "balanced_accuracy": 0.8707317073170732,
+        "macro_f1": 0.8513689700130378,
+        "precision": 0.9473684210526315,
+        "NLL": 0.2587366216716701,
+        "per_disease_correct_rate": {
+          "ACK": 0.875,
+          "BCC": 0.928,
+          "MEL": 0.7777777777777778,
+          "NEV": 0.8636363636363636,
+          "SCC": 0.9,
+          "SEK": 0.8157894736842105
+        }
+      }
+    }
+  },
+  "test_development_record": {
+    "KL_INT8_test_once_at_val_selected_T_threshold": {
+      "n": 343,
+      "temperature": 0.8904876994104525,
+      "threshold": 0.697673760670338,
+      "auc": 0.9114056505057552,
+      "TP": 248,
+      "FN": 34,
+      "TN": 49,
+      "FP": 12,
+      "positive_recall": 0.8794326241134752,
+      "specificity": 0.8032786885245902,
+      "balanced_accuracy": 0.8413556563190328,
+      "macro_f1": 0.7978423534235343,
+      "precision": 0.9538461538461539,
+      "NLL": 0.3066645817646167,
+      "per_disease_correct_rate": {
+        "ACK": 0.8934426229508197,
+        "BCC": 0.9047619047619048,
+        "MEL": 0.5,
+        "NEV": 0.9090909090909091,
+        "SCC": 0.8636363636363636,
+        "SEK": 0.7435897435897436
+      }
+    }
+  },
+  "notes": [
+    "All temperature fits and threshold selection use validation only.",
+    "Test set is documented by the delivery as development_evaluation_set, not an untouched final test set."
+  ]
+}

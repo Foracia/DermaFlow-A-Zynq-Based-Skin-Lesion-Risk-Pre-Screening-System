@@ -1,0 +1,7 @@
+{
+  "expected_nonloading_boot_sha256": "903a18bee448c1f1ba3f59485af94ad8ea7fc93c3d766154ba18b2194f48a18b",
+  "standalone_controls": true,
+  "startup_downloads": 1,
+  "result_output": "runs/",
+  "startup_cache_reclaim": "One startup sync and reclaim before DMA allocation"
+}

@@ -1,0 +1,1147 @@
+{
+  "status": "SYSTEM_UI_SESSION_COMPLETE",
+  "hardware_round": 41,
+  "software_round": "system_ui",
+  "captures": [
+    {
+      "logits": [
+        2.53125,
+        -2.46875
+      ],
+      "refer_probability": 0.003473194500584086,
+      "decision_threshold": 0.7097623636691894,
+      "temperature": 0.8835169076919556,
+      "positive_class_index": 1,
+      "comparison": ">=",
+      "prediction": 0,
+      "risk_label": "暂未提示明显风险",
+      "schema_version": 1,
+      "capture_id": "5501ab744a9346bea6bc31eda89b78db",
+      "mode": "normal",
+      "frame_count": 1,
+      "fusion_method": "single_frame",
+      "model_identity": "c6d25a8506368ef8fdf7d386dbae442cad548eaf81fc54adcb9fc8de1be36f4d",
+      "bitstream_version": "system:53c4e4688430947da5807022d49699113d38a9db125f80172dc7454e297bc2bc",
+      "inference_latency_ms": 173.67496,
+      "inference_latency_scope": "Accepted owned RGB input(s) through preprocessing, packing, CNN API and logits aggregation; excludes quality check, display and archive",
+      "hardware_transaction_total_ms": 48.8639375,
+      "quality_sequences": [
+        555,
+        556,
+        557
+      ],
+      "inferences": [
+        {
+          "index": 4,
+          "raw_hex": "b151",
+          "expected_hex": null,
+          "mirror_hex": "b151",
+          "input_tokens": 16384,
+          "output_tokens": 1,
+          "transaction_ms": 49.889219,
+          "transaction_with_output_check_ms": 50.305748,
+          "hardware_transaction_cycles": 3909115,
+          "hardware_transaction_ms": 48.8639375,
+          "start_monotonic_ns": 688448277596,
+          "end_monotonic_ns": 688498598912,
+          "logits": [
+            2.53125,
+            -2.46875
+          ],
+          "positive_probability": 0.003473194500584086,
+          "prediction": 0
+        }
+      ],
+      "capture_accepted_monotonic_ns": 688325368870,
+      "hardware_frame_binding_verified": false,
+      "source_sof_continuity_verified": false,
+      "working_point_policy": "Existing single-frame point reused by user decision; not refitted for fusion",
+      "clinical_probability_validated": false,
+      "save_status": "complete",
+      "first_result_submitted_monotonic_ns": 688727090918,
+      "result_path": "/home/xilinx/jupyter_notebooks/system_ui_SYSTEM_v3_20261030/runs/captures/capture_5501ab744a9346bea6bc31eda89b78db/result.json"
+    },
+    {
+      "logits": [
+        2.0416666666666665,
+        -1.96875
+      ],
+      "refer_probability": 0.010569562923420716,
+      "decision_threshold": 0.7097623636691894,
+      "temperature": 0.8835169076919556,
+      "positive_class_index": 1,
+      "comparison": ">=",
+      "prediction": 0,
+      "risk_label": "暂未提示明显风险",
+      "schema_version": 1,
+      "capture_id": "b583b8c6bb154a7da545e05664889b59",
+      "mode": "fusion",
+      "frame_count": 3,
+      "fusion_method": "mean_logits",
+      "model_identity": "c6d25a8506368ef8fdf7d386dbae442cad548eaf81fc54adcb9fc8de1be36f4d",
+      "bitstream_version": "system:53c4e4688430947da5807022d49699113d38a9db125f80172dc7454e297bc2bc",
+      "inference_latency_ms": 453.050092,
+      "inference_latency_scope": "Accepted owned RGB input(s) through preprocessing, packing, CNN API and logits aggregation; excludes quality check, display and archive",
+      "hardware_transaction_total_ms": 146.59655,
+      "quality_sequences": [
+        2648,
+        2649,
+        2650
+      ],
+      "inferences": [
+        {
+          "index": 5,
+          "raw_hex": "f40d",
+          "expected_hex": null,
+          "mirror_hex": "f40d",
+          "input_tokens": 16384,
+          "output_tokens": 1,
+          "transaction_ms": 49.14155,
+          "transaction_with_output_check_ms": 49.576123,
+          "hardware_transaction_cycles": 3909239,
+          "hardware_transaction_ms": 48.8654875,
+          "start_monotonic_ns": 728376520964,
+          "end_monotonic_ns": 728426114139,
+          "logits": [
+            0.40625,
+            -0.375
+          ],
+          "positive_probability": 0.29229780844007197,
+          "prediction": 0
+        },
+        {
+          "index": 6,
+          "raw_hex": "bd45",
+          "expected_hex": null,
+          "mirror_hex": "bd45",
+          "input_tokens": 16384,
+          "output_tokens": 1,
+          "transaction_ms": 49.134671,
+          "transaction_with_output_check_ms": 49.572819,
+          "hardware_transaction_cycles": 3909293,
+          "hardware_transaction_ms": 48.8661625,
+          "start_monotonic_ns": 728526349954,
+          "end_monotonic_ns": 728575938434,
+          "logits": [
+            2.15625,
+            -2.09375
+          ],
+          "positive_probability": 0.008079435083944781,
+          "prediction": 0
+        },
+        {
+          "index": 7,
+          "raw_hex": "9272",
+          "expected_hex": null,
+          "mirror_hex": "9272",
+          "input_tokens": 16384,
+          "output_tokens": 1,
+          "transaction_ms": 49.149587,
+          "transaction_with_output_check_ms": 49.5924,
+          "hardware_transaction_cycles": 3909192,
+          "hardware_transaction_ms": 48.8649,
+          "start_monotonic_ns": 728676770828,
+          "end_monotonic_ns": 728726379296,
+          "logits": [
+            3.5625,
+            -3.4375
+          ],
+          "positive_probability": 0.0003622253379304543,
+          "prediction": 0
+        }
+      ],
+      "capture_accepted_monotonic_ns": 728273801635,
+      "hardware_frame_binding_verified": false,
+      "source_sof_continuity_verified": false,
+      "working_point_policy": "Existing single-frame point reused by user decision; not refitted for fusion",
+      "clinical_probability_validated": false,
+      "save_status": "complete",
+      "first_result_submitted_monotonic_ns": 728951995855,
+      "result_path": "/home/xilinx/jupyter_notebooks/system_ui_SYSTEM_v3_20261030/runs/captures/capture_b583b8c6bb154a7da545e05664889b59/result.json"
+    },
+    {
+      "logits": [
+        2.1770833333333335,
+        -2.1354166666666665
+      ],
+      "refer_probability": 0.007531798693603686,
+      "decision_threshold": 0.7097623636691894,
+      "temperature": 0.8835169076919556,
+      "positive_class_index": 1,
+      "comparison": ">=",
+      "prediction": 0,
+      "risk_label": "暂未提示明显风险",
+      "schema_version": 1,
+      "capture_id": "26939f9dad7f4c9d8959a56b59cdd944",
+      "mode": "fusion",
+      "frame_count": 3,
+      "fusion_method": "mean_logits",
+      "model_identity": "c6d25a8506368ef8fdf7d386dbae442cad548eaf81fc54adcb9fc8de1be36f4d",
+      "bitstream_version": "system:53c4e4688430947da5807022d49699113d38a9db125f80172dc7454e297bc2bc",
+      "inference_latency_ms": 447.275267,
+      "inference_latency_scope": "Accepted owned RGB input(s) through preprocessing, packing, CNN API and logits aggregation; excludes quality check, display and archive",
+      "hardware_transaction_total_ms": 146.603225,
+      "quality_sequences": [
+        3171,
+        3172,
+        3173
+      ],
+      "inferences": [
+        {
+          "index": 8,
+          "raw_hex": "b34e",
+          "expected_hex": null,
+          "mirror_hex": "b34e",
+          "input_tokens": 16384,
+          "output_tokens": 1,
+          "transaction_ms": 49.691249,
+          "transaction_with_output_check_ms": 50.107083,
+          "hardware_transaction_cycles": 3909689,
+          "hardware_transaction_ms": 48.8711125,
+          "start_monotonic_ns": 747041850124,
+          "end_monotonic_ns": 747091973010,
+          "logits": [
+            2.4375,
+            -2.40625
+          ],
+          "positive_probability": 0.004142308098127094,
+          "prediction": 0
+        },
+        {
+          "index": 9,
+          "raw_hex": "b74a",
+          "expected_hex": null,
+          "mirror_hex": "b74a",
+          "input_tokens": 16384,
+          "output_tokens": 1,
+          "transaction_ms": 50.027975,
+          "transaction_with_output_check_ms": 50.486708,
+          "hardware_transaction_cycles": 3909481,
+          "hardware_transaction_ms": 48.8685125,
+          "start_monotonic_ns": 747190126850,
+          "end_monotonic_ns": 747240629976,
+          "logits": [
+            2.3125,
+            -2.28125
+          ],
+          "positive_probability": 0.005489621849585074,
+          "prediction": 0
+        },
+        {
+          "index": 10,
+          "raw_hex": "c939",
+          "expected_hex": null,
+          "mirror_hex": "c939",
+          "input_tokens": 16384,
+          "output_tokens": 1,
+          "transaction_ms": 49.824363,
+          "transaction_with_output_check_ms": 50.248184,
+          "hardware_transaction_cycles": 3909088,
+          "hardware_transaction_ms": 48.8636,
+          "start_monotonic_ns": 747337576665,
+          "end_monotonic_ns": 747387840818,
+          "logits": [
+            1.78125,
+            -1.71875
+          ],
+          "positive_probability": 0.018680078588076975,
+          "prediction": 0
+        }
+      ],
+      "capture_accepted_monotonic_ns": 746941019090,
+      "hardware_frame_binding_verified": false,
+      "source_sof_continuity_verified": false,
+      "working_point_policy": "Existing single-frame point reused by user decision; not refitted for fusion",
+      "clinical_probability_validated": false,
+      "save_status": "complete",
+      "first_result_submitted_monotonic_ns": 747612398270,
+      "result_path": "/home/xilinx/jupyter_notebooks/system_ui_SYSTEM_v3_20261030/runs/captures/capture_26939f9dad7f4c9d8959a56b59cdd944/result.json"
+    },
+    {
+      "logits": [
+        2.3645833333333335,
+        -2.28125
+      ],
+      "refer_probability": 0.005176989289227747,
+      "decision_threshold": 0.7097623636691894,
+      "temperature": 0.8835169076919556,
+      "positive_class_index": 1,
+      "comparison": ">=",
+      "prediction": 0,
+      "risk_label": "暂未提示明显风险",
+      "schema_version": 1,
+      "capture_id": "8e5e715775174ba7b8238b938d8eb5ae",
+      "mode": "fusion",
+      "frame_count": 3,
+      "fusion_method": "mean_logits",
+      "model_identity": "c6d25a8506368ef8fdf7d386dbae442cad548eaf81fc54adcb9fc8de1be36f4d",
+      "bitstream_version": "system:53c4e4688430947da5807022d49699113d38a9db125f80172dc7454e297bc2bc",
+      "inference_latency_ms": 453.209655,
+      "inference_latency_scope": "Accepted owned RGB input(s) through preprocessing, packing, CNN API and logits aggregation; excludes quality check, display and archive",
+      "hardware_transaction_total_ms": 146.5992875,
+      "quality_sequences": [
+        3274,
+        3275,
+        3276
+      ],
+      "inferences": [
+        {
+          "index": 11,
+          "raw_hex": "c63c",
+          "expected_hex": null,
+          "mirror_hex": "c63c",
+          "input_tokens": 16384,
+          "output_tokens": 1,
+          "transaction_ms": 49.104677,
+          "transaction_with_output_check_ms": 49.542763,
+          "hardware_transaction_cycles": 3909363,
+          "hardware_transaction_ms": 48.8670375,
+          "start_monotonic_ns": 758776766648,
+          "end_monotonic_ns": 758826325220,
+          "logits": [
+            1.875,
+            -1.8125
+          ],
+          "positive_probability": 0.015162357351342895,
+          "prediction": 0
+        },
+        {
+          "index": 12,
+          "raw_hex": "af54",
+          "expected_hex": null,
+          "mirror_hex": "af54",
+          "input_tokens": 16384,
+          "output_tokens": 1,
+          "transaction_ms": 49.11229,
+          "transaction_with_output_check_ms": 49.545533,
+          "hardware_transaction_cycles": 3909318,
+          "hardware_transaction_ms": 48.866475,
+          "start_monotonic_ns": 758926014961,
+          "end_monotonic_ns": 758975577404,
+          "logits": [
+            2.625,
+            -2.53125
+          ],
+          "positive_probability": 0.0029118478534975,
+          "prediction": 0
+        },
+        {
+          "index": 13,
+          "raw_hex": "b053",
+          "expected_hex": null,
+          "mirror_hex": "b053",
+          "input_tokens": 16384,
+          "output_tokens": 1,
+          "transaction_ms": 50.187261,
+          "transaction_with_output_check_ms": 50.61216,
+          "hardware_transaction_cycles": 3909262,
+          "hardware_transaction_ms": 48.865775,
+          "start_monotonic_ns": 759075861607,
+          "end_monotonic_ns": 759126490112,
+          "logits": [
+            2.59375,
+            -2.5
+          ],
+          "positive_probability": 0.0031246256209642924,
+          "prediction": 0
+        }
+      ],
+      "capture_accepted_monotonic_ns": 758673759996,
+      "hardware_frame_binding_verified": false,
+      "source_sof_continuity_verified": false,
+      "working_point_policy": "Existing single-frame point reused by user decision; not refitted for fusion",
+      "clinical_probability_validated": false,
+      "save_status": "complete",
+      "first_result_submitted_monotonic_ns": 759351664825,
+      "result_path": "/home/xilinx/jupyter_notebooks/system_ui_SYSTEM_v3_20261030/runs/captures/capture_8e5e715775174ba7b8238b938d8eb5ae/result.json"
+    }
+  ],
+  "cleanup": {
+    "video_dma_stopped": true,
+    "cnn": {
+      "dma_reset_and_halted": true,
+      "core_reset_requested": true,
+      "hp1_mode_restored": true,
+      "buffers_freed": true,
+      "errors": []
+    },
+    "cancelled_tasks": 0,
+    "uio": {
+      "released_uio": 1,
+      "released_controllers": 1
+    },
+    "event_loop_closed": true,
+    "errors": []
+  },
+  "bitstream_reprogrammed": false,
+  "working_point_refitted": false,
+  "model_manifest_sha256": "c6d25a8506368ef8fdf7d386dbae442cad548eaf81fc54adcb9fc8de1be36f4d",
+  "bitstream_sha256": "53c4e4688430947da5807022d49699113d38a9db125f80172dc7454e297bc2bc",
+  "health_before": {
+    "MemAvailable": 360344,
+    "CmaFree": 115624,
+    "SwapFree": 524284
+  },
+  "health_checks": [
+    {
+      "MemAvailable": 360344,
+      "CmaFree": 115624,
+      "SwapFree": 524284,
+      "stage": "before_video",
+      "monotonic_ns": 647530205909
+    },
+    {
+      "MemAvailable": 274644,
+      "CmaFree": 65548,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 678502505346
+    },
+    {
+      "MemAvailable": 274644,
+      "CmaFree": 65548,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 679519111240
+    },
+    {
+      "MemAvailable": 271036,
+      "CmaFree": 61948,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 680535771152
+    },
+    {
+      "MemAvailable": 271036,
+      "CmaFree": 61948,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 681552418849
+    },
+    {
+      "MemAvailable": 267416,
+      "CmaFree": 58940,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 682569093709
+    },
+    {
+      "MemAvailable": 267292,
+      "CmaFree": 58940,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 683585730354
+    },
+    {
+      "MemAvailable": 263716,
+      "CmaFree": 56220,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 684602353060
+    },
+    {
+      "MemAvailable": 263716,
+      "CmaFree": 56220,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 685619034092
+    },
+    {
+      "MemAvailable": 260168,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 686635535561
+    },
+    {
+      "MemAvailable": 256976,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 687775766667
+    },
+    {
+      "MemAvailable": 250820,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 690557929475
+    },
+    {
+      "MemAvailable": 254368,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 691568815954
+    },
+    {
+      "MemAvailable": 254368,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 692585486211
+    },
+    {
+      "MemAvailable": 254368,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 693602127243
+    },
+    {
+      "MemAvailable": 254368,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 694618856940
+    },
+    {
+      "MemAvailable": 254368,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 695635450594
+    },
+    {
+      "MemAvailable": 254368,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 696635453860
+    },
+    {
+      "MemAvailable": 254368,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 697652027650
+    },
+    {
+      "MemAvailable": 254368,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 698652033697
+    },
+    {
+      "MemAvailable": 254368,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 699668673314
+    },
+    {
+      "MemAvailable": 257880,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 700668694500
+    },
+    {
+      "MemAvailable": 257896,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 701668753071
+    },
+    {
+      "MemAvailable": 257772,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 702685312220
+    },
+    {
+      "MemAvailable": 257772,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 703685379511
+    },
+    {
+      "MemAvailable": 257780,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 704701995073
+    },
+    {
+      "MemAvailable": 257780,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 705719304087
+    },
+    {
+      "MemAvailable": 257656,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 706735468085
+    },
+    {
+      "MemAvailable": 257656,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 707735690527
+    },
+    {
+      "MemAvailable": 257656,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 708751991491
+    },
+    {
+      "MemAvailable": 257656,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 709768580216
+    },
+    {
+      "MemAvailable": 257656,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 710768591679
+    },
+    {
+      "MemAvailable": 257656,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 711785216816
+    },
+    {
+      "MemAvailable": 257656,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 712801913510
+    },
+    {
+      "MemAvailable": 257656,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 713818514678
+    },
+    {
+      "MemAvailable": 257656,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 714818522842
+    },
+    {
+      "MemAvailable": 257656,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 715818576232
+    },
+    {
+      "MemAvailable": 257428,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 716818654864
+    },
+    {
+      "MemAvailable": 257428,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 717835305324
+    },
+    {
+      "MemAvailable": 257428,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 718851940283
+    },
+    {
+      "MemAvailable": 257428,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 719852182355
+    },
+    {
+      "MemAvailable": 257428,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 720868622304
+    },
+    {
+      "MemAvailable": 257428,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 721885392518
+    },
+    {
+      "MemAvailable": 257428,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 722902044264
+    },
+    {
+      "MemAvailable": 257428,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 723918795118
+    },
+    {
+      "MemAvailable": 257428,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 724935210624
+    },
+    {
+      "MemAvailable": 257428,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 725987465127
+    },
+    {
+      "MemAvailable": 256844,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 727255567316
+    },
+    {
+      "MemAvailable": 248332,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 736709218496
+    },
+    {
+      "MemAvailable": 251900,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 737718263245
+    },
+    {
+      "MemAvailable": 251900,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 738734916450
+    },
+    {
+      "MemAvailable": 251900,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 739735094996
+    },
+    {
+      "MemAvailable": 251900,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 740751601481
+    },
+    {
+      "MemAvailable": 251900,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 741768258445
+    },
+    {
+      "MemAvailable": 251900,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 742784893398
+    },
+    {
+      "MemAvailable": 251900,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 743785071476
+    },
+    {
+      "MemAvailable": 251900,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 744801510392
+    },
+    {
+      "MemAvailable": 255808,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 745943757454
+    },
+    {
+      "MemAvailable": 248444,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 755478852154
+    },
+    {
+      "MemAvailable": 251956,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 756484846085
+    },
+    {
+      "MemAvailable": 255860,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 757655988582
+    },
+    {
+      "MemAvailable": 248428,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 764298666344
+    },
+    {
+      "MemAvailable": 251936,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 765301425290
+    },
+    {
+      "MemAvailable": 251936,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 766318057473
+    },
+    {
+      "MemAvailable": 251936,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 767318070081
+    },
+    {
+      "MemAvailable": 251992,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 768334883876
+    },
+    {
+      "MemAvailable": 255124,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 769351380632
+    },
+    {
+      "MemAvailable": 255124,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 770368003769
+    },
+    {
+      "MemAvailable": 255128,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 771368393681
+    },
+    {
+      "MemAvailable": 255128,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 772384832590
+    },
+    {
+      "MemAvailable": 255128,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 773401404164
+    },
+    {
+      "MemAvailable": 252096,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 775361937337
+    },
+    {
+      "MemAvailable": 252104,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 776367944474
+    },
+    {
+      "MemAvailable": 252104,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 777401922109
+    },
+    {
+      "MemAvailable": 252104,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 778418179461
+    },
+    {
+      "MemAvailable": 252104,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 779435166869
+    },
+    {
+      "MemAvailable": 252104,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 780451298843
+    },
+    {
+      "MemAvailable": 252104,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 781468614029
+    },
+    {
+      "MemAvailable": 252104,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 782484554194
+    },
+    {
+      "MemAvailable": 252104,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 783501872094
+    },
+    {
+      "MemAvailable": 251980,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 784517943483
+    },
+    {
+      "MemAvailable": 251988,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 785535430337
+    },
+    {
+      "MemAvailable": 251988,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 786551200286
+    },
+    {
+      "MemAvailable": 251988,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 787568751879
+    },
+    {
+      "MemAvailable": 251988,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 788584490677
+    },
+    {
+      "MemAvailable": 251988,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 789601892183
+    },
+    {
+      "MemAvailable": 251988,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 790618059763
+    },
+    {
+      "MemAvailable": 251988,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 791635120814
+    },
+    {
+      "MemAvailable": 251988,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 792651160591
+    },
+    {
+      "MemAvailable": 251988,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 793668418300
+    },
+    {
+      "MemAvailable": 251988,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 794684436822
+    },
+    {
+      "MemAvailable": 251988,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 795701641559
+    },
+    {
+      "MemAvailable": 251988,
+      "CmaFree": 53268,
+      "SwapFree": 524284,
+      "stage": "video",
+      "monotonic_ns": 796717951730
+    }
+  ],
+  "golden": [
+    {
+      "index": 0,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "mirror_hex": "1ce3",
+      "input_tokens": 16384,
+      "output_tokens": 1,
+      "transaction_ms": 49.91568,
+      "transaction_with_output_check_ms": 50.346671,
+      "hardware_transaction_cycles": 3909548,
+      "hardware_transaction_ms": 48.86935,
+      "start_monotonic_ns": 667740350685,
+      "end_monotonic_ns": 667790714094,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1
+    },
+    {
+      "index": 1,
+      "raw_hex": "ff00",
+      "expected_hex": "ff00",
+      "mirror_hex": "ff00",
+      "input_tokens": 16384,
+      "output_tokens": 1,
+      "transaction_ms": 50.084769,
+      "transaction_with_output_check_ms": 50.48139,
+      "hardware_transaction_cycles": 3909463,
+      "hardware_transaction_ms": 48.8682875,
+      "start_monotonic_ns": 667793290949,
+      "end_monotonic_ns": 667843787362,
+      "logits": [
+        0.0,
+        -0.03125
+      ],
+      "positive_probability": 0.4911584197694913,
+      "prediction": 0
+    },
+    {
+      "index": 2,
+      "raw_hex": "d12f",
+      "expected_hex": "d12f",
+      "mirror_hex": "d12f",
+      "input_tokens": 16384,
+      "output_tokens": 1,
+      "transaction_ms": 50.114763,
+      "transaction_with_output_check_ms": 50.51096,
+      "hardware_transaction_cycles": 3909394,
+      "hardware_transaction_ms": 48.867425,
+      "start_monotonic_ns": 667846291946,
+      "end_monotonic_ns": 667896818832,
+      "logits": [
+        1.46875,
+        -1.46875
+      ],
+      "positive_probability": 0.03473077930700862,
+      "prediction": 0
+    },
+    {
+      "index": 3,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "mirror_hex": "1ce3",
+      "input_tokens": 16384,
+      "output_tokens": 1,
+      "transaction_ms": 50.02936,
+      "transaction_with_output_check_ms": 50.42395,
+      "hardware_transaction_cycles": 3909368,
+      "hardware_transaction_ms": 48.8671,
+      "start_monotonic_ns": 667899306020,
+      "end_monotonic_ns": 667949745540,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1
+    }
+  ],
+  "input_configuration_seconds": 9.362284348999992,
+  "exports": [
+    {
+      "archive_path": "/home/xilinx/jupyter_notebooks/system_ui_SYSTEM_v3_20261030/runs/captures/exports/results_d06e622463694e3bb70a146c7f0a9a2b.zip",
+      "complete_count": 4,
+      "skipped_count": 0,
+      "report": {
+        "complete_count": 4,
+        "skipped_count": 0,
+        "complete": [
+          "capture_26939f9dad7f4c9d8959a56b59cdd944",
+          "capture_5501ab744a9346bea6bc31eda89b78db",
+          "capture_8e5e715775174ba7b8238b938d8eb5ae",
+          "capture_b583b8c6bb154a7da545e05664889b59"
+        ],
+        "skipped": []
+      }
+    }
+  ],
+  "submitted_frames": 92,
+  "elapsed_seconds": 120.01067347699995,
+  "health_after": {
+    "MemAvailable": 293504,
+    "CmaFree": 92544,
+    "SwapFree": 524284
+  },
+  "ext4_errors_after": 0
+}

@@ -1,0 +1,1275 @@
+{
+  "source_sha256_after_generation": "39e60c35b055870a1c333507be662754124ad15a61a9aae730cd256c295b2785",
+  "precision_recipe": {
+    "candidate": "minmax8",
+    "width": 8,
+    "policy": "per-layer signed train minmax; independent weight/bias; I>=1; AP_RND_CONV/AP_SAT",
+    "accumulator_precision": "fixed<48,24,AP_RND_CONV,AP_SAT>",
+    "activation_clipping_measured": false,
+    "activation_clipping_note": "Only FP32 train ranges; actual quantized activation clipping is not measured.",
+    "layer_precisions": {
+      "global_in": {
+        "result": "fixed<8,4,AP_RND_CONV,AP_SAT>"
+      },
+      "Conv_0": {
+        "result": "fixed<8,4,AP_RND_CONV,AP_SAT>",
+        "accum": "fixed<48,24,AP_RND_CONV,AP_SAT>",
+        "weight": "fixed<8,1,AP_RND_CONV,AP_SAT>",
+        "bias": "fixed<8,1,AP_RND_CONV,AP_SAT>"
+      },
+      "Relu_0": {
+        "result": "fixed<8,4,AP_RND_CONV,AP_SAT>",
+        "accum": "fixed<48,24,AP_RND_CONV,AP_SAT>"
+      },
+      "MaxPool_0": {
+        "result": "fixed<8,4,AP_RND_CONV,AP_SAT>",
+        "accum": "fixed<48,24,AP_RND_CONV,AP_SAT>"
+      },
+      "Conv_1": {
+        "result": "fixed<8,4,AP_RND_CONV,AP_SAT>",
+        "accum": "fixed<48,24,AP_RND_CONV,AP_SAT>",
+        "weight": "fixed<8,1,AP_RND_CONV,AP_SAT>",
+        "bias": "fixed<8,3,AP_RND_CONV,AP_SAT>"
+      },
+      "Relu_1": {
+        "result": "fixed<8,4,AP_RND_CONV,AP_SAT>",
+        "accum": "fixed<48,24,AP_RND_CONV,AP_SAT>"
+      },
+      "MaxPool_1": {
+        "result": "fixed<8,4,AP_RND_CONV,AP_SAT>",
+        "accum": "fixed<48,24,AP_RND_CONV,AP_SAT>"
+      },
+      "Conv_2": {
+        "result": "fixed<8,5,AP_RND_CONV,AP_SAT>",
+        "accum": "fixed<48,24,AP_RND_CONV,AP_SAT>",
+        "weight": "fixed<8,1,AP_RND_CONV,AP_SAT>",
+        "bias": "fixed<8,2,AP_RND_CONV,AP_SAT>"
+      },
+      "Relu_2": {
+        "result": "fixed<8,5,AP_RND_CONV,AP_SAT>",
+        "accum": "fixed<48,24,AP_RND_CONV,AP_SAT>"
+      },
+      "MaxPool_2": {
+        "result": "fixed<8,5,AP_RND_CONV,AP_SAT>",
+        "accum": "fixed<48,24,AP_RND_CONV,AP_SAT>"
+      },
+      "Conv_3": {
+        "result": "fixed<8,4,AP_RND_CONV,AP_SAT>",
+        "accum": "fixed<48,24,AP_RND_CONV,AP_SAT>",
+        "weight": "fixed<8,1,AP_RND_CONV,AP_SAT>",
+        "bias": "fixed<8,4,AP_RND_CONV,AP_SAT>"
+      },
+      "Relu_3": {
+        "result": "fixed<8,4,AP_RND_CONV,AP_SAT>",
+        "accum": "fixed<48,24,AP_RND_CONV,AP_SAT>"
+      },
+      "AveragePool_0": {
+        "result": "fixed<8,3,AP_RND_CONV,AP_SAT>",
+        "accum": "fixed<48,24,AP_RND_CONV,AP_SAT>"
+      },
+      "Flatten_0": {
+        "result": "fixed<8,3,AP_RND_CONV,AP_SAT>",
+        "accum": "fixed<48,24,AP_RND_CONV,AP_SAT>"
+      },
+      "MatMul_0": {
+        "result": "fixed<48,24,AP_RND_CONV,AP_SAT>",
+        "accum": "fixed<48,24,AP_RND_CONV,AP_SAT>",
+        "weight": "fixed<8,1,AP_RND_CONV,AP_SAT>",
+        "bias": "fixed<8,1,AP_RND_CONV,AP_SAT>"
+      },
+      "Add_0": {
+        "result": "fixed<8,3,AP_RND_CONV,AP_SAT>",
+        "accum": "fixed<48,24,AP_RND_CONV,AP_SAT>",
+        "scale": "fixed<8,2,AP_RND_CONV,AP_SAT>",
+        "bias": "fixed<8,1,AP_RND_CONV,AP_SAT>"
+      },
+      "Conv_0_param0": {
+        "result": "fixed<8,1,AP_RND_CONV,AP_SAT>"
+      },
+      "Conv_0_param1": {
+        "result": "fixed<8,1,AP_RND_CONV,AP_SAT>"
+      },
+      "Conv_1_param0": {
+        "result": "fixed<8,1,AP_RND_CONV,AP_SAT>"
+      },
+      "Conv_1_param1": {
+        "result": "fixed<8,3,AP_RND_CONV,AP_SAT>"
+      },
+      "Conv_2_param0": {
+        "result": "fixed<8,1,AP_RND_CONV,AP_SAT>"
+      },
+      "Conv_2_param1": {
+        "result": "fixed<8,2,AP_RND_CONV,AP_SAT>"
+      },
+      "Conv_3_param0": {
+        "result": "fixed<8,1,AP_RND_CONV,AP_SAT>"
+      },
+      "Conv_3_param1": {
+        "result": "fixed<8,4,AP_RND_CONV,AP_SAT>"
+      },
+      "MatMul_0_param0": {
+        "result": "fixed<8,1,AP_RND_CONV,AP_SAT>"
+      },
+      "Add_0_param0": {
+        "result": "fixed<8,1,AP_RND_CONV,AP_SAT>"
+      }
+    },
+    "source_node_mapping": {
+      "Conv_0": {
+        "name": "/backbone/stem/stem.0/Conv",
+        "op": "Conv",
+        "output": "/backbone/stem/stem.0/Conv_output_0"
+      },
+      "Relu_0": {
+        "name": "/backbone/stem/stem.2/Relu",
+        "op": "Relu",
+        "output": "/backbone/stem/stem.2/Relu_output_0"
+      },
+      "MaxPool_0": {
+        "name": "/backbone/stem/stem.3/MaxPool",
+        "op": "MaxPool",
+        "output": "/backbone/stem/stem.3/MaxPool_output_0"
+      },
+      "Conv_1": {
+        "name": "/head1/body/body.0/Conv",
+        "op": "Conv",
+        "output": "/head1/body/body.0/Conv_output_0"
+      },
+      "Relu_1": {
+        "name": "/head1/body/body.2/Relu",
+        "op": "Relu",
+        "output": "/head1/body/body.2/Relu_output_0"
+      },
+      "MaxPool_1": {
+        "name": "/head1/body/body.3/MaxPool",
+        "op": "MaxPool",
+        "output": "/head1/body/body.3/MaxPool_output_0"
+      },
+      "Conv_2": {
+        "name": "/head2/body/body.0/Conv",
+        "op": "Conv",
+        "output": "/head2/body/body.0/Conv_output_0"
+      },
+      "Relu_2": {
+        "name": "/head2/body/body.2/Relu",
+        "op": "Relu",
+        "output": "/head2/body/body.2/Relu_output_0"
+      },
+      "MaxPool_2": {
+        "name": "/head2/body/body.3/MaxPool",
+        "op": "MaxPool",
+        "output": "/head2/body/body.3/MaxPool_output_0"
+      },
+      "Conv_3": {
+        "name": "/head3/body/body.0/Conv",
+        "op": "Conv",
+        "output": "/head3/body/body.0/Conv_output_0"
+      },
+      "Relu_3": {
+        "name": "/head3/body/body.2/Relu",
+        "op": "Relu",
+        "output": "/head3/body/body.2/Relu_output_0"
+      },
+      "AveragePool_0": {
+        "name": "/gap/AveragePool",
+        "op": "AveragePool",
+        "output": "/gap/AveragePool_output_0"
+      },
+      "Flatten_0": {
+        "name": "/Flatten",
+        "op": "Flatten",
+        "output": "/Flatten_output_0"
+      },
+      "MatMul_0": {
+        "name": "/classifier/Gemm",
+        "op": "Gemm",
+        "range_policy": "prebias has no observed source range; retain 48/24"
+      },
+      "Add_0": {
+        "name": "/classifier/Gemm",
+        "op": "Gemm",
+        "output": "logits"
+      }
+    },
+    "initializer_mapping": {
+      "Conv_0_param0": {
+        "source": "onnx::Conv_46",
+        "role": "weight",
+        "target": "Conv_0",
+        "source_shape": [
+          64,
+          3,
+          7,
+          7
+        ],
+        "tensor_equality": true
+      },
+      "Conv_0_param1": {
+        "source": "onnx::Conv_47",
+        "role": "bias",
+        "target": "Conv_0",
+        "source_shape": [
+          64
+        ],
+        "tensor_equality": true
+      },
+      "Conv_1_param0": {
+        "source": "onnx::Conv_49",
+        "role": "weight",
+        "target": "Conv_1",
+        "source_shape": [
+          32,
+          64,
+          3,
+          3
+        ],
+        "tensor_equality": true
+      },
+      "Conv_1_param1": {
+        "source": "onnx::Conv_50",
+        "role": "bias",
+        "target": "Conv_1",
+        "source_shape": [
+          32
+        ],
+        "tensor_equality": true
+      },
+      "Conv_2_param0": {
+        "source": "onnx::Conv_52",
+        "role": "weight",
+        "target": "Conv_2",
+        "source_shape": [
+          64,
+          32,
+          3,
+          3
+        ],
+        "tensor_equality": true
+      },
+      "Conv_2_param1": {
+        "source": "onnx::Conv_53",
+        "role": "bias",
+        "target": "Conv_2",
+        "source_shape": [
+          64
+        ],
+        "tensor_equality": true
+      },
+      "Conv_3_param0": {
+        "source": "onnx::Conv_55",
+        "role": "weight",
+        "target": "Conv_3",
+        "source_shape": [
+          128,
+          64,
+          3,
+          3
+        ],
+        "tensor_equality": true
+      },
+      "Conv_3_param1": {
+        "source": "onnx::Conv_56",
+        "role": "bias",
+        "target": "Conv_3",
+        "source_shape": [
+          128
+        ],
+        "tensor_equality": true
+      },
+      "MatMul_0_param0": {
+        "source": "classifier.weight",
+        "role": "weight",
+        "target": "MatMul_0",
+        "source_shape": [
+          2,
+          128
+        ],
+        "tensor_equality": true
+      },
+      "Add_0_param0": {
+        "source": "classifier.bias",
+        "role": "bias",
+        "target": "Add_0",
+        "source_shape": [
+          2
+        ],
+        "tensor_equality": true
+      }
+    },
+    "parameter_quantization": {
+      "onnx::Conv_46": {
+        "total_bits": 8,
+        "integer_bits_including_sign": 1,
+        "fractional_bits": 7,
+        "representable_min": -1.0,
+        "representable_max": 0.9921875,
+        "rounding": "AP_RND_CONV (ties to even)",
+        "saturation": "AP_SAT",
+        "element_count": 9408,
+        "outside_representable_range_count": 0,
+        "rounded_saturation_count": 0,
+        "rounding_changed_count": 9408,
+        "quantization_changed_count": 9408,
+        "max_abs_error": 0.0039059678092598915,
+        "mean_abs_error": 0.0016718963488234827,
+        "precision": "fixed<8,1,AP_RND_CONV,AP_SAT>",
+        "range_suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 1,
+          "fractional_bits": 7,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -1.0,
+          "representable_max": 0.9921875
+        }
+      },
+      "onnx::Conv_47": {
+        "total_bits": 8,
+        "integer_bits_including_sign": 1,
+        "fractional_bits": 7,
+        "representable_min": -1.0,
+        "representable_max": 0.9921875,
+        "rounding": "AP_RND_CONV (ties to even)",
+        "saturation": "AP_SAT",
+        "element_count": 64,
+        "outside_representable_range_count": 0,
+        "rounded_saturation_count": 0,
+        "rounding_changed_count": 64,
+        "quantization_changed_count": 64,
+        "max_abs_error": 0.0038927197456359863,
+        "mean_abs_error": 0.0017243768593022957,
+        "precision": "fixed<8,1,AP_RND_CONV,AP_SAT>",
+        "range_suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 1,
+          "fractional_bits": 7,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -1.0,
+          "representable_max": 0.9921875
+        }
+      },
+      "onnx::Conv_49": {
+        "total_bits": 8,
+        "integer_bits_including_sign": 1,
+        "fractional_bits": 7,
+        "representable_min": -1.0,
+        "representable_max": 0.9921875,
+        "rounding": "AP_RND_CONV (ties to even)",
+        "saturation": "AP_SAT",
+        "element_count": 18432,
+        "outside_representable_range_count": 0,
+        "rounded_saturation_count": 0,
+        "rounding_changed_count": 18432,
+        "quantization_changed_count": 18432,
+        "max_abs_error": 0.0039062220603227615,
+        "mean_abs_error": 0.0019475724540073927,
+        "precision": "fixed<8,1,AP_RND_CONV,AP_SAT>",
+        "range_suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 1,
+          "fractional_bits": 7,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -1.0,
+          "representable_max": 0.9921875
+        }
+      },
+      "onnx::Conv_50": {
+        "total_bits": 8,
+        "integer_bits_including_sign": 3,
+        "fractional_bits": 5,
+        "representable_min": -4.0,
+        "representable_max": 3.96875,
+        "rounding": "AP_RND_CONV (ties to even)",
+        "saturation": "AP_SAT",
+        "element_count": 32,
+        "outside_representable_range_count": 0,
+        "rounded_saturation_count": 0,
+        "rounding_changed_count": 32,
+        "quantization_changed_count": 32,
+        "max_abs_error": 0.014945030212402344,
+        "mean_abs_error": 0.008229095488786697,
+        "precision": "fixed<8,3,AP_RND_CONV,AP_SAT>",
+        "range_suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 3,
+          "fractional_bits": 5,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -4.0,
+          "representable_max": 3.96875
+        }
+      },
+      "onnx::Conv_52": {
+        "total_bits": 8,
+        "integer_bits_including_sign": 1,
+        "fractional_bits": 7,
+        "representable_min": -1.0,
+        "representable_max": 0.9921875,
+        "rounding": "AP_RND_CONV (ties to even)",
+        "saturation": "AP_SAT",
+        "element_count": 18432,
+        "outside_representable_range_count": 0,
+        "rounded_saturation_count": 0,
+        "rounding_changed_count": 18432,
+        "quantization_changed_count": 18432,
+        "max_abs_error": 0.003906065598130226,
+        "mean_abs_error": 0.0019607961867765026,
+        "precision": "fixed<8,1,AP_RND_CONV,AP_SAT>",
+        "range_suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 1,
+          "fractional_bits": 7,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -1.0,
+          "representable_max": 0.9921875
+        }
+      },
+      "onnx::Conv_53": {
+        "total_bits": 8,
+        "integer_bits_including_sign": 2,
+        "fractional_bits": 6,
+        "representable_min": -2.0,
+        "representable_max": 1.984375,
+        "rounding": "AP_RND_CONV (ties to even)",
+        "saturation": "AP_SAT",
+        "element_count": 64,
+        "outside_representable_range_count": 0,
+        "rounded_saturation_count": 0,
+        "rounding_changed_count": 64,
+        "quantization_changed_count": 64,
+        "max_abs_error": 0.0074111223220825195,
+        "mean_abs_error": 0.00403120182454586,
+        "precision": "fixed<8,2,AP_RND_CONV,AP_SAT>",
+        "range_suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 2,
+          "fractional_bits": 6,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -2.0,
+          "representable_max": 1.984375
+        }
+      },
+      "onnx::Conv_55": {
+        "total_bits": 8,
+        "integer_bits_including_sign": 1,
+        "fractional_bits": 7,
+        "representable_min": -1.0,
+        "representable_max": 0.9921875,
+        "rounding": "AP_RND_CONV (ties to even)",
+        "saturation": "AP_SAT",
+        "element_count": 73728,
+        "outside_representable_range_count": 0,
+        "rounded_saturation_count": 0,
+        "rounding_changed_count": 73728,
+        "quantization_changed_count": 73728,
+        "max_abs_error": 0.0039060860872268677,
+        "mean_abs_error": 0.0019599023690917796,
+        "precision": "fixed<8,1,AP_RND_CONV,AP_SAT>",
+        "range_suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 1,
+          "fractional_bits": 7,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -1.0,
+          "representable_max": 0.9921875
+        }
+      },
+      "onnx::Conv_56": {
+        "total_bits": 8,
+        "integer_bits_including_sign": 4,
+        "fractional_bits": 4,
+        "representable_min": -8.0,
+        "representable_max": 7.9375,
+        "rounding": "AP_RND_CONV (ties to even)",
+        "saturation": "AP_SAT",
+        "element_count": 128,
+        "outside_representable_range_count": 0,
+        "rounded_saturation_count": 0,
+        "rounding_changed_count": 128,
+        "quantization_changed_count": 128,
+        "max_abs_error": 0.031182527542114258,
+        "mean_abs_error": 0.015640631085261703,
+        "precision": "fixed<8,4,AP_RND_CONV,AP_SAT>",
+        "range_suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 4,
+          "fractional_bits": 4,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -8.0,
+          "representable_max": 7.9375
+        }
+      },
+      "classifier.weight": {
+        "total_bits": 8,
+        "integer_bits_including_sign": 1,
+        "fractional_bits": 7,
+        "representable_min": -1.0,
+        "representable_max": 0.9921875,
+        "rounding": "AP_RND_CONV (ties to even)",
+        "saturation": "AP_SAT",
+        "element_count": 256,
+        "outside_representable_range_count": 0,
+        "rounded_saturation_count": 0,
+        "rounding_changed_count": 256,
+        "quantization_changed_count": 256,
+        "max_abs_error": 0.00390518456697464,
+        "mean_abs_error": 0.00200236460477754,
+        "precision": "fixed<8,1,AP_RND_CONV,AP_SAT>",
+        "range_suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 1,
+          "fractional_bits": 7,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -1.0,
+          "representable_max": 0.9921875
+        }
+      },
+      "classifier.bias": {
+        "total_bits": 8,
+        "integer_bits_including_sign": 1,
+        "fractional_bits": 7,
+        "representable_min": -1.0,
+        "representable_max": 0.9921875,
+        "rounding": "AP_RND_CONV (ties to even)",
+        "saturation": "AP_SAT",
+        "element_count": 2,
+        "outside_representable_range_count": 0,
+        "rounded_saturation_count": 0,
+        "rounding_changed_count": 2,
+        "quantization_changed_count": 2,
+        "max_abs_error": 0.0026090540923178196,
+        "mean_abs_error": 0.0026023525279015303,
+        "precision": "fixed<8,1,AP_RND_CONV,AP_SAT>",
+        "range_suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 1,
+          "fractional_bits": 7,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -1.0,
+          "representable_max": 0.9921875
+        }
+      }
+    },
+    "accumulator_bounds": {
+      "Conv_0": {
+        "method": "representable input absolute limit * per-output sum(abs(quantized weights)) + abs(quantized bias)",
+        "input_absolute_limit": 8.0,
+        "maximum_weight_l1": 5.9453125,
+        "per_output_absolute_bound": [
+          18.84375,
+          9.9140625,
+          0.0,
+          9.3984375,
+          0.0,
+          27.96875,
+          44.9609375,
+          0.0,
+          19.5859375,
+          0.0,
+          13.0703125,
+          15.78125,
+          10.0625,
+          0.0,
+          7.4296875,
+          47.7890625,
+          9.6875,
+          5.25,
+          9.2421875,
+          6.53125,
+          9.4609375,
+          4.703125,
+          8.0703125,
+          45.4375,
+          34.203125,
+          7.7734375,
+          7.90625,
+          9.4140625,
+          13.890625,
+          8.09375,
+          16.1171875,
+          17.171875,
+          9.6484375,
+          24.9296875,
+          8.4921875,
+          10.359375,
+          0.0,
+          4.296875,
+          0.0,
+          40.9375,
+          42.4140625,
+          17.140625,
+          19.15625,
+          17.875,
+          12.796875,
+          7.6015625,
+          5.46875,
+          25.0078125,
+          0.0,
+          20.09375,
+          30.5546875,
+          19.2578125,
+          22.6328125,
+          32.1015625,
+          6.59375,
+          27.734375,
+          8.6171875,
+          6.15625,
+          9.8671875,
+          19.0234375,
+          18.1484375,
+          2.5,
+          7.6015625,
+          19.03125
+        ],
+        "maximum_absolute_bound": 47.7890625,
+        "n_in": 147,
+        "ceil_log2_n_in": 8,
+        "minimum_symmetric_integer_bits": 7,
+        "accumulator_covers_bound": true,
+        "accumulator_fractional_bits": 24,
+        "product_fractional_bits": 11,
+        "product_rounding_error_absolute_bound": 0.0,
+        "maximum_absolute_bound_including_product_rounding": 47.7890625,
+        "actual_accumulator_clipping_measured": false
+      },
+      "Conv_1": {
+        "method": "representable input absolute limit * per-output sum(abs(quantized weights)) + abs(quantized bias)",
+        "input_absolute_limit": 8.0,
+        "maximum_weight_l1": 47.2109375,
+        "per_output_absolute_bound": [
+          171.5625,
+          162.21875,
+          230.3125,
+          200.96875,
+          232.53125,
+          236.96875,
+          225.4375,
+          302.46875,
+          246.71875,
+          258.25,
+          378.9375,
+          172.34375,
+          215.875,
+          214.84375,
+          242.09375,
+          122.5625,
+          228.59375,
+          147.09375,
+          124.28125,
+          121.8125,
+          186.53125,
+          221.34375,
+          228.0625,
+          120.9375,
+          246.78125,
+          339.84375,
+          263.65625,
+          232.0,
+          327.59375,
+          240.4375,
+          268.84375,
+          216.84375
+        ],
+        "maximum_absolute_bound": 378.9375,
+        "n_in": 576,
+        "ceil_log2_n_in": 10,
+        "minimum_symmetric_integer_bits": 10,
+        "accumulator_covers_bound": true,
+        "accumulator_fractional_bits": 24,
+        "product_fractional_bits": 11,
+        "product_rounding_error_absolute_bound": 0.0,
+        "maximum_absolute_bound_including_product_rounding": 378.9375,
+        "actual_accumulator_clipping_measured": false
+      },
+      "Conv_2": {
+        "method": "representable input absolute limit * per-output sum(abs(quantized weights)) + abs(quantized bias)",
+        "input_absolute_limit": 8.0,
+        "maximum_weight_l1": 29.15625,
+        "per_output_absolute_bound": [
+          167.40625,
+          233.90625,
+          68.3125,
+          125.1875,
+          54.5,
+          33.1875,
+          45.734375,
+          108.6875,
+          119.703125,
+          40.4375,
+          62.390625,
+          47.828125,
+          48.203125,
+          121.09375,
+          101.953125,
+          137.515625,
+          72.3125,
+          48.640625,
+          48.65625,
+          62.03125,
+          99.265625,
+          71.453125,
+          69.453125,
+          143.53125,
+          110.5625,
+          49.46875,
+          129.359375,
+          47.796875,
+          67.828125,
+          72.828125,
+          75.0,
+          89.328125,
+          171.453125,
+          49.25,
+          82.65625,
+          100.046875,
+          100.40625,
+          49.875,
+          138.625,
+          74.046875,
+          44.828125,
+          127.125,
+          35.828125,
+          106.8125,
+          64.390625,
+          136.109375,
+          66.875,
+          131.875,
+          64.0625,
+          174.0,
+          68.765625,
+          104.515625,
+          68.390625,
+          90.734375,
+          56.765625,
+          105.96875,
+          66.515625,
+          51.203125,
+          59.03125,
+          86.84375,
+          92.84375,
+          60.859375,
+          113.84375,
+          190.78125
+        ],
+        "maximum_absolute_bound": 233.90625,
+        "n_in": 288,
+        "ceil_log2_n_in": 9,
+        "minimum_symmetric_integer_bits": 9,
+        "accumulator_covers_bound": true,
+        "accumulator_fractional_bits": 24,
+        "product_fractional_bits": 11,
+        "product_rounding_error_absolute_bound": 0.0,
+        "maximum_absolute_bound_including_product_rounding": 233.90625,
+        "actual_accumulator_clipping_measured": false
+      },
+      "Conv_3": {
+        "method": "representable input absolute limit * per-output sum(abs(quantized weights)) + abs(quantized bias)",
+        "input_absolute_limit": 16.0,
+        "maximum_weight_l1": 27.8203125,
+        "per_output_absolute_bound": [
+          316.625,
+          377.5,
+          248.5,
+          237.3125,
+          273.375,
+          315.75,
+          357.6875,
+          203.6875,
+          270.8125,
+          225.1875,
+          248.75,
+          279.125,
+          365.0,
+          224.4375,
+          281.6875,
+          300.0,
+          255.625,
+          248.75,
+          271.6875,
+          179.625,
+          306.4375,
+          385.375,
+          317.875,
+          377.6875,
+          325.3125,
+          304.6875,
+          401.5,
+          391.5625,
+          447.5625,
+          408.125,
+          309.125,
+          437.4375,
+          254.125,
+          371.375,
+          406.3125,
+          357.625,
+          395.6875,
+          398.0,
+          305.8125,
+          287.1875,
+          394.4375,
+          380.5625,
+          367.125,
+          258.625,
+          249.0,
+          279.375,
+          243.75,
+          411.375,
+          297.625,
+          150.25,
+          265.0625,
+          358.875,
+          269.8125,
+          267.75,
+          400.9375,
+          258.0625,
+          252.4375,
+          392.1875,
+          236.4375,
+          412.875,
+          338.875,
+          319.75,
+          310.1875,
+          305.1875,
+          322.4375,
+          287.125,
+          286.25,
+          273.0625,
+          238.625,
+          282.25,
+          256.375,
+          235.5625,
+          353.8125,
+          259.0625,
+          178.6875,
+          166.125,
+          345.5,
+          335.3125,
+          249.4375,
+          272.3125,
+          382.4375,
+          246.9375,
+          257.5,
+          264.8125,
+          268.0625,
+          412.25,
+          299.3125,
+          288.3125,
+          277.6875,
+          271.625,
+          256.625,
+          386.1875,
+          267.3125,
+          286.75,
+          394.5625,
+          287.5625,
+          249.0,
+          397.125,
+          248.6875,
+          368.75,
+          282.0625,
+          249.9375,
+          264.5,
+          242.8125,
+          331.5625,
+          246.25,
+          230.4375,
+          336.375,
+          99.3125,
+          300.8125,
+          389.375,
+          265.375,
+          232.5,
+          307.0625,
+          212.75,
+          334.875,
+          247.875,
+          153.25,
+          400.6875,
+          310.375,
+          246.4375,
+          166.25,
+          290.8125,
+          263.9375,
+          310.75,
+          257.5,
+          273.625,
+          305.625
+        ],
+        "maximum_absolute_bound": 447.5625,
+        "n_in": 576,
+        "ceil_log2_n_in": 10,
+        "minimum_symmetric_integer_bits": 10,
+        "accumulator_covers_bound": true,
+        "accumulator_fractional_bits": 24,
+        "product_fractional_bits": 10,
+        "product_rounding_error_absolute_bound": 0.0,
+        "maximum_absolute_bound_including_product_rounding": 447.5625,
+        "actual_accumulator_clipping_measured": false
+      },
+      "MatMul_0": {
+        "method": "representable input absolute limit * per-output sum(abs(quantized weights)) + abs(quantized bias)",
+        "input_absolute_limit": 4.0,
+        "maximum_weight_l1": 14.34375,
+        "per_output_absolute_bound": [
+          57.375,
+          55.875
+        ],
+        "maximum_absolute_bound": 57.375,
+        "n_in": 128,
+        "ceil_log2_n_in": 7,
+        "minimum_symmetric_integer_bits": 7,
+        "accumulator_covers_bound": true,
+        "accumulator_fractional_bits": 24,
+        "product_fractional_bits": 12,
+        "product_rounding_error_absolute_bound": 0.0,
+        "maximum_absolute_bound_including_product_rounding": 57.375,
+        "actual_accumulator_clipping_measured": false
+      },
+      "AveragePool_0": {
+        "method": "sum of all 64 representable input absolute limits before average division",
+        "n_in": 64,
+        "ceil_log2_n_in": 6,
+        "input_absolute_limit": 8.0,
+        "maximum_absolute_bound": 512.0,
+        "accumulator_covers_bound": true,
+        "actual_accumulator_clipping_measured": false
+      }
+    },
+    "activation_range_suggestions": {
+      "input": {
+        "observed_min": -4.667377948760986,
+        "observed_max": 3.6579232215881348,
+        "sample_count": 298,
+        "source_fp32_only": true,
+        "shape_per_tensor": [
+          1,
+          3,
+          128,
+          128
+        ],
+        "suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 4,
+          "fractional_bits": 4,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -8.0,
+          "representable_max": 7.9375
+        }
+      },
+      "/backbone/stem/stem.0/Conv_output_0": {
+        "observed_min": -3.1082117557525635,
+        "observed_max": 4.622801780700684,
+        "sample_count": 298,
+        "source_fp32_only": true,
+        "shape_per_tensor": [
+          1,
+          64,
+          64,
+          64
+        ],
+        "suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 4,
+          "fractional_bits": 4,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -8.0,
+          "representable_max": 7.9375
+        }
+      },
+      "/backbone/stem/stem.2/Relu_output_0": {
+        "observed_min": 0.0,
+        "observed_max": 4.622801780700684,
+        "sample_count": 298,
+        "source_fp32_only": true,
+        "shape_per_tensor": [
+          1,
+          64,
+          64,
+          64
+        ],
+        "suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 4,
+          "fractional_bits": 4,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -8.0,
+          "representable_max": 7.9375
+        }
+      },
+      "/backbone/stem/stem.3/MaxPool_output_0": {
+        "observed_min": 0.0,
+        "observed_max": 4.622801780700684,
+        "sample_count": 298,
+        "source_fp32_only": true,
+        "shape_per_tensor": [
+          1,
+          64,
+          32,
+          32
+        ],
+        "suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 4,
+          "fractional_bits": 4,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -8.0,
+          "representable_max": 7.9375
+        }
+      },
+      "/head1/body/body.0/Conv_output_0": {
+        "observed_min": -6.445635795593262,
+        "observed_max": 7.064831733703613,
+        "sample_count": 298,
+        "source_fp32_only": true,
+        "shape_per_tensor": [
+          1,
+          32,
+          32,
+          32
+        ],
+        "suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 4,
+          "fractional_bits": 4,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -8.0,
+          "representable_max": 7.9375
+        }
+      },
+      "/head1/body/body.2/Relu_output_0": {
+        "observed_min": 0.0,
+        "observed_max": 7.064831733703613,
+        "sample_count": 298,
+        "source_fp32_only": true,
+        "shape_per_tensor": [
+          1,
+          32,
+          32,
+          32
+        ],
+        "suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 4,
+          "fractional_bits": 4,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -8.0,
+          "representable_max": 7.9375
+        }
+      },
+      "/head1/body/body.3/MaxPool_output_0": {
+        "observed_min": 0.0,
+        "observed_max": 7.064831733703613,
+        "sample_count": 298,
+        "source_fp32_only": true,
+        "shape_per_tensor": [
+          1,
+          32,
+          16,
+          16
+        ],
+        "suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 4,
+          "fractional_bits": 4,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -8.0,
+          "representable_max": 7.9375
+        }
+      },
+      "/head2/body/body.0/Conv_output_0": {
+        "observed_min": -9.594017028808594,
+        "observed_max": 7.94758415222168,
+        "sample_count": 298,
+        "source_fp32_only": true,
+        "shape_per_tensor": [
+          1,
+          64,
+          16,
+          16
+        ],
+        "suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 5,
+          "fractional_bits": 3,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -16.0,
+          "representable_max": 15.875
+        }
+      },
+      "/head2/body/body.2/Relu_output_0": {
+        "observed_min": 0.0,
+        "observed_max": 7.94758415222168,
+        "sample_count": 298,
+        "source_fp32_only": true,
+        "shape_per_tensor": [
+          1,
+          64,
+          16,
+          16
+        ],
+        "suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 5,
+          "fractional_bits": 3,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -16.0,
+          "representable_max": 15.875
+        }
+      },
+      "/head2/body/body.3/MaxPool_output_0": {
+        "observed_min": 0.0,
+        "observed_max": 7.94758415222168,
+        "sample_count": 298,
+        "source_fp32_only": true,
+        "shape_per_tensor": [
+          1,
+          64,
+          8,
+          8
+        ],
+        "suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 5,
+          "fractional_bits": 3,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -16.0,
+          "representable_max": 15.875
+        }
+      },
+      "/head3/body/body.0/Conv_output_0": {
+        "observed_min": -6.314962863922119,
+        "observed_max": 7.077750205993652,
+        "sample_count": 298,
+        "source_fp32_only": true,
+        "shape_per_tensor": [
+          1,
+          128,
+          8,
+          8
+        ],
+        "suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 4,
+          "fractional_bits": 4,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -8.0,
+          "representable_max": 7.9375
+        }
+      },
+      "/head3/body/body.2/Relu_output_0": {
+        "observed_min": 0.0,
+        "observed_max": 7.077750205993652,
+        "sample_count": 298,
+        "source_fp32_only": true,
+        "shape_per_tensor": [
+          1,
+          128,
+          8,
+          8
+        ],
+        "suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 4,
+          "fractional_bits": 4,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -8.0,
+          "representable_max": 7.9375
+        }
+      },
+      "/gap/AveragePool_output_0": {
+        "observed_min": 0.0,
+        "observed_max": 2.2604997158050537,
+        "sample_count": 298,
+        "source_fp32_only": true,
+        "shape_per_tensor": [
+          1,
+          128,
+          1,
+          1
+        ],
+        "suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 3,
+          "fractional_bits": 5,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -4.0,
+          "representable_max": 3.96875
+        }
+      },
+      "/Flatten_output_0": {
+        "observed_min": 0.0,
+        "observed_max": 2.2604997158050537,
+        "sample_count": 298,
+        "source_fp32_only": true,
+        "shape_per_tensor": [
+          1,
+          128
+        ],
+        "suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 3,
+          "fractional_bits": 5,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -4.0,
+          "representable_max": 3.96875
+        }
+      },
+      "logits": {
+        "observed_min": -3.247547149658203,
+        "observed_max": 3.320082187652588,
+        "sample_count": 298,
+        "source_fp32_only": true,
+        "shape_per_tensor": [
+          1,
+          2
+        ],
+        "suggestion": {
+          "total_bits": 8,
+          "integer_bits_including_sign": 3,
+          "fractional_bits": 5,
+          "not_final_configuration": true,
+          "policy": "I>=1, F>=0; signed range [-2^(I-1), 2^(I-1)-2^(-F)]",
+          "representable_min": -4.0,
+          "representable_max": 3.96875
+        }
+      }
+    },
+    "provenance": {
+      "status": "PASS",
+      "source_sha256": "39e60c35b055870a1c333507be662754124ad15a61a9aae730cd256c295b2785",
+      "sample_count": 298,
+      "partition": "train",
+      "all_sample_npy_identities_verified": true,
+      "provenance": {
+        "C:\\Users\\foracia\\Desktop\\\u6a21\u578b\u4ea4\u4ed8\u5305\uff081\uff09\\quantization\\work_ncnn_fp32\\calibration_manifest.csv": "f9490167a2baf5908ccbce24fa138e7f496c0a10cdeaea35a19f949de8417072",
+        "C:\\Users\\foracia\\Desktop\\\u6a21\u578b\u4ea4\u4ed8\u5305\uff081\uff09\\quantization\\work_ncnn_fp32\\calibration_npy_list.txt": "fbde2b1d6b3b2aba1e5d277d44edf641b5c264ad8f829ba780454624d09dd04b",
+        "C:\\Users\\foracia\\Desktop\\\u6a21\u578b\u4ea4\u4ed8\u5305\uff081\uff09\\deliver_v12_20261008\\data\\split.json": "32fa09a32a0b7f9c91110c8b311d9e1a466c5ada955f1b8347cc02f0ffb47eec",
+        "C:\\Users\\foracia\\Desktop\\\u6a21\u578b\u4ea4\u4ed8\u5305\uff081\uff09\\deliver_v12_20261008\\calibration_list.txt": "d48dc1269f93c93b4fd986068922e70cc43f600b55f984a62a11f14853d98ff8"
+      },
+      "range_report_sha256": "4a0ee4bf908ec56c0f89965fcd64ebc401ac0a33927030b9615ffd3797f10683"
+    }
+  }
+}

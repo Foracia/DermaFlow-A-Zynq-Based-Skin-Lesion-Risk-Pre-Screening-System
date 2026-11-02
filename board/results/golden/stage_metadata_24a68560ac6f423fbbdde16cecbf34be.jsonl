@@ -1,0 +1,5 @@
+{"stage": "import_pynq", "event": "BEGIN", "monotonic_ns": 4081188562115, "pid": 6469}
+{"stage": "import_pynq", "event": "COMPLETE", "monotonic_ns": 4089220074005, "pid": 6469}
+{"stage": "parse_overlay_without_download", "event": "BEGIN", "monotonic_ns": 4089288809014, "pid": 6469}
+{"stage": "parse_overlay_without_download", "event": "COMPLETE", "monotonic_ns": 4096444490314, "pid": 6469}
+{"stage": "metadata", "event": "PHASE_PASS", "monotonic_ns": 4096471675477, "pid": 6469}

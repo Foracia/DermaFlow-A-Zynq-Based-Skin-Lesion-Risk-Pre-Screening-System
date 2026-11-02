@@ -1,0 +1,7 @@
+{
+  "temperature": 0.8835169076919556,
+  "threshold": 0.7097623636691894,
+  "positive_class_index": 1,
+  "comparison": ">=",
+  "source": "system legacy8 metrics; frozen, not refitted this batch"
+}

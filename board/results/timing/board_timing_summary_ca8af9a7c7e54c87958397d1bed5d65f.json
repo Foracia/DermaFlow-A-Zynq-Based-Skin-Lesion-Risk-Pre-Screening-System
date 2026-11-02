@@ -1,0 +1,405 @@
+{
+  "status": "PL_PREPARED_INPUT_TIMING_PASS",
+  "board_wall_clock_utc_unverified": "2025-05-05T04:01:55.728222+00:00",
+  "platform": "Linux-6.6.10-xilinx-v2024.1-g3c0eca68c652-armv7l-with-glibc2.35",
+  "python_executable": "/usr/local/share/pynq-venv/bin/python3",
+  "numpy": "1.21.5",
+  "model_manifest_sha256": "c6d25a8506368ef8fdf7d386dbae442cad548eaf81fc54adcb9fc8de1be36f4d",
+  "timing_tools_manifest_sha256": "fbc714c8f4141afadd1a10f29be582df0059988e4a607192ee2fff570a48ab14",
+  "warmup_runs": 4,
+  "measured_runs": 20,
+  "bitstream_reprogrammed": false,
+  "per_mmio_diagnostic_trace": false,
+  "poll_interval_ms": 1.0,
+  "frames": [
+    {
+      "frame": 0,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "transaction_ms": 49.688591,
+      "transaction_with_output_check_ms": 50.092763,
+      "hardware_transaction_cycles": 3909264,
+      "hardware_transaction_ms": 48.8658,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1,
+      "batch_index": 1
+    },
+    {
+      "frame": 1,
+      "raw_hex": "ff00",
+      "expected_hex": "ff00",
+      "transaction_ms": 49.948104,
+      "transaction_with_output_check_ms": 50.340375,
+      "hardware_transaction_cycles": 3909336,
+      "hardware_transaction_ms": 48.8667,
+      "logits": [
+        0.0,
+        -0.03125
+      ],
+      "positive_probability": 0.4911584197694913,
+      "prediction": 0,
+      "batch_index": 1
+    },
+    {
+      "frame": 2,
+      "raw_hex": "d12f",
+      "expected_hex": "d12f",
+      "transaction_ms": 49.892979,
+      "transaction_with_output_check_ms": 50.308382,
+      "hardware_transaction_cycles": 3909216,
+      "hardware_transaction_ms": 48.8652,
+      "logits": [
+        1.46875,
+        -1.46875
+      ],
+      "positive_probability": 0.03473077930700862,
+      "prediction": 0,
+      "batch_index": 1
+    },
+    {
+      "frame": 3,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "transaction_ms": 49.801187,
+      "transaction_with_output_check_ms": 50.175784,
+      "hardware_transaction_cycles": 3909279,
+      "hardware_transaction_ms": 48.8659875,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1,
+      "batch_index": 1
+    },
+    {
+      "frame": 0,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "transaction_ms": 49.39328,
+      "transaction_with_output_check_ms": 49.77808,
+      "hardware_transaction_cycles": 3909215,
+      "hardware_transaction_ms": 48.8651875,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1,
+      "batch_index": 2
+    },
+    {
+      "frame": 1,
+      "raw_hex": "ff00",
+      "expected_hex": "ff00",
+      "transaction_ms": 49.529932,
+      "transaction_with_output_check_ms": 49.910794,
+      "hardware_transaction_cycles": 3909283,
+      "hardware_transaction_ms": 48.8660375,
+      "logits": [
+        0.0,
+        -0.03125
+      ],
+      "positive_probability": 0.4911584197694913,
+      "prediction": 0,
+      "batch_index": 2
+    },
+    {
+      "frame": 2,
+      "raw_hex": "d12f",
+      "expected_hex": "d12f",
+      "transaction_ms": 49.438418,
+      "transaction_with_output_check_ms": 49.815625,
+      "hardware_transaction_cycles": 3909257,
+      "hardware_transaction_ms": 48.8657125,
+      "logits": [
+        1.46875,
+        -1.46875
+      ],
+      "positive_probability": 0.03473077930700862,
+      "prediction": 0,
+      "batch_index": 2
+    },
+    {
+      "frame": 3,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "transaction_ms": 49.519846,
+      "transaction_with_output_check_ms": 49.893785,
+      "hardware_transaction_cycles": 3909183,
+      "hardware_transaction_ms": 48.8647875,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1,
+      "batch_index": 2
+    },
+    {
+      "frame": 0,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "transaction_ms": 49.339422,
+      "transaction_with_output_check_ms": 49.736818,
+      "hardware_transaction_cycles": 3909222,
+      "hardware_transaction_ms": 48.865275,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1,
+      "batch_index": 3
+    },
+    {
+      "frame": 1,
+      "raw_hex": "ff00",
+      "expected_hex": "ff00",
+      "transaction_ms": 49.594277,
+      "transaction_with_output_check_ms": 49.969803,
+      "hardware_transaction_cycles": 3909212,
+      "hardware_transaction_ms": 48.86515,
+      "logits": [
+        0.0,
+        -0.03125
+      ],
+      "positive_probability": 0.4911584197694913,
+      "prediction": 0,
+      "batch_index": 3
+    },
+    {
+      "frame": 2,
+      "raw_hex": "d12f",
+      "expected_hex": "d12f",
+      "transaction_ms": 49.523299,
+      "transaction_with_output_check_ms": 49.894025,
+      "hardware_transaction_cycles": 3909232,
+      "hardware_transaction_ms": 48.8654,
+      "logits": [
+        1.46875,
+        -1.46875
+      ],
+      "positive_probability": 0.03473077930700862,
+      "prediction": 0,
+      "batch_index": 3
+    },
+    {
+      "frame": 3,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "transaction_ms": 49.603809,
+      "transaction_with_output_check_ms": 49.977618,
+      "hardware_transaction_cycles": 3909199,
+      "hardware_transaction_ms": 48.8649875,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1,
+      "batch_index": 3
+    },
+    {
+      "frame": 0,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "transaction_ms": 49.352941,
+      "transaction_with_output_check_ms": 49.750929,
+      "hardware_transaction_cycles": 3909341,
+      "hardware_transaction_ms": 48.8667625,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1,
+      "batch_index": 4
+    },
+    {
+      "frame": 1,
+      "raw_hex": "ff00",
+      "expected_hex": "ff00",
+      "transaction_ms": 49.505305,
+      "transaction_with_output_check_ms": 49.882419,
+      "hardware_transaction_cycles": 3909237,
+      "hardware_transaction_ms": 48.8654625,
+      "logits": [
+        0.0,
+        -0.03125
+      ],
+      "positive_probability": 0.4911584197694913,
+      "prediction": 0,
+      "batch_index": 4
+    },
+    {
+      "frame": 2,
+      "raw_hex": "d12f",
+      "expected_hex": "d12f",
+      "transaction_ms": 49.519821,
+      "transaction_with_output_check_ms": 49.890394,
+      "hardware_transaction_cycles": 3909340,
+      "hardware_transaction_ms": 48.86675,
+      "logits": [
+        1.46875,
+        -1.46875
+      ],
+      "positive_probability": 0.03473077930700862,
+      "prediction": 0,
+      "batch_index": 4
+    },
+    {
+      "frame": 3,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "transaction_ms": 49.525366,
+      "transaction_with_output_check_ms": 49.895797,
+      "hardware_transaction_cycles": 3909311,
+      "hardware_transaction_ms": 48.8663875,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1,
+      "batch_index": 4
+    },
+    {
+      "frame": 0,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "transaction_ms": 49.425101,
+      "transaction_with_output_check_ms": 49.817667,
+      "hardware_transaction_cycles": 3909297,
+      "hardware_transaction_ms": 48.8662125,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1,
+      "batch_index": 5
+    },
+    {
+      "frame": 1,
+      "raw_hex": "ff00",
+      "expected_hex": "ff00",
+      "transaction_ms": 49.611101,
+      "transaction_with_output_check_ms": 49.989581,
+      "hardware_transaction_cycles": 3909159,
+      "hardware_transaction_ms": 48.8644875,
+      "logits": [
+        0.0,
+        -0.03125
+      ],
+      "positive_probability": 0.4911584197694913,
+      "prediction": 0,
+      "batch_index": 5
+    },
+    {
+      "frame": 2,
+      "raw_hex": "d12f",
+      "expected_hex": "d12f",
+      "transaction_ms": 49.542074,
+      "transaction_with_output_check_ms": 49.968247,
+      "hardware_transaction_cycles": 3909113,
+      "hardware_transaction_ms": 48.8639125,
+      "logits": [
+        1.46875,
+        -1.46875
+      ],
+      "positive_probability": 0.03473077930700862,
+      "prediction": 0,
+      "batch_index": 5
+    },
+    {
+      "frame": 3,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "transaction_ms": 50.059502,
+      "transaction_with_output_check_ms": 50.509576,
+      "hardware_transaction_cycles": 3909242,
+      "hardware_transaction_ms": 48.865525,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1,
+      "batch_index": 5
+    }
+  ],
+  "batches": [
+    {
+      "index": 0,
+      "phase": "warmup",
+      "result_file": "/home/xilinx/cnn_system_trial_20261027/board_timing_batch_53d3a6fdc1a74765a6924f923f37b62c.json",
+      "sha256": "882308fa2598d193b16b70fa97e2b6c91112cadeaac5fe4d5e95b39fec10bdaf"
+    },
+    {
+      "index": 1,
+      "phase": "measured",
+      "result_file": "/home/xilinx/cnn_system_trial_20261027/board_timing_batch_c6eae0fc4fda44afbb4135a37e30b8c3.json",
+      "sha256": "7cb9f409eeca477154bca4e93c907b1ff84a7192d5708d4d3a87d8a09c841efc"
+    },
+    {
+      "index": 2,
+      "phase": "measured",
+      "result_file": "/home/xilinx/cnn_system_trial_20261027/board_timing_batch_428579769e154bfb940f4801bcb9a908.json",
+      "sha256": "f9a6be7d63b68cb67006a59e29f1c33583b7b6ffb97242236947c50a520cfc02"
+    },
+    {
+      "index": 3,
+      "phase": "measured",
+      "result_file": "/home/xilinx/cnn_system_trial_20261027/board_timing_batch_452929d4b60d41f68faa6a94fd9d443d.json",
+      "sha256": "82c2b40a01e9652c5364168cc0e47c09d1de767b2f747cd40ea25b1427815d75"
+    },
+    {
+      "index": 4,
+      "phase": "measured",
+      "result_file": "/home/xilinx/cnn_system_trial_20261027/board_timing_batch_92e5fda1274c40158597bdcff9e39e78.json",
+      "sha256": "f49444f23ceefca5ba75ecec9f6998367f9d09a2813aba6cc70643f085d789b3"
+    },
+    {
+      "index": 5,
+      "phase": "measured",
+      "result_file": "/home/xilinx/cnn_system_trial_20261027/board_timing_batch_74eb114d45d54bef9c8dd47859d15c42.json",
+      "sha256": "60a9570042674618ed118ed801b75fa86415ed5b665ab97f0a3f74fec0963fb1"
+    }
+  ],
+  "timing_scope": "Prepared-input START through synchronous DMA/core completion polling; excludes input copy/flush, output invalidate/check, metadata setup and postprocess",
+  "hardware_scope": "Core START through completion including DMA input/output waits; not pure convolution MAC time",
+  "api_with_output_scope": "START through completion, RX cache invalidate, output copy/raw check, token and cycle register reads; excludes input copy/flush, metadata setup, postprocess",
+  "validation_scope": "Four fixed golden inputs rotated; not complete-dataset accuracy, camera latency or video throughput",
+  "transaction": {
+    "runs": 20,
+    "mean_ms": 49.590717749999996,
+    "median_ms": 49.527649,
+    "p95_ms": 49.9536739,
+    "min_ms": 49.339422,
+    "max_ms": 50.059502,
+    "std_population_ms": 0.19168155215744576
+  },
+  "hardware_transaction": {
+    "runs": 20,
+    "mean_ms": 48.86558625,
+    "median_ms": 48.86549375,
+    "p95_ms": 48.866750625,
+    "min_ms": 48.8639125,
+    "max_ms": 48.8667625,
+    "std_population_ms": 0.0007447514266527801
+  },
+  "api_with_output_check": {
+    "runs": 20,
+    "mean_ms": 49.9799231,
+    "median_ms": 49.9032955,
+    "p95_ms": 50.348835050000005,
+    "min_ms": 49.736818,
+    "max_ms": 50.509576,
+    "std_population_ms": 0.20242917496643173
+  }
+}

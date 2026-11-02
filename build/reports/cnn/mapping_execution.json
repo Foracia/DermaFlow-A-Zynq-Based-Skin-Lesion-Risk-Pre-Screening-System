@@ -1,0 +1,19 @@
+{
+  "status": "EXITED",
+  "command": [
+    "D:\\tools\\AMD\\2025.2\\Vivado\\bin\\vivado.bat",
+    "-mode",
+    "batch",
+    "-nojournal",
+    "-log",
+    "mapping_vivado.log",
+    "-source",
+    "run.tcl"
+  ],
+  "started_utc": "2026-10-29T15:50:26.663229+00:00",
+  "cwd": "<workspace>",
+  "pid": 14068,
+  "exit_code": 0,
+  "elapsed_seconds": 130.64426440000534,
+  "log_sha256": "78eb5d935f63653c1ba2ede2e58fa9c1c711ceec2a55336bdc23e50cbe6f4bcb"
+}

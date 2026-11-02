@@ -1,0 +1,34 @@
+{
+  "status": "board_validation_working_points_not_clinical_thresholds",
+  "input_blob": "in0",
+  "output_blob": "out0",
+  "input_shape": [1, 3, 128, 128],
+  "input_dtype": "float32",
+  "color": "RGB",
+  "positive_class_index": 1,
+  "probability": "float64 softmax(logits / temperature)",
+  "comparison": ">=",
+  "candidates": {
+    "fp32": {
+      "temperature": 0.8832379804831932,
+      "threshold": 0.7098302503219471,
+      "source": "pc_threshold_analysis.json / validation_candidates / FP32"
+    },
+    "kl": {
+      "temperature": 0.8904876816537481,
+      "threshold": 0.6976737641875307,
+      "source": "kl_quant_spec_source.json / postprocess_candidate; same working point as pc_kl_smoke.json"
+    },
+    "eq": {
+      "temperature": 0.8762233805861245,
+      "threshold": 0.7212510715795385,
+      "source": "pc_eq_metrics.json; same working point as pc_eq_smoke.json"
+    }
+  },
+  "notes": [
+    "KL historical threshold-analysis/default-script values differ by a few 1e-8 from the interface and actual PC smoke receipt; use the explicit values above, not CLI defaults.",
+    "EQ reference eq_logits.npy is derived from stored PC EQ smoke logits, not copied from FP32 or KL.",
+    "Six golden samples are functional reference vectors, not a complete accuracy evaluation set.",
+    "No board result exists yet; no retraining, threshold refitting or PL operation is part of this package."
+  ]
+}

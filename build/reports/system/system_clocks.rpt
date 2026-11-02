@@ -1,0 +1,138 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Oct 31 22:12:21 2026
+| Host         : FallenStarStasion running 64-bit major release  (build 9200)
+| Command      : report_clocks -file C:/Users/foracia/AppData/Local/Temp/r42_system_515068ce/system/system_clocks.rpt
+| Design       : base_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Physopt postRoute
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Report
+
+
+Attributes
+  P: Propagated
+  G: Generated
+  A: Auto-derived
+  R: Renamed
+  V: Virtual
+  I: Inverted
+  S: Pin phase-shifted with Latency mode
+
+Clock                                                  Period(ns)  Waveform(ns)    Attributes  Sources
+base_i/clk_wiz_10MHz/inst/clk_in1                      10.000      {0.000 5.000}   P           {base_i/clk_wiz_10MHz/inst/clk_in1}
+clk_fpga_0                                             10.000      {0.000 5.000}   P           {base_i/ps7_0/inst/PS7_i/FCLKCLK[0]}
+clk_fpga_1                                             7.000       {0.000 3.500}   P           {base_i/ps7_0/inst/PS7_i/FCLKCLK[1]}
+clk_fpga_2                                             5.000       {0.000 2.500}   P           {base_i/ps7_0/inst/PS7_i/FCLKCLK[2]}
+clk_fpga_3                                             10.000      {0.000 5.000}   P           {base_i/ps7_0/inst/PS7_i/FCLKCLK[3]}
+hdmi_in_clk_p                                          8.334       {0.000 4.167}   P           {hdmi_in_clk_p}
+base_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk  2.000       {0.000 0.800}   P,G         {base_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk}
+CLKFBIN                                                8.334       {0.000 4.167}   P,G,A       {base_i/video/hdmi_in/frontend/dvi2rgb_0/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKFBOUT}
+CLK_OUT_5x_hdmi_clk                                    1.667       {0.000 0.833}   P,G,A       {base_i/video/hdmi_in/frontend/dvi2rgb_0/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKOUT0}
+I                                                      2.000       {0.000 1.000}   P,G,A       {base_i/video/hdmi_out/frontend/axi_dynclk/U0/Inst_mmcme2_drp/mmcm_adv_inst/CLKOUT0}
+axi_dynclk_0_PXL_CLK_O                                 10.000      {0.000 4.000}   P,G,A       {base_i/video/hdmi_out/frontend/axi_dynclk/U0/BUFR_inst/O}
+clk_out1_base_clk_wiz_10MHz_0                          100.000     {0.000 50.000}  P,G,A       {base_i/clk_wiz_10MHz/inst/mmcm_adv_inst/CLKOUT0}
+clk_out1_base_cnn_clock_0                              12.500      {0.000 6.250}   P,G,A       {base_i/cnn_clock/inst/mmcm_adv_inst/CLKOUT0}
+clkfbout_base_clk_wiz_10MHz_0                          20.000      {0.000 10.000}  P,G,A       {base_i/clk_wiz_10MHz/inst/mmcm_adv_inst/CLKFBOUT}
+clkfbout_base_cnn_clock_0                              10.000      {0.000 5.000}   P,G,A       {base_i/cnn_clock/inst/mmcm_adv_inst/CLKFBOUT}
+hdmi_in_PixelClk                                       8.334       {0.000 3.334}   P,G,A       {base_i/video/hdmi_in/frontend/dvi2rgb_0/U0/TMDS_ClockingX/PixelClkBuffer/O}
+mmcm_fbclk_out                                         10.000      {0.000 5.000}   P,G,A       {base_i/video/hdmi_out/frontend/axi_dynclk/U0/Inst_mmcme2_drp/mmcm_adv_inst/CLKFBOUT}
+
+
+====================================================
+Generated Clocks
+====================================================
+
+Generated Clock     : base_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk
+Master Source       : base_i/video/hdmi_out/frontend/rgb2dvi_0/U0/PixelClk
+Master Clock        : axi_dynclk_0_PXL_CLK_O
+Multiply By         : 5
+Generated Sources   : {base_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk}
+
+Generated Clock     : CLKFBIN
+Master Source       : base_i/video/hdmi_in/frontend/dvi2rgb_0/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKIN1
+Master Clock        : hdmi_in_clk_p
+Multiply By         : 1
+Generated Sources   : {base_i/video/hdmi_in/frontend/dvi2rgb_0/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKFBOUT}
+
+Generated Clock     : CLK_OUT_5x_hdmi_clk
+Master Source       : base_i/video/hdmi_in/frontend/dvi2rgb_0/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKIN1
+Master Clock        : hdmi_in_clk_p
+Multiply By         : 5
+Generated Sources   : {base_i/video/hdmi_in/frontend/dvi2rgb_0/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKOUT0}
+
+Generated Clock     : I
+Master Source       : base_i/video/hdmi_out/frontend/axi_dynclk/U0/Inst_mmcme2_drp/mmcm_adv_inst/CLKIN1
+Master Clock        : clk_fpga_0
+Multiply By         : 5
+Generated Sources   : {base_i/video/hdmi_out/frontend/axi_dynclk/U0/Inst_mmcme2_drp/mmcm_adv_inst/CLKOUT0}
+
+Generated Clock     : axi_dynclk_0_PXL_CLK_O
+Master Source       : base_i/video/hdmi_out/frontend/axi_dynclk/U0/BUFR_inst/I
+Master Clock        : I
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 3.000 8.000}
+Generated Sources   : {base_i/video/hdmi_out/frontend/axi_dynclk/U0/BUFR_inst/O}
+
+Generated Clock     : clk_out1_base_clk_wiz_10MHz_0
+Master Source       : base_i/clk_wiz_10MHz/inst/mmcm_adv_inst/CLKIN1
+Master Clock        : base_i/clk_wiz_10MHz/inst/clk_in1
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 45.000 90.000}
+Generated Sources   : {base_i/clk_wiz_10MHz/inst/mmcm_adv_inst/CLKOUT0}
+
+Generated Clock     : clk_out1_base_cnn_clock_0
+Master Source       : base_i/cnn_clock/inst/mmcm_adv_inst/CLKIN1
+Master Clock        : clk_fpga_0
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 1.250 2.500}
+Generated Sources   : {base_i/cnn_clock/inst/mmcm_adv_inst/CLKOUT0}
+
+Generated Clock     : clkfbout_base_clk_wiz_10MHz_0
+Master Source       : base_i/clk_wiz_10MHz/inst/mmcm_adv_inst/CLKIN1
+Master Clock        : base_i/clk_wiz_10MHz/inst/clk_in1
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 5.000 10.000}
+Generated Sources   : {base_i/clk_wiz_10MHz/inst/mmcm_adv_inst/CLKFBOUT}
+
+Generated Clock     : clkfbout_base_cnn_clock_0
+Master Source       : base_i/cnn_clock/inst/mmcm_adv_inst/CLKIN1
+Master Clock        : clk_fpga_0
+Multiply By         : 1
+Generated Sources   : {base_i/cnn_clock/inst/mmcm_adv_inst/CLKFBOUT}
+
+Generated Clock     : hdmi_in_PixelClk
+Master Source       : base_i/video/hdmi_in/frontend/dvi2rgb_0/U0/TMDS_ClockingX/PixelClkBuffer/I
+Master Clock        : CLK_OUT_5x_hdmi_clk
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 2.500 6.667}
+Generated Sources   : {base_i/video/hdmi_in/frontend/dvi2rgb_0/U0/TMDS_ClockingX/PixelClkBuffer/O}
+
+Generated Clock     : mmcm_fbclk_out
+Master Source       : base_i/video/hdmi_out/frontend/axi_dynclk/U0/Inst_mmcme2_drp/mmcm_adv_inst/CLKIN1
+Master Clock        : clk_fpga_0
+Multiply By         : 1
+Generated Sources   : {base_i/video/hdmi_out/frontend/axi_dynclk/U0/Inst_mmcme2_drp/mmcm_adv_inst/CLKFBOUT}
+
+
+
+====================================================
+User Uncertainty
+====================================================
+
+
+
+====================================================
+User Jitter
+====================================================
+
+Clock                              Jitter(ns)
+base_i/clk_wiz_10MHz/inst/clk_in1  0.100
+clk_fpga_0                         0.300
+clk_fpga_1                         0.210
+clk_fpga_2                         0.150
+clk_fpga_3                         0.300
+

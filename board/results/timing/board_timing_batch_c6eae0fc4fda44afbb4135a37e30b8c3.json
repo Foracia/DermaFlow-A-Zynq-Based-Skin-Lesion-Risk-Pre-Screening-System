@@ -1,0 +1,103 @@
+{
+  "status": "FOUR_FRAME_BOARD_GOLDEN_PASS",
+  "board_wall_clock_utc_unverified": "2025-05-05T04:02:17.383224+00:00",
+  "elapsed_clock": "time.perf_counter_ns",
+  "frames": [
+    {
+      "frame": 0,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "transaction_ms": 49.688591,
+      "transaction_with_output_check_ms": 50.092763,
+      "hardware_transaction_cycles": 3909264,
+      "hardware_transaction_ms": 48.8658,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1
+    },
+    {
+      "frame": 1,
+      "raw_hex": "ff00",
+      "expected_hex": "ff00",
+      "transaction_ms": 49.948104,
+      "transaction_with_output_check_ms": 50.340375,
+      "hardware_transaction_cycles": 3909336,
+      "hardware_transaction_ms": 48.8667,
+      "logits": [
+        0.0,
+        -0.03125
+      ],
+      "positive_probability": 0.4911584197694913,
+      "prediction": 0
+    },
+    {
+      "frame": 2,
+      "raw_hex": "d12f",
+      "expected_hex": "d12f",
+      "transaction_ms": 49.892979,
+      "transaction_with_output_check_ms": 50.308382,
+      "hardware_transaction_cycles": 3909216,
+      "hardware_transaction_ms": 48.8652,
+      "logits": [
+        1.46875,
+        -1.46875
+      ],
+      "positive_probability": 0.03473077930700862,
+      "prediction": 0
+    },
+    {
+      "frame": 3,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "transaction_ms": 49.801187,
+      "transaction_with_output_check_ms": 50.175784,
+      "hardware_transaction_cycles": 3909279,
+      "hardware_transaction_ms": 48.8659875,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1
+    }
+  ],
+  "cleanup": {
+    "dma_reset_and_halted": true,
+    "core_reset_requested": true,
+    "hp1_mode_restored": true,
+    "errors": [],
+    "buffers_freed": true
+  },
+  "scope": "Four fixed raw golden inputs; not camera, complete dataset accuracy or continuous video throughput",
+  "timing_scope": "Prepared input: START through DMA/core completion polling (1ms polling); excludes input copy/flush, output invalidate/check, model setup and postprocess",
+  "manifest_sha256": "c6d25a8506368ef8fdf7d386dbae442cad548eaf81fc54adcb9fc8de1be36f4d",
+  "result_file": "/home/xilinx/cnn_system_trial_20261027/board_timing_batch_c6eae0fc4fda44afbb4135a37e30b8c3.json",
+  "stage_trace": null,
+  "diagnostic_trace": false,
+  "poll_interval_seconds": 0.001,
+  "overlay_load_ms": 3794.708782,
+  "fpga_rst_ctrl": 0,
+  "hp1_afi_mode": {
+    "before": {
+      "0": 0,
+      "20": 3840
+    },
+    "after": {
+      "0": 1,
+      "20": 3841
+    }
+  },
+  "buffers": [
+    {
+      "physical_address": 361037824,
+      "bytes": 65536
+    },
+    {
+      "physical_address": 361013248,
+      "bytes": 4
+    }
+  ]
+}

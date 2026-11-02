@@ -1,0 +1,20 @@
+{
+  "aux_reset_in": {
+    "constant": 1,
+    "active_high": 0
+  },
+  "mb_debug_sys_rst": {
+    "constant": 0,
+    "active_high": 1
+  },
+  "status": "AUX_AND_DEBUG_CONSTANTS_INACTIVE",
+  "hwh_sha256": "de38b98175eb55d2e6fa55091cf8a3f732ad622d188f719e1b43c2c0c59429ab",
+  "bd_sha256": "2f2b0651a79c61d72da5687cb6cd4413c3735d34d593d05e938acefc89391402",
+  "rtl_proof": {
+    "status": "BUILD_RTL_BOUND_TO_ACTUAL_FOUR_FRAME_SIMULATION",
+    "files": 84,
+    "prepared_sha256": "5437714c9ccb8b2ef9323e90e56a98673c1f947330eb231c24fc5fa3a62433f2",
+    "proof_sha256": "578df5a816e73f94786a04052a0b509807d747e7b859c4767feed1c27ae73c2d",
+    "simulator_log_sha256": "062b3f4f46c2daf687cd5cb7fb4df1b138a7203d66cb68d6da8e4994bbfec26f"
+  }
+}

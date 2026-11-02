@@ -1,0 +1,16 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+build/work/
+build/output/
+/board/system_ui/runs/
+/board/experimental/software/runs/
+/board/batch/batch_run_*/
+/board/batch/*_inputs.npz
+/data/dataset/*
+!/data/dataset/.gitkeep
+!/data/dataset/README.md
+/data/calibration/*
+!/data/calibration/.gitkeep
+python_deps/

@@ -1,0 +1,81 @@
+{
+  "model": "ncnn INT8 KL candidate",
+  "temperature": 0.8904876994104525,
+  "threshold": 0.697673760670338,
+  "positive_class_index": 1,
+  "prediction_rule": ">=",
+  "samples": [
+    {
+      "index": 0,
+      "image_path": "ACK_光化性角化病/PAT_1014_85_22_ACK.png",
+      "class_short": "ACK",
+      "label": 1,
+      "logits": [
+        -0.7694162130355835,
+        0.7299701571464539
+      ],
+      "positive_probability": 0.8434045639619344,
+      "prediction": 1
+    },
+    {
+      "index": 1,
+      "image_path": "BCC_基底细胞癌/PAT_112_168_360_BCC.png",
+      "class_short": "BCC",
+      "label": 1,
+      "logits": [
+        -0.34336012601852417,
+        0.3163573741912842
+      ],
+      "positive_probability": 0.6771816232964215,
+      "prediction": 0
+    },
+    {
+      "index": 2,
+      "image_path": "MEL_黑色素瘤/PAT_115_1138_870_MEL.png",
+      "class_short": "MEL",
+      "label": 1,
+      "logits": [
+        -1.032957673072815,
+        0.977446973323822
+      ],
+      "positive_probability": 0.9053078962935459,
+      "prediction": 1
+    },
+    {
+      "index": 3,
+      "image_path": "NEV_色素痣/PAT_1138_520_154_NEV.png",
+      "class_short": "NEV",
+      "label": 0,
+      "logits": [
+        1.7074403762817383,
+        -1.6839109659194946
+      ],
+      "positive_probability": 0.02170178142761032,
+      "prediction": 0
+    },
+    {
+      "index": 4,
+      "image_path": "SCC_鳞状细胞癌/PAT_150_1799_644_SCC.png",
+      "class_short": "SCC",
+      "label": 1,
+      "logits": [
+        -1.7404234409332275,
+        1.686318278312683
+      ],
+      "positive_probability": 0.9791261414080794,
+      "prediction": 1
+    },
+    {
+      "index": 5,
+      "image_path": "SEK_脂溢性角化病/PAT_1071_312_841_SEK.png",
+      "class_short": "SEK",
+      "label": 0,
+      "logits": [
+        1.4568828344345093,
+        -1.4370776414871216
+      ],
+      "positive_probability": 0.03733191348474329,
+      "prediction": 0
+    }
+  ]
+}

@@ -1,0 +1,382 @@
+{
+  "candidate": "ncnn EQ INT8",
+  "model_param": "<workspace>",
+  "model_bin": "<workspace>",
+  "temperature_fit_split": "val",
+  "threshold_selection_split": "val",
+  "target_recall": 0.9,
+  "temperature": 0.8762233805861245,
+  "threshold": 0.7212510715795385,
+  "comparison": ">=",
+  "val": {
+    "n": 342,
+    "temperature": 0.8762233805861245,
+    "threshold": 0.7212510715795385,
+    "auc": 0.9344277673545967,
+    "confusion_matrix": [
+      [
+        72,
+        10
+      ],
+      [
+        26,
+        234
+      ]
+    ],
+    "TP": 234,
+    "FN": 26,
+    "TN": 72,
+    "FP": 10,
+    "positive_recall": 0.9,
+    "specificity": 0.8780487804878049,
+    "balanced_accuracy": 0.8890243902439025,
+    "macro_f1": 0.8642857142857143,
+    "precision": 0.9590163934426229,
+    "NLL": 0.2433007937844277
+  },
+  "test_development": {
+    "n": 343,
+    "temperature": 0.8762233805861245,
+    "threshold": 0.7212510715795385,
+    "auc": 0.9152424136728287,
+    "confusion_matrix": [
+      [
+        49,
+        12
+      ],
+      [
+        35,
+        247
+      ]
+    ],
+    "TP": 247,
+    "FN": 35,
+    "TN": 49,
+    "FP": 12,
+    "positive_recall": 0.875886524822695,
+    "specificity": 0.8032786885245902,
+    "balanced_accuracy": 0.8395826066736426,
+    "macro_f1": 0.7944929568487475,
+    "precision": 0.9536679536679536,
+    "NLL": 0.30746553442066193
+  },
+  "by_disease_val": {
+    "ACK": {
+      "n": 96,
+      "temperature": 0.8762233805861245,
+      "threshold": 0.7212510715795385,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          12,
+          84
+        ]
+      ],
+      "TP": 84,
+      "FN": 12,
+      "TN": 0,
+      "FP": 0,
+      "positive_recall": 0.875,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.4375,
+      "macro_f1": 0.4666666666666667,
+      "precision": 1.0,
+      "NLL": 0.15500570468535826
+    },
+    "BCC": {
+      "n": 125,
+      "temperature": 0.8762233805861245,
+      "threshold": 0.7212510715795385,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          8,
+          117
+        ]
+      ],
+      "TP": 117,
+      "FN": 8,
+      "TN": 0,
+      "FP": 0,
+      "positive_recall": 0.936,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.468,
+      "macro_f1": 0.4834710743801653,
+      "precision": 1.0,
+      "NLL": 0.13227979828913902
+    },
+    "MEL": {
+      "n": 9,
+      "temperature": 0.8762233805861245,
+      "threshold": 0.7212510715795385,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "TP": 6,
+      "FN": 3,
+      "TN": 0,
+      "FP": 0,
+      "positive_recall": 0.6666666666666666,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.3333333333333333,
+      "macro_f1": 0.4,
+      "precision": 1.0,
+      "NLL": 0.3584460180787222
+    },
+    "NEV": {
+      "n": 44,
+      "temperature": 0.8762233805861245,
+      "threshold": 0.7212510715795385,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          40,
+          4
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "TP": 0,
+      "FN": 0,
+      "TN": 40,
+      "FP": 4,
+      "positive_recall": 0.0,
+      "specificity": 0.9090909090909091,
+      "balanced_accuracy": 0.45454545454545453,
+      "macro_f1": 0.47619047619047616,
+      "precision": 0.0,
+      "NLL": 0.4152291627872884
+    },
+    "SCC": {
+      "n": 30,
+      "temperature": 0.8762233805861245,
+      "threshold": 0.7212510715795385,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          27
+        ]
+      ],
+      "TP": 27,
+      "FN": 3,
+      "TN": 0,
+      "FP": 0,
+      "positive_recall": 0.9,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.45,
+      "macro_f1": 0.47368421052631576,
+      "precision": 1.0,
+      "NLL": 0.1113050150037004
+    },
+    "SEK": {
+      "n": 38,
+      "temperature": 0.8762233805861245,
+      "threshold": 0.7212510715795385,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          32,
+          6
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "TP": 0,
+      "FN": 0,
+      "TN": 32,
+      "FP": 6,
+      "positive_recall": 0.0,
+      "specificity": 0.8421052631578947,
+      "balanced_accuracy": 0.42105263157894735,
+      "macro_f1": 0.45714285714285713,
+      "precision": 0.0,
+      "NLL": 0.7094237174441391
+    }
+  },
+  "by_disease_test_development": {
+    "ACK": {
+      "n": 122,
+      "temperature": 0.8762233805861245,
+      "threshold": 0.7212510715795385,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          14,
+          108
+        ]
+      ],
+      "TP": 108,
+      "FN": 14,
+      "TN": 0,
+      "FP": 0,
+      "positive_recall": 0.8852459016393442,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.4426229508196721,
+      "macro_f1": 0.46956521739130436,
+      "precision": 1.0,
+      "NLL": 0.18723843327314266
+    },
+    "BCC": {
+      "n": 126,
+      "temperature": 0.8762233805861245,
+      "threshold": 0.7212510715795385,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          12,
+          114
+        ]
+      ],
+      "TP": 114,
+      "FN": 12,
+      "TN": 0,
+      "FP": 0,
+      "positive_recall": 0.9047619047619048,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.4523809523809524,
+      "macro_f1": 0.475,
+      "precision": 1.0,
+      "NLL": 0.20041133717100384
+    },
+    "MEL": {
+      "n": 12,
+      "temperature": 0.8762233805861245,
+      "threshold": 0.7212510715795385,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "TP": 6,
+      "FN": 6,
+      "TN": 0,
+      "FP": 0,
+      "positive_recall": 0.5,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.25,
+      "macro_f1": 0.3333333333333333,
+      "precision": 1.0,
+      "NLL": 1.085930145995832
+    },
+    "NEV": {
+      "n": 22,
+      "temperature": 0.8762233805861245,
+      "threshold": 0.7212510715795385,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          20,
+          2
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "TP": 0,
+      "FN": 0,
+      "TN": 20,
+      "FP": 2,
+      "positive_recall": 0.0,
+      "specificity": 0.9090909090909091,
+      "balanced_accuracy": 0.45454545454545453,
+      "macro_f1": 0.47619047619047616,
+      "precision": 0.0,
+      "NLL": 0.3501200345031799
+    },
+    "SCC": {
+      "n": 22,
+      "temperature": 0.8762233805861245,
+      "threshold": 0.7212510715795385,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          19
+        ]
+      ],
+      "TP": 19,
+      "FN": 3,
+      "TN": 0,
+      "FP": 0,
+      "positive_recall": 0.8636363636363636,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.4318181818181818,
+      "macro_f1": 0.4634146341463415,
+      "precision": 1.0,
+      "NLL": 0.2652778443558595
+    },
+    "SEK": {
+      "n": 39,
+      "temperature": 0.8762233805861245,
+      "threshold": 0.7212510715795385,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          29,
+          10
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "TP": 0,
+      "FN": 0,
+      "TN": 29,
+      "FP": 10,
+      "positive_recall": 0.0,
+      "specificity": 0.7435897435897436,
+      "balanced_accuracy": 0.3717948717948718,
+      "macro_f1": 0.4264705882352941,
+      "precision": 0.0,
+      "NLL": 0.7896370737581616
+    }
+  },
+  "notes": [
+    "test is the source package's development-evaluation split, not an untouched final test."
+  ]
+}

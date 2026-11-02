@@ -1,0 +1,350 @@
+{
+  "logits": [
+    2.0416666666666665,
+    -1.96875
+  ],
+  "refer_probability": 0.010569562923420716,
+  "decision_threshold": 0.7097623636691894,
+  "temperature": 0.8835169076919556,
+  "positive_class_index": 1,
+  "comparison": ">=",
+  "prediction": 0,
+  "risk_label": "暂未提示明显风险",
+  "schema_version": 1,
+  "capture_id": "b583b8c6bb154a7da545e05664889b59",
+  "mode": "fusion",
+  "frame_count": 3,
+  "fusion_method": "mean_logits",
+  "model_identity": "c6d25a8506368ef8fdf7d386dbae442cad548eaf81fc54adcb9fc8de1be36f4d",
+  "bitstream_version": "system:53c4e4688430947da5807022d49699113d38a9db125f80172dc7454e297bc2bc",
+  "inference_latency_ms": 453.050092,
+  "inference_latency_scope": "Accepted owned RGB input(s) through preprocessing, packing, CNN API and logits aggregation; excludes quality check, display and archive",
+  "hardware_transaction_total_ms": 146.59655,
+  "quality_sequences": [
+    2648,
+    2649,
+    2650
+  ],
+  "inferences": [
+    {
+      "index": 5,
+      "raw_hex": "f40d",
+      "expected_hex": null,
+      "mirror_hex": "f40d",
+      "input_tokens": 16384,
+      "output_tokens": 1,
+      "transaction_ms": 49.14155,
+      "transaction_with_output_check_ms": 49.576123,
+      "hardware_transaction_cycles": 3909239,
+      "hardware_transaction_ms": 48.8654875,
+      "start_monotonic_ns": 728376520964,
+      "end_monotonic_ns": 728426114139,
+      "logits": [
+        0.40625,
+        -0.375
+      ],
+      "positive_probability": 0.29229780844007197,
+      "prediction": 0
+    },
+    {
+      "index": 6,
+      "raw_hex": "bd45",
+      "expected_hex": null,
+      "mirror_hex": "bd45",
+      "input_tokens": 16384,
+      "output_tokens": 1,
+      "transaction_ms": 49.134671,
+      "transaction_with_output_check_ms": 49.572819,
+      "hardware_transaction_cycles": 3909293,
+      "hardware_transaction_ms": 48.8661625,
+      "start_monotonic_ns": 728526349954,
+      "end_monotonic_ns": 728575938434,
+      "logits": [
+        2.15625,
+        -2.09375
+      ],
+      "positive_probability": 0.008079435083944781,
+      "prediction": 0
+    },
+    {
+      "index": 7,
+      "raw_hex": "9272",
+      "expected_hex": null,
+      "mirror_hex": "9272",
+      "input_tokens": 16384,
+      "output_tokens": 1,
+      "transaction_ms": 49.149587,
+      "transaction_with_output_check_ms": 49.5924,
+      "hardware_transaction_cycles": 3909192,
+      "hardware_transaction_ms": 48.8649,
+      "start_monotonic_ns": 728676770828,
+      "end_monotonic_ns": 728726379296,
+      "logits": [
+        3.5625,
+        -3.4375
+      ],
+      "positive_probability": 0.0003622253379304543,
+      "prediction": 0
+    }
+  ],
+  "capture_accepted_monotonic_ns": 728273801635,
+  "hardware_frame_binding_verified": false,
+  "source_sof_continuity_verified": false,
+  "working_point_policy": "Existing single-frame point reused by user decision; not refitted for fusion",
+  "clinical_probability_validated": false,
+  "save_status": "complete",
+  "first_result_submitted_monotonic_ns": 728951995855,
+  "images": [
+    {
+      "sequence": 2648,
+      "captured_monotonic": 726.805080695,
+      "assessment": {
+        "stats": {
+          "pixel_count": 230400,
+          "luma_sum": 30273390,
+          "dark_count": 0,
+          "bright_count": 0,
+          "gradient_count": 228404,
+          "gradient_sum": 8507720
+        },
+        "metrics": {
+          "mean_luma": 131.394921875,
+          "dark_ratio": 0.0,
+          "bright_ratio": 0.0,
+          "sharpness_score": 37.24855956988494
+        },
+        "valid": true,
+        "exposure_ok": true,
+        "sharpness_ok": true,
+        "quality_ok": true,
+        "reasons": [],
+        "config": {
+          "enable": 1,
+          "x0": 320,
+          "y0": 180,
+          "width": 640,
+          "height": 360,
+          "mean_min": 40,
+          "mean_max": 210,
+          "dark_level": 16,
+          "bright_level": 239,
+          "dark_max_bp": 500,
+          "bright_max_bp": 200,
+          "sharp_min": 20,
+          "stable_n": 3
+        },
+        "frame_width": 1280,
+        "frame_height": 720,
+        "roi_rgb_sha256": "1152a62e04b5a017bf905712f5e00b2bec420ca4339b7734674dc0de42479d83"
+      },
+      "input": {
+        "roi_shape": [
+          360,
+          640,
+          3
+        ],
+        "roi_rgb_sha256": "1152a62e04b5a017bf905712f5e00b2bec420ca4339b7734674dc0de42479d83",
+        "tensor_shape": [
+          1,
+          3,
+          128,
+          128
+        ],
+        "tensor_dtype": "float32",
+        "tensor_layout": "NCHW RGB",
+        "tensor_sha256": "99a37be534e47b87731c9059c4a06d63c45340cc43095325461c99e8336b3eca",
+        "packed_shape": [
+          16384
+        ],
+        "packed_dtype": "little-endian uint32",
+        "packed_nbytes": 65536,
+        "packed_sha256": "2d03025e19cc1f2b6eb292a028aa98ea4c0441e6b8b98345ba4aa0ad58eb07d7",
+        "pixel_order": "row-major HWC; R bits7:0, G bits15:8, B bits23:16, top byte zero",
+        "quantization": "signed8 F4, step1/16, zero0, float64 multiply then ties-even rounding and saturation",
+        "saturated_values": 0,
+        "normalized_min": -4.110811233520508,
+        "normalized_max": 2.09490704536438,
+        "model_executed": false,
+        "quality_acceptance_verified_by_this_module": false
+      },
+      "filename": "frame_01.png",
+      "sha256": "56bd513766d5cbd8f3b042611ff10f9a0cf859d7f1e493eb009388181b2eace0",
+      "rgb_sha256": "1152a62e04b5a017bf905712f5e00b2bec420ca4339b7734674dc0de42479d83",
+      "readback_rgb_sha256": "1152a62e04b5a017bf905712f5e00b2bec420ca4339b7734674dc0de42479d83",
+      "shape": [
+        360,
+        640,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    {
+      "sequence": 2649,
+      "captured_monotonic": 727.254164135,
+      "assessment": {
+        "stats": {
+          "pixel_count": 230400,
+          "luma_sum": 32095536,
+          "dark_count": 0,
+          "bright_count": 0,
+          "gradient_count": 228404,
+          "gradient_sum": 5937044
+        },
+        "metrics": {
+          "mean_luma": 139.30354166666666,
+          "dark_ratio": 0.0,
+          "bright_ratio": 0.0,
+          "sharpness_score": 25.993607817726485
+        },
+        "valid": true,
+        "exposure_ok": true,
+        "sharpness_ok": true,
+        "quality_ok": true,
+        "reasons": [],
+        "config": {
+          "enable": 1,
+          "x0": 320,
+          "y0": 180,
+          "width": 640,
+          "height": 360,
+          "mean_min": 40,
+          "mean_max": 210,
+          "dark_level": 16,
+          "bright_level": 239,
+          "dark_max_bp": 500,
+          "bright_max_bp": 200,
+          "sharp_min": 20,
+          "stable_n": 3
+        },
+        "frame_width": 1280,
+        "frame_height": 720,
+        "roi_rgb_sha256": "69954e0b8fcfda6893dd30753500e74e6c72646fcb85fb338058eba49d30fd9a"
+      },
+      "input": {
+        "roi_shape": [
+          360,
+          640,
+          3
+        ],
+        "roi_rgb_sha256": "69954e0b8fcfda6893dd30753500e74e6c72646fcb85fb338058eba49d30fd9a",
+        "tensor_shape": [
+          1,
+          3,
+          128,
+          128
+        ],
+        "tensor_dtype": "float32",
+        "tensor_layout": "NCHW RGB",
+        "tensor_sha256": "343ded3c64e79a9828ea1ac373a09d33415c24e56c904b17eb052b38b424bd36",
+        "packed_shape": [
+          16384
+        ],
+        "packed_dtype": "little-endian uint32",
+        "packed_nbytes": 65536,
+        "packed_sha256": "06bf865ca0973034ca5ef21356e05a316dddc0485e0a6a91bd074440d841f8e1",
+        "pixel_order": "row-major HWC; R bits7:0, G bits15:8, B bits23:16, top byte zero",
+        "quantization": "signed8 F4, step1/16, zero0, float64 multiply then ties-even rounding and saturation",
+        "saturated_values": 0,
+        "normalized_min": -4.138639450073242,
+        "normalized_max": 2.483577251434326,
+        "model_executed": false,
+        "quality_acceptance_verified_by_this_module": false
+      },
+      "filename": "frame_02.png",
+      "sha256": "828d33b1b0144d18fe29204d9df27b3dd3b5b79db3623e63fdc8c613c1144c61",
+      "rgb_sha256": "69954e0b8fcfda6893dd30753500e74e6c72646fcb85fb338058eba49d30fd9a",
+      "readback_rgb_sha256": "69954e0b8fcfda6893dd30753500e74e6c72646fcb85fb338058eba49d30fd9a",
+      "shape": [
+        360,
+        640,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    {
+      "sequence": 2650,
+      "captured_monotonic": 727.706375266,
+      "assessment": {
+        "stats": {
+          "pixel_count": 230400,
+          "luma_sum": 33815120,
+          "dark_count": 232,
+          "bright_count": 0,
+          "gradient_count": 228404,
+          "gradient_sum": 5143848
+        },
+        "metrics": {
+          "mean_luma": 146.7670138888889,
+          "dark_ratio": 0.0010069444444444444,
+          "bright_ratio": 0.0,
+          "sharpness_score": 22.520831509080402
+        },
+        "valid": true,
+        "exposure_ok": true,
+        "sharpness_ok": true,
+        "quality_ok": true,
+        "reasons": [],
+        "config": {
+          "enable": 1,
+          "x0": 320,
+          "y0": 180,
+          "width": 640,
+          "height": 360,
+          "mean_min": 40,
+          "mean_max": 210,
+          "dark_level": 16,
+          "bright_level": 239,
+          "dark_max_bp": 500,
+          "bright_max_bp": 200,
+          "sharp_min": 20,
+          "stable_n": 3
+        },
+        "frame_width": 1280,
+        "frame_height": 720,
+        "roi_rgb_sha256": "f19d3af0c3361bb1facf383b09ee220fb048bc0616540b1f6e0e57ac094c7ae9"
+      },
+      "input": {
+        "roi_shape": [
+          360,
+          640,
+          3
+        ],
+        "roi_rgb_sha256": "f19d3af0c3361bb1facf383b09ee220fb048bc0616540b1f6e0e57ac094c7ae9",
+        "tensor_shape": [
+          1,
+          3,
+          128,
+          128
+        ],
+        "tensor_dtype": "float32",
+        "tensor_layout": "NCHW RGB",
+        "tensor_sha256": "55d505cda0d6da164ec6512dbfe11ce1bea285b708bb52a162c954ec13b2cf98",
+        "packed_shape": [
+          16384
+        ],
+        "packed_dtype": "little-endian uint32",
+        "packed_nbytes": 65536,
+        "packed_sha256": "757fa6524e4b2b15dd36eca49bf3b6d83d06a305b3489e9c5cf7da9fc2ca04a9",
+        "pixel_order": "row-major HWC; R bits7:0, G bits15:8, B bits23:16, top byte zero",
+        "quantization": "signed8 F4, step1/16, zero0, float64 multiply then ties-even rounding and saturation",
+        "saturated_values": 0,
+        "normalized_min": -4.583892822265625,
+        "normalized_max": 2.536956548690796,
+        "model_executed": false,
+        "quality_acceptance_verified_by_this_module": false
+      },
+      "filename": "frame_03.png",
+      "sha256": "e5eca830a048abda948a7d1e0dd203d88e05acf325ed30f47979342545a36a75",
+      "rgb_sha256": "f19d3af0c3361bb1facf383b09ee220fb048bc0616540b1f6e0e57ac094c7ae9",
+      "readback_rgb_sha256": "f19d3af0c3361bb1facf383b09ee220fb048bc0616540b1f6e0e57ac094c7ae9",
+      "shape": [
+        360,
+        640,
+        3
+      ],
+      "dtype": "uint8"
+    }
+  ],
+  "case_dir": "/home/xilinx/jupyter_notebooks/system_ui_SYSTEM_v3_20261030/runs/captures/capture_b583b8c6bb154a7da545e05664889b59",
+  "result_path": "/home/xilinx/jupyter_notebooks/system_ui_SYSTEM_v3_20261030/runs/captures/capture_b583b8c6bb154a7da545e05664889b59/result.json"
+}

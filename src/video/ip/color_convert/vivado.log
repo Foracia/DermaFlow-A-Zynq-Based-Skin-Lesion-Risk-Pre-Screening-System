@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Oct 11 21:28:14 2026
+# Process ID         : 50912
+# Current directory  : D:/FPGA_board_work/PYNQ-image_v3.1.1-2025.2-work/boards/ip/hls/color_convert/solution1/impl/ip
+# Command line       : vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file           : D:/FPGA_board_work/PYNQ-image_v3.1.1-2025.2-work/boards/ip/hls/color_convert/solution1/impl/ip/vivado.log
+# Journal file       : D:/FPGA_board_work/PYNQ-image_v3.1.1-2025.2-work/boards/ip/hls/color_convert/solution1/impl/ip\vivado.jou
+# Running On         : LAPTOP-62VUI6RK
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) i9-14900HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 34070 MB
+# Swap memory        : 34359 MB
+# Total Virtual      : 68429 MB
+# Available Virtual  : 15777 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=D:/FPGA_board_work/PYNQ-image_v3.1.1-2025.2-work/boards/ip/hls/color_convert/solution1/solution1_data.json outdir=D:/FPGA_board_work/PYNQ-image_v3.1.1-2025.2-work/boards/ip/hls/color_convert/solution1/impl/ip srcdir=D:/FPGA_board_work/PYNQ-image_v3.1.1-2025.2-work/boards/ip/hls/color_convert/solution1 ippack_options_dict= ippack_options_dict=
+INFO: Copied 1 ipmisc file(s) to D:/FPGA_board_work/PYNQ-image_v3.1.1-2025.2-work/boards/ip/hls/color_convert/solution1/impl/ip/misc
+INFO: Copied 8 verilog file(s) to D:/FPGA_board_work/PYNQ-image_v3.1.1-2025.2-work/boards/ip/hls/color_convert/solution1/impl/ip/hdl/verilog
+INFO: Copied 6 vhdl file(s) to D:/FPGA_board_work/PYNQ-image_v3.1.1-2025.2-work/boards/ip/hls/color_convert/solution1/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to D:/FPGA_board_work/PYNQ-image_v3.1.1-2025.2-work/boards/ip/hls/color_convert/solution1/impl/ip/drivers
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+ipx::create_core: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 531.754 ; gain = 214.801
+INFO: Import ports from HDL: D:/FPGA_board_work/PYNQ-image_v3.1.1-2025.2-work/boards/ip/hls/color_convert/solution1/impl/ip/hdl/vhdl/color_convert.vhd (color_convert)
+INFO: Add axi4lite interface s_axi_control
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add axi4stream interface stream_in_24
+INFO: Add axi4stream interface stream_out_24
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2025.2/Vivado/data/ip'.
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP D:/FPGA_board_work/PYNQ-image_v3.1.1-2025.2-work/boards/ip/hls/color_convert/solution1/impl/ip/component.xml
+INFO: Created IP archive D:/FPGA_board_work/PYNQ-image_v3.1.1-2025.2-work/boards/ip/hls/color_convert/solution1/impl/ip/xilinx_com_hls_color_convert_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 11 21:28:30 2026...

@@ -1,0 +1,36 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Tue Oct 27 00:27:33 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/real_core_sim/xsim_script.tcl
+# xsim {real_core_sim} -autoloadwcfg -tclbatch {run.tcl}
+Time resolution is 1 ps
+source run.tcl
+## run all
+SYSTEM_CORE_PROGRESS frame=0 cycles=1000000 sent=4856
+SYSTEM_CORE_PROGRESS frame=0 cycles=2000000 sent=9404
+SYSTEM_CORE_PROGRESS frame=0 cycles=3000000 sent=13808
+SYSTEM_CORE_FRAME_PASS frame=0 input_words=16384 raw=1ce3 cycles=3903572 stalls=11
+SYSTEM_CORE_PROGRESS frame=1 cycles=1000000 sent=4856
+SYSTEM_CORE_PROGRESS frame=1 cycles=2000000 sent=9404
+SYSTEM_CORE_PROGRESS frame=1 cycles=3000000 sent=13808
+SYSTEM_CORE_FRAME_PASS frame=1 input_words=16384 raw=ff00 cycles=3903572 stalls=11
+SYSTEM_CORE_PROGRESS frame=2 cycles=1000000 sent=4856
+SYSTEM_CORE_PROGRESS frame=2 cycles=2000000 sent=9404
+SYSTEM_CORE_PROGRESS frame=2 cycles=3000000 sent=13808
+SYSTEM_CORE_FRAME_PASS frame=2 input_words=16384 raw=d12f cycles=3903572 stalls=11
+SYSTEM_CORE_PROGRESS frame=3 cycles=1000000 sent=4856
+SYSTEM_CORE_PROGRESS frame=3 cycles=2000000 sent=9404
+SYSTEM_CORE_PROGRESS frame=3 cycles=3000000 sent=13808
+SYSTEM_CORE_FRAME_PASS frame=3 input_words=16384 raw=1ce3 cycles=3903572 stalls=11
+SYSTEM_CORE_GOLDEN_PASS frames=4 mismatches=0 reset_between_frames=0
+$finish called at time : 195180575 ns : File "<workspace>" Line 74
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:08:06 . Memory (MB): peak = 224.270 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 15464 KB (Peak: 15464 KB), Simulation CPU Usage: 474312 ms
+INFO: [Common 17-206] Exiting xsim at Tue Oct 27 00:35:41 2026...

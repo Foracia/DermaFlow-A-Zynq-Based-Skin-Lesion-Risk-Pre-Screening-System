@@ -1,0 +1,13 @@
+{
+  "aux_reset_in": {
+    "constant": 1,
+    "active_high": 0
+  },
+  "mb_debug_sys_rst": {
+    "constant": 0,
+    "active_high": 1
+  },
+  "status": "AUX_AND_DEBUG_CONSTANTS_INACTIVE",
+  "hwh_sha256": "de38b98175eb55d2e6fa55091cf8a3f732ad622d188f719e1b43c2c0c59429ab",
+  "bd_sha256": "2f2b0651a79c61d72da5687cb6cd4413c3735d34d593d05e938acefc89391402"
+}

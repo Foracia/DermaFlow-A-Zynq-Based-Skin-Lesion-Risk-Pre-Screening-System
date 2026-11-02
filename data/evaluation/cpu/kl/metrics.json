@@ -1,0 +1,382 @@
+{
+  "candidate": "ncnn EQ INT8",
+  "model_param": "<workspace>",
+  "model_bin": "<workspace>",
+  "temperature_fit_split": "val",
+  "threshold_selection_split": "val",
+  "target_recall": 0.9,
+  "temperature": 0.8904876816537481,
+  "threshold": 0.6976737641875307,
+  "comparison": ">=",
+  "val": {
+    "n": 342,
+    "temperature": 0.8904876816537481,
+    "threshold": 0.6976737641875307,
+    "auc": 0.9340994371482177,
+    "confusion_matrix": [
+      [
+        70,
+        12
+      ],
+      [
+        26,
+        234
+      ]
+    ],
+    "TP": 234,
+    "FN": 26,
+    "TN": 70,
+    "FP": 12,
+    "positive_recall": 0.9,
+    "specificity": 0.8536585365853658,
+    "balanced_accuracy": 0.8768292682926829,
+    "macro_f1": 0.8557090198516677,
+    "precision": 0.9512195121951219,
+    "NLL": 0.24901267587476833
+  },
+  "test_development": {
+    "n": 343,
+    "temperature": 0.8904876816537481,
+    "threshold": 0.6976737641875307,
+    "auc": 0.9114056505057552,
+    "confusion_matrix": [
+      [
+        49,
+        12
+      ],
+      [
+        34,
+        248
+      ]
+    ],
+    "TP": 248,
+    "FN": 34,
+    "TN": 49,
+    "FP": 12,
+    "positive_recall": 0.8794326241134752,
+    "specificity": 0.8032786885245902,
+    "balanced_accuracy": 0.8413556563190328,
+    "macro_f1": 0.7978423534235343,
+    "precision": 0.9538461538461539,
+    "NLL": 0.30666458274263286
+  },
+  "by_disease_val": {
+    "ACK": {
+      "n": 96,
+      "temperature": 0.8904876816537481,
+      "threshold": 0.6976737641875307,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          12,
+          84
+        ]
+      ],
+      "TP": 84,
+      "FN": 12,
+      "TN": 0,
+      "FP": 0,
+      "positive_recall": 0.875,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.4375,
+      "macro_f1": 0.4666666666666667,
+      "precision": 1.0,
+      "NLL": 0.15643196228005793
+    },
+    "BCC": {
+      "n": 125,
+      "temperature": 0.8904876816537481,
+      "threshold": 0.6976737641875307,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          8,
+          117
+        ]
+      ],
+      "TP": 117,
+      "FN": 8,
+      "TN": 0,
+      "FP": 0,
+      "positive_recall": 0.936,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.468,
+      "macro_f1": 0.4834710743801653,
+      "precision": 1.0,
+      "NLL": 0.1360248753774097
+    },
+    "MEL": {
+      "n": 9,
+      "temperature": 0.8904876816537481,
+      "threshold": 0.6976737641875307,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "TP": 6,
+      "FN": 3,
+      "TN": 0,
+      "FP": 0,
+      "positive_recall": 0.6666666666666666,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.3333333333333333,
+      "macro_f1": 0.4,
+      "precision": 1.0,
+      "NLL": 0.2947501507006099
+    },
+    "NEV": {
+      "n": 44,
+      "temperature": 0.8904876816537481,
+      "threshold": 0.6976737641875307,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          39,
+          5
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "TP": 0,
+      "FN": 0,
+      "TN": 39,
+      "FP": 5,
+      "positive_recall": 0.0,
+      "specificity": 0.8863636363636364,
+      "balanced_accuracy": 0.4431818181818182,
+      "macro_f1": 0.46987951807228917,
+      "precision": 0.0,
+      "NLL": 0.4497616434991291
+    },
+    "SCC": {
+      "n": 30,
+      "temperature": 0.8904876816537481,
+      "threshold": 0.6976737641875307,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          27
+        ]
+      ],
+      "TP": 27,
+      "FN": 3,
+      "TN": 0,
+      "FP": 0,
+      "positive_recall": 0.9,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.45,
+      "macro_f1": 0.47368421052631576,
+      "precision": 1.0,
+      "NLL": 0.10940921928431288
+    },
+    "SEK": {
+      "n": 38,
+      "temperature": 0.8904876816537481,
+      "threshold": 0.6976737641875307,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          31,
+          7
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "TP": 0,
+      "FN": 0,
+      "TN": 31,
+      "FP": 7,
+      "positive_recall": 0.0,
+      "specificity": 0.8157894736842105,
+      "balanced_accuracy": 0.40789473684210525,
+      "macro_f1": 0.4492753623188406,
+      "precision": 0.0,
+      "NLL": 0.7215057131398015
+    }
+  },
+  "by_disease_test_development": {
+    "ACK": {
+      "n": 122,
+      "temperature": 0.8904876816537481,
+      "threshold": 0.6976737641875307,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          13,
+          109
+        ]
+      ],
+      "TP": 109,
+      "FN": 13,
+      "TN": 0,
+      "FP": 0,
+      "positive_recall": 0.8934426229508197,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.44672131147540983,
+      "macro_f1": 0.47186147186147187,
+      "precision": 1.0,
+      "NLL": 0.18141888757410524
+    },
+    "BCC": {
+      "n": 126,
+      "temperature": 0.8904876816537481,
+      "threshold": 0.6976737641875307,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          12,
+          114
+        ]
+      ],
+      "TP": 114,
+      "FN": 12,
+      "TN": 0,
+      "FP": 0,
+      "positive_recall": 0.9047619047619048,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.4523809523809524,
+      "macro_f1": 0.475,
+      "precision": 1.0,
+      "NLL": 0.20289619700330158
+    },
+    "MEL": {
+      "n": 12,
+      "temperature": 0.8904876816537481,
+      "threshold": 0.6976737641875307,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "TP": 6,
+      "FN": 6,
+      "TN": 0,
+      "FP": 0,
+      "positive_recall": 0.5,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.25,
+      "macro_f1": 0.3333333333333333,
+      "precision": 1.0,
+      "NLL": 0.9910350589010203
+    },
+    "NEV": {
+      "n": 22,
+      "temperature": 0.8904876816537481,
+      "threshold": 0.6976737641875307,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          20,
+          2
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "TP": 0,
+      "FN": 0,
+      "TN": 20,
+      "FP": 2,
+      "positive_recall": 0.0,
+      "specificity": 0.9090909090909091,
+      "balanced_accuracy": 0.45454545454545453,
+      "macro_f1": 0.47619047619047616,
+      "precision": 0.0,
+      "NLL": 0.37840907776693894
+    },
+    "SCC": {
+      "n": 22,
+      "temperature": 0.8904876816537481,
+      "threshold": 0.6976737641875307,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          19
+        ]
+      ],
+      "TP": 19,
+      "FN": 3,
+      "TN": 0,
+      "FP": 0,
+      "positive_recall": 0.8636363636363636,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.4318181818181818,
+      "macro_f1": 0.4634146341463415,
+      "precision": 1.0,
+      "NLL": 0.23304712978157358
+    },
+    "SEK": {
+      "n": 39,
+      "temperature": 0.8904876816537481,
+      "threshold": 0.6976737641875307,
+      "auc": null,
+      "confusion_matrix": [
+        [
+          29,
+          10
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "TP": 0,
+      "FN": 0,
+      "TN": 29,
+      "FP": 10,
+      "positive_recall": 0.0,
+      "specificity": 0.7435897435897436,
+      "balanced_accuracy": 0.3717948717948718,
+      "macro_f1": 0.4264705882352941,
+      "precision": 0.0,
+      "NLL": 0.824191525676583
+    }
+  },
+  "notes": [
+    "test is the source package's development-evaluation split, not an untouched final test."
+  ]
+}

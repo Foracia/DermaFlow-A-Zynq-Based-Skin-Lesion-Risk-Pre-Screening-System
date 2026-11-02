@@ -1,0 +1,127 @@
+{
+  "status": "CLOSED",
+  "root": "/home/xilinx/cnn_system_trial_20261027",
+  "bitstream_reprogrammed": false,
+  "setup_reused": true,
+  "inferences": [
+    {
+      "index": 0,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "mirror_hex": "1ce3",
+      "input_tokens": 16384,
+      "output_tokens": 1,
+      "transaction_ms": 49.684007,
+      "transaction_with_output_check_ms": 50.09352,
+      "hardware_transaction_cycles": 3909108,
+      "hardware_transaction_ms": 48.86385,
+      "start_monotonic_ns": 429208121951,
+      "end_monotonic_ns": 429258231293,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1
+    },
+    {
+      "index": 1,
+      "raw_hex": "ff00",
+      "expected_hex": "ff00",
+      "mirror_hex": "ff00",
+      "input_tokens": 16384,
+      "output_tokens": 1,
+      "transaction_ms": 49.753169,
+      "transaction_with_output_check_ms": 50.13576,
+      "hardware_transaction_cycles": 3909176,
+      "hardware_transaction_ms": 48.8647,
+      "start_monotonic_ns": 429260756093,
+      "end_monotonic_ns": 429310906825,
+      "logits": [
+        0.0,
+        -0.03125
+      ],
+      "positive_probability": 0.4911584197694913,
+      "prediction": 0
+    },
+    {
+      "index": 2,
+      "raw_hex": "d12f",
+      "expected_hex": "d12f",
+      "mirror_hex": "d12f",
+      "input_tokens": 16384,
+      "output_tokens": 1,
+      "transaction_ms": 49.749846,
+      "transaction_with_output_check_ms": 50.12424,
+      "hardware_transaction_cycles": 3909043,
+      "hardware_transaction_ms": 48.8630375,
+      "start_monotonic_ns": 429313293009,
+      "end_monotonic_ns": 429363432455,
+      "logits": [
+        1.46875,
+        -1.46875
+      ],
+      "positive_probability": 0.03473077930700862,
+      "prediction": 0
+    },
+    {
+      "index": 3,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "mirror_hex": "1ce3",
+      "input_tokens": 16384,
+      "output_tokens": 1,
+      "transaction_ms": 49.745317,
+      "transaction_with_output_check_ms": 50.118209,
+      "hardware_transaction_cycles": 3909000,
+      "hardware_transaction_ms": 48.8625,
+      "start_monotonic_ns": 429365805889,
+      "end_monotonic_ns": 429415938548,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1
+    }
+  ],
+  "cleanup": {
+    "dma_reset_and_halted": true,
+    "core_reset_requested": true,
+    "hp1_mode_restored": true,
+    "buffers_freed": true,
+    "errors": []
+  },
+  "timing_scope": "START through completion polling; output-check variant includes invalidate, raw/mirror/token/cycle checks; input copy/flush, setup, postprocess and JSON writes excluded",
+  "diagnostic_trace": false,
+  "per_inference_disk_writes": false,
+  "model_manifest_sha256": "c6d25a8506368ef8fdf7d386dbae442cad548eaf81fc54adcb9fc8de1be36f4d",
+  "working_point": {
+    "temperature": 0.8835169076919556,
+    "threshold": 0.7097623636691894,
+    "positive_class_index": 1,
+    "comparison": ">=",
+    "source": "system legacy8 metrics; frozen, not refitted this batch"
+  },
+  "fpga_rst_ctrl": 0,
+  "hp1_afi_mode": {
+    "before": {
+      "0": 0,
+      "20": 3840
+    },
+    "after": {
+      "0": 1,
+      "20": 3841
+    }
+  },
+  "buffers": [
+    {
+      "physical_address": 361037824,
+      "bytes": 65536
+    },
+    {
+      "physical_address": 361013248,
+      "bytes": 4
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "status": "ARCHIVED_FILES_INDEX",
+  "purpose": "Integrity inventory of the files provided in this directory",
+  "source_bitstream_sha256": "53c4e4688430947da5807022d49699113d38a9db125f80172dc7454e297bc2bc",
+  "files": {
+    "board_result_4f0eead1c7eb407b8de5c15f5e54b719.json": "aba23d2a4dc0963dbc17ecd3aed3cd86aca24823456443f49c0ef61c61ffaf16",
+    "board_result_4f0eead1c7eb407b8de5c15f5e54b719.jsonl": "a09ee84fd2cf4792b49b8c0fe5851a4f808f99f45285a248a8e7733a2a95341f",
+    "hp1_init_reference.json": "2a9cd83b41d39e19c1a86535ce9b5af42850267475851e373b4d173fa76c439f",
+    "model_handoff_contract_source.json": "6df537cbe39867d2aef6fee9b47e0891bcd612e92ceecc456cf1f3e45a9bc8e6",
+    "preprocess_source.json": "de8c703bf399f7f04852d717f3a1daac7347281688a416a555087aaa0b944fb4",
+    "reset_contract.json": "4ff9a4df5881b28b0a2d3f67b226a9bf86bd19a9902dd19652147b5910dda9d8",
+    "stage_control_8694915ffcfb4ce38177ea2bf9782983.jsonl": "e00972ed902ed5cdf4494013bf061a476dcfc59f1bb5ca6abebd7f509b7ab91c",
+    "stage_load_b134e91785ea4719af60df5a2904d933.jsonl": "c27308b92ed8ec0ba697a95997a9f5d27e41362e98a10eb808ae3e99ebb4ad7c",
+    "stage_metadata_24a68560ac6f423fbbdde16cecbf34be.jsonl": "e34eb9b6f575620c1c7ab5dae4d995be2b6c4a9324dcb41b257032a088d3c915",
+    "working_point.json": "bfd38e696c0a456e7a52619882482557f3e6dab6461ba77235f5e52a05866271"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "status": "COMPLETE",
+  "platform": "Linux-6.6.10-xilinx-v2024.1-g3c0eca68c652-armv7l-with-glibc2.35",
+  "python": "3.10.4 (main, Apr  2 2022, 09:04:19) [GCC 11.2.0]",
+  "numpy": "1.21.5",
+  "payload_manifest_sha256": "1fb2d46027a9cbe3252b2b1a4b07623ee9c2f251d5f639a22a84b0b9c694e3ae",
+  "batch_tools_manifest_sha256": "a596b628ce148406314b53c4488217d08ca61bdb0f776f223ae91c8bdf1e9a16",
+  "selected_splits": [
+    "test"
+  ],
+  "backends": [
+    "pl"
+  ],
+  "results": {
+    "test_pl": {
+      "file": "test_pl_result.json",
+      "status": "COMPLETE",
+      "accuracy": {
+        "n": 343,
+        "temperature": 0.8835169076919556,
+        "threshold": 0.7097623636691894,
+        "comparison": ">=",
+        "auc": 0.9237588652482269,
+        "confusion_matrix": [
+          [
+            49,
+            12
+          ],
+          [
+            33,
+            249
+          ]
+        ],
+        "TP": 249,
+        "FN": 33,
+        "TN": 49,
+        "FP": 12,
+        "positive_recall": 0.8829787234042553,
+        "specificity": 0.8032786885245902,
+        "balanced_accuracy": 0.8431287059644228,
+        "macro_f1": 0.8012208785689449,
+        "precision": 0.9540229885057471,
+        "accuracy": 0.8688046647230321,
+        "NLL": 0.2964722384860342,
+        "Brier": 0.0881558974185867
+      },
+      "timing": {
+        "adapter_ms": {
+          "runs": 300,
+          "mean_ms": 16.86717785333333,
+          "median_ms": 16.833565999999998,
+          "p95_ms": 17.53746265,
+          "min_ms": 14.900911,
+          "max_ms": 20.932726
+        },
+        "prepared_api_ms": {
+          "runs": 300,
+          "mean_ms": 52.63082750666666,
+          "median_ms": 52.679274,
+          "p95_ms": 53.2404188,
+          "min_ms": 52.08904,
+          "max_ms": 53.922492
+        },
+        "postprocess_ms": {
+          "runs": 300,
+          "mean_ms": 0.4339871366666666,
+          "median_ms": 0.43515099999999995,
+          "p95_ms": 0.5102299,
+          "min_ms": 0.409864,
+          "max_ms": 0.549022
+        },
+        "normalized_input_to_logits_ms": {
+          "runs": 300,
+          "mean_ms": 69.49800536,
+          "median_ms": 69.54156900000001,
+          "p95_ms": 70.47559605000001,
+          "min_ms": 67.63872,
+          "max_ms": 74.855218
+        },
+        "normalized_input_to_prediction_ms": {
+          "runs": 300,
+          "mean_ms": 69.93199249666667,
+          "median_ms": 69.9766525,
+          "p95_ms": 70.9146972,
+          "min_ms": 68.059009,
+          "max_ms": 75.378535
+        },
+        "transaction_ms": {
+          "runs": 300,
+          "mean_ms": 49.41068024999999,
+          "median_ms": 49.408286000000004,
+          "p95_ms": 49.7861137,
+          "min_ms": 48.999114,
+          "max_ms": 50.270049
+        },
+        "transaction_with_output_check_ms": {
+          "runs": 300,
+          "mean_ms": 49.817724893333335,
+          "median_ms": 49.809732,
+          "p95_ms": 50.2584085,
+          "min_ms": 49.389686,
+          "max_ms": 50.73416
+        },
+        "hardware_transaction_ms": {
+          "runs": 300,
+          "mean_ms": 48.864288541666674,
+          "median_ms": 48.8636375,
+          "p95_ms": 48.86667375,
+          "min_ms": 48.8592,
+          "max_ms": 48.9526625
+        }
+      },
+      "reference_comparison": {
+        "sample_count": 343,
+        "max_abs_logits_error": 0.0,
+        "mean_abs_logits_error": 0.0,
+        "argmax_mismatches": 0,
+        "threshold_decision_mismatches": 0,
+        "max_abs_positive_probability_error": 0.0,
+        "mean_abs_positive_probability_error": 0.0,
+        "raw_mismatches": 0
+      }
+    }
+  },
+  "cleanup": {
+    "test_pl": {
+      "dma_reset_and_halted": true,
+      "core_reset_requested": true,
+      "hp1_mode_restored": true,
+      "buffers_freed": true,
+      "errors": []
+    }
+  },
+  "bitstream_reprogrammed": false,
+  "quality_gate_applied": false,
+  "test_scope": "Source development-evaluation split, not untouched blind test"
+}

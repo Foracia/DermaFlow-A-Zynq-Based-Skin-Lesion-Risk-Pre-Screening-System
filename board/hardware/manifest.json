@@ -1,0 +1,19 @@
+{
+  "status": "PACKAGED",
+  "round": 42,
+  "part": "xc7z020clg400-1",
+  "files": {
+    "board_accel.py": "8a11bfbc767775b3bdb9426a825e6dce443e42fcc4523c49ea09d5365e94009d",
+    "board_stage_probe.py": "248080aab7e7a32c246e0c3d3cd0c9c40471ba63f2d4d8b37b91cf7cc9e34b00",
+    "board_trace.py": "071da34f16f0e0a32b51c5e3a92db66fcd3f5b987e5ade12b47b5004005fc1a2",
+    "cnn_system.bit": "0ed00ee2d5ac3c0a67243568a04208a4c3c5757e996cab7bc0061190bec3790d",
+    "cnn_system.hwh": "de38b98175eb55d2e6fa55091cf8a3f732ad622d188f719e1b43c2c0c59429ab",
+    "expected.hex": "6937742c6e215a4fa36eea323f0c640ede019dd167503a2c00f751018db0fe82",
+    "hp1_init_reference.json": "bd7001343a16f6d19a9acf79d626c99076361d7ed821f1d6062d92ae26832df5",
+    "input.hex": "81abd6f4f8ecafc31fc808cab1a27d5242fb2f8b7cf9524adbeec4226995def5",
+    "model_handoff_contract_source.json": "c7cbda487936f8fa0189aa564fbf09d8da763d5ae5ae747dd4bbff6200eded3b",
+    "preprocess_source.json": "479214576bacb3e16e94b33b2563a4565cabf2787286f886be1658a752f06b07",
+    "reset_contract.json": "85f3380372ad2af00cb348dd73804fb9256dda918ffc7379024f53c395a52c1a",
+    "working_point.json": "2e0d2f6c92ffdc500841fd44ec5db2b694d0bfb2b5f922f32de3106fdf0cec41"
+  }
+}

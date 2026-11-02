@@ -1,0 +1,91 @@
+{
+ "run_id": "v9_defB_mel8",
+ "temperature": 0.8835169076919556,
+ "probability_formula": "softmax(logits / T)",
+ "probability_dtype": "float64",
+ "comparison": ">=",
+ "default_threshold": 0.5,
+ "frozen_threshold": 0.7097623636691894,
+ "input_shape": [
+  6,
+  3,
+  128,
+  128
+ ],
+ "input_dtype": "float32",
+ "input_layout": "NCHW, RGB, 已归一化 (pixel/255 - mean)/std",
+ "mean": [
+  0.66557,
+  0.522759,
+  0.462534
+ ],
+ "std": [
+  0.14092,
+  0.140212,
+  0.146932
+ ],
+ "max_abs_diff_pytorch_vs_onnx": 1.5497207641601562e-06,
+ "tolerance": 0.0001,
+ "samples": [
+  {
+   "image_path": "ACK_光化性角化病/PAT_1014_85_22_ACK.png",
+   "class_short": "ACK",
+   "label": 1,
+   "patient_id": "PAT_1014",
+   "source_file": "E:\\皮肤病数据\\data\\ACK_光化性角化病\\PAT_1014_85_22_ACK.png",
+   "source_kind": "原图当场 resize"
+  },
+  {
+   "image_path": "BCC_基底细胞癌/PAT_112_168_360_BCC.png",
+   "class_short": "BCC",
+   "label": 1,
+   "patient_id": "PAT_112",
+   "source_file": "E:\\皮肤病数据\\data\\BCC_基底细胞癌\\PAT_112_168_360_BCC.png",
+   "source_kind": "原图当场 resize"
+  },
+  {
+   "image_path": "MEL_黑色素瘤/PAT_115_1138_870_MEL.png",
+   "class_short": "MEL",
+   "label": 1,
+   "patient_id": "PAT_115",
+   "source_file": "E:\\皮肤病数据\\data\\MEL_黑色素瘤\\PAT_115_1138_870_MEL.png",
+   "source_kind": "原图当场 resize"
+  },
+  {
+   "image_path": "NEV_色素痣/PAT_1138_520_154_NEV.png",
+   "class_short": "NEV",
+   "label": 0,
+   "patient_id": "PAT_1138",
+   "source_file": "E:\\皮肤病数据\\data\\NEV_色素痣\\PAT_1138_520_154_NEV.png",
+   "source_kind": "原图当场 resize"
+  },
+  {
+   "image_path": "SCC_鳞状细胞癌/PAT_150_1799_644_SCC.png",
+   "class_short": "SCC",
+   "label": 1,
+   "patient_id": "PAT_150",
+   "source_file": "E:\\皮肤病数据\\data\\SCC_鳞状细胞癌\\PAT_150_1799_644_SCC.png",
+   "source_kind": "原图当场 resize"
+  },
+  {
+   "image_path": "SEK_脂溢性角化病/PAT_1071_312_841_SEK.png",
+   "class_short": "SEK",
+   "label": 0,
+   "patient_id": "PAT_1071",
+   "source_file": "E:\\皮肤病数据\\data\\SEK_脂溢性角化病\\PAT_1071_312_841_SEK.png",
+   "source_kind": "原图当场 resize"
+  }
+ ],
+ "hashes": {
+  "input.npy": "96c1301cbd7885ae67b751e1600e53bb6079fe5b34467bf802997ac417393c1a",
+  "pytorch_out.npy": "ca6843ef29cb33057d0b90814451a46f227b60136564589d81dc3e332b92608b",
+  "onnx_out.npy": "5e3c1a01714ca335ff411069b5d83db97a4deb2daf0f307d74999fca360e7e90"
+ },
+ "environment": {
+  "python": "3.13.12",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.2",
+  "torch": "2.11.0+cu128",
+  "onnxruntime": "1.30.0"
+ }
+}

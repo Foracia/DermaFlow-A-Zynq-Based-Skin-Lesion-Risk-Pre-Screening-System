@@ -1,0 +1,31 @@
+{
+  "status": "EXTRACTED_FROM_GENERATED_AMD_PS7_INIT_NOT_EXECUTABLE",
+  "source_sha256": "3bc497e6f82f3611ea94ab793056c9f6e74c3e1acf77667645b1174931657a75",
+  "snippets": [
+    {
+      "line": 3564,
+      "source": "    // .. .. START: AFI1 REGISTERS\n    // .. .. n32BitEn = 1\n    // .. .. ==> 0XF8009000[0:0] = 0x00000001U\n    // .. ..     ==> MASK : 0x00000001U    VAL : 0x00000001U\n    // .. .. \n    EMIT_MASKWRITE(0XF8009000, 0x00000001U ,0x00000001U),"
+    },
+    {
+      "line": 3569,
+      "source": "    EMIT_MASKWRITE(0XF8009000, 0x00000001U ,0x00000001U),\n    // .. .. n32BitEn = 1\n    // .. .. ==> 0XF8009014[0:0] = 0x00000001U\n    // .. ..     ==> MASK : 0x00000001U    VAL : 0x00000001U\n    // .. .. \n    EMIT_MASKWRITE(0XF8009014, 0x00000001U ,0x00000001U),"
+    },
+    {
+      "line": 7326,
+      "source": "    // .. .. START: AFI1 REGISTERS\n    // .. .. n32BitEn = 1\n    // .. .. ==> 0XF8009000[0:0] = 0x00000001U\n    // .. ..     ==> MASK : 0x00000001U    VAL : 0x00000001U\n    // .. .. \n    EMIT_MASKWRITE(0XF8009000, 0x00000001U ,0x00000001U),"
+    },
+    {
+      "line": 7331,
+      "source": "    EMIT_MASKWRITE(0XF8009000, 0x00000001U ,0x00000001U),\n    // .. .. n32BitEn = 1\n    // .. .. ==> 0XF8009014[0:0] = 0x00000001U\n    // .. ..     ==> MASK : 0x00000001U    VAL : 0x00000001U\n    // .. .. \n    EMIT_MASKWRITE(0XF8009014, 0x00000001U ,0x00000001U),"
+    },
+    {
+      "line": 11019,
+      "source": "    // .. .. START: AFI1 REGISTERS\n    // .. .. n32BitEn = 1\n    // .. .. ==> 0XF8009000[0:0] = 0x00000001U\n    // .. ..     ==> MASK : 0x00000001U    VAL : 0x00000001U\n    // .. .. \n    EMIT_MASKWRITE(0XF8009000, 0x00000001U ,0x00000001U),"
+    },
+    {
+      "line": 11024,
+      "source": "    EMIT_MASKWRITE(0XF8009000, 0x00000001U ,0x00000001U),\n    // .. .. n32BitEn = 1\n    // .. .. ==> 0XF8009014[0:0] = 0x00000001U\n    // .. ..     ==> MASK : 0x00000001U    VAL : 0x00000001U\n    // .. .. \n    EMIT_MASKWRITE(0XF8009014, 0x00000001U ,0x00000001U),"
+    }
+  ],
+  "runtime": "DMA halted; check SLCR0xf8000240 bit21 clear; AFI1 offset0/0x14 bit0=1; restore prior mode after DMA halted"
+}

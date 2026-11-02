@@ -1,0 +1,117 @@
+{
+ "contract_version": "2.0",
+ "model_file": "model.onnx",
+ "input_name": "input",
+ "input_shape": [
+  1,
+  3,
+  128,
+  128
+ ],
+ "input_dtype": "float32",
+ "input_layout": "NCHW, RGB",
+ "input_normalization": {
+  "formula": "(pixel/255 - mean) / std",
+  "mean": [
+   0.66557,
+   0.522759,
+   0.462534
+  ],
+  "std": [
+   0.14092,
+   0.140212,
+   0.146932
+  ],
+  "input_range_global": [
+   -4.723,
+   3.6579
+  ]
+ },
+ "output_name": "logits",
+ "output_shape": [
+  1,
+  2
+ ],
+ "output_order": [
+  "negative(暂不需就医)",
+  "positive(建议就医)"
+ ],
+ "output_order_text": "[negative(暂不需就医), positive(建议就医)]",
+ "class_definition": {
+  "positive": {
+   "index": 1,
+   "label": "建议就医",
+   "diseases": [
+    "BCC",
+    "SCC",
+    "MEL",
+    "ACK"
+   ],
+   "note": "ACK 为癌前病变；BCC/SCC/MEL 为恶性"
+  },
+  "negative": {
+   "index": 0,
+   "label": "暂不需就医",
+   "diseases": [
+    "NEV",
+    "SEK"
+   ],
+   "note": "良性病变"
+  },
+  "differs_from_dataset_original": true,
+  "dataset_original_positive": [
+   "BCC",
+   "SCC",
+   "MEL"
+  ],
+  "rationale": "设备输出标签为『建议就医』而非『恶性』，故判据为『是否需要就医』。ACK 是癌前病变、需就医。"
+ },
+ "temperature": 0.8835169076919556,
+ "probability_formula": "softmax(logits / T)",
+ "probability_dtype": "float64",
+ "comparison": ">=",
+ "positive_class_index": 1,
+ "default_threshold": 0.5,
+ "frozen_threshold": 0.7097623636691894,
+ "threshold_selected_on": "val",
+ "decision_rule": "p_positive >= threshold",
+ "calibration": {
+  "list_file": "calibration_list.txt",
+  "n_images": 298,
+  "columns": [
+   "image_path",
+   "label",
+   "class_short"
+  ],
+  "image_path_is_relative_to": "img_root",
+  "img_root": {
+   "default_local": "E:\\皮肤病数据\\data",
+   "required_layout": "img_root/<class_folder>/<image_path>，与 PAD-UFES-20 原始目录结构一致",
+   "override": "用 --img-root 覆盖；交付方本机路径不是契约的一部分",
+   "data_source": "PAD-UFES-20（CC BY 4.0）https://data.mendeley.com/datasets/zr7vgbcyr2/1"
+  },
+  "split_file": "data/split.json",
+  "split_meta_group_by": "patient",
+  "calib_seed": 42,
+  "verified_no_val_test_overlap": true,
+  "verified_subset_of_train": true,
+  "class_counts": {
+   "ACK": 116,
+   "BCC": 100,
+   "MEL": 5,
+   "NEV": 35,
+   "SCC": 16,
+   "SEK": 26
+  },
+  "must_use_same_preprocess": true,
+  "note": "含三重断言：校准图 ⊆ 训练集、与验证/测试集图像级交集为 0"
+ },
+ "opset": 17,
+ "notes": [
+  "预处理已包含在输入侧；若 PL 侧希望在硬件内做归一化，需要另行折算。",
+  "温度 T 是一次常数除法，可折进量化 scale，硬件成本为零。",
+  "若量化后 logits 尺度变化较大，温度需要重新拟合（用 logits.npz 回验）。",
+  "本契约中的路径均为**交付包内相对路径**（正斜杠）。",
+  "量化方案（per-tensor / per-channel、累加器位宽）仅为**候选，待 PTQ 端到端结果确认**。"
+ ]
+}

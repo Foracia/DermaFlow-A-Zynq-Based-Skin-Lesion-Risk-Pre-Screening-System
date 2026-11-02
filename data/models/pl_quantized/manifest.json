@@ -1,0 +1,20 @@
+{
+  "source_model_sha256": "39e60c35b055870a1c333507be662754124ad15a61a9aae730cd256c295b2785",
+  "hls_weights_sha256": "cbb54c2f85a485358e42fa1bb0487f25db5804adefad2b4194af90e7ba78da69",
+  "files": {
+    "parameters/add_0_bias.npy": "5db93c4489dbe75fa11354476bff29fe312c6bc03f6180755da0a828fad43ffe",
+    "parameters/conv_0_bias.npy": "50b7b56dac4ad6f1a0e9295912cb4760e9ec3090eca210d0e4f82c6057a1d400",
+    "parameters/conv_0_weight.npy": "6ea950d816a7c99f0b46e29165ac291258b711d645be436485e37c7aceaa61e8",
+    "parameters/conv_1_bias.npy": "388c2c3ac27ed48d43e0a9549b59410e047fae3bbb9b39d5a3fad866e12fb104",
+    "parameters/conv_1_weight.npy": "78bc13bde77d52c655a6be08bd7f06b1a3ac859b5b2ff39e2ca68b65d462e0d1",
+    "parameters/conv_2_bias.npy": "fd47638d91e941bf9e0b5d12d4dd713d037f93a7675786ae9e780dc6c0ebd6de",
+    "parameters/conv_2_weight.npy": "0983b1b351e9aff8e4ef2a051b6cbbb1b9ea6cbcb18cd56343f7e0df20bb4163",
+    "parameters/conv_3_bias.npy": "4f9bbcd5d9481ea1e34366d05e6a2ec256ba4409852ba6a9a86c772342bcc0a5",
+    "parameters/conv_3_weight.npy": "20a90304f5c056bf60f570c9337b2a593b01b10e96284032f676dcdad05d1936",
+    "parameters/matmul_0_bias.npy": "5db93c4489dbe75fa11354476bff29fe312c6bc03f6180755da0a828fad43ffe",
+    "parameters/matmul_0_weight.npy": "b1040d42ae84f81f406dc2a9f0ea7800454a871d34a3ed8c741282775b1f11e4",
+    "quantization.json": "305a1abaa5998a88369365b91f4a7ff959e9144513f99429001b8d8a759558c0",
+    "recipe.json": "ad6ec2f0ce58b69eda4f0330d094964b5ed1c1953d86f265ba4ebdf7863df1ac"
+  },
+  "parameter_export_check": "PARAMETERS_AND_HLS_HEADER_MATCH; 11 arrays and exact HLS header; no inference or hardware build"
+}

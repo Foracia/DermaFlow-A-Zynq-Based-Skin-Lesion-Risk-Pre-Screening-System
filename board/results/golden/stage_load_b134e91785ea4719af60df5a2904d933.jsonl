@@ -1,0 +1,7 @@
+{"stage": "import_pynq", "event": "BEGIN", "monotonic_ns": 4186340338826, "pid": 6637}
+{"stage": "import_pynq", "event": "COMPLETE", "monotonic_ns": 4194376509510, "pid": 6637}
+{"stage": "parse_overlay_without_download", "event": "BEGIN", "monotonic_ns": 4194446314919, "pid": 6637}
+{"stage": "parse_overlay_without_download", "event": "COMPLETE", "monotonic_ns": 4201540454041, "pid": 6637}
+{"stage": "download_only_no_cnn_or_dma_mmio", "event": "BEGIN", "monotonic_ns": 4201566210441, "pid": 6637}
+{"stage": "download_only_no_cnn_or_dma_mmio", "event": "COMPLETE", "monotonic_ns": 4204539927292, "pid": 6637}
+{"stage": "load", "event": "PHASE_PASS", "monotonic_ns": 4204553895741, "pid": 6637}

@@ -1,0 +1,106 @@
+{
+  "run_id": "v9_defB_mel8",
+  "source": "ckpt['args']（checkpoint 内嵌的训练配置）",
+  "note": "⚠ 本文件**直接从 checkpoint 读取**，不是手工填写，也不是用脚本当前默认值冒充。\n此前版本把 batch_size 写错、把 seed 标为『未记录』，而这些值一直存在于 checkpoint 里（deliver_v10 审查意见）。",
+  "arch": {
+    "name": "HybridDermCNN",
+    "backbone": "resnet18",
+    "n_blocks": 0,
+    "width": 1.0,
+    "head_ch": [
+      32,
+      64,
+      128
+    ],
+    "n_classes": 2,
+    "input_size": 128,
+    "gap_mode": "avgpool"
+  },
+  "preprocess": {
+    "mean": [
+      0.66557,
+      0.522759,
+      0.462534
+    ],
+    "std": [
+      0.14092,
+      0.140212,
+      0.146932
+    ],
+    "resize": [
+      128,
+      128
+    ],
+    "channel_order": "RGB"
+  },
+  "temperature": 0.8835169076919556,
+  "args": {
+    "backbone": "resnet18",
+    "n_blocks": 0,
+    "no_pretrained": false,
+    "unfreeze_backbone": false,
+    "head_ch": [
+      32,
+      64,
+      128
+    ],
+    "width": 1.0,
+    "csv": "data\\dataset_vB.csv",
+    "img_root": "E:\\皮肤病数据\\data",
+    "split": "data\\split_vB.json",
+    "out": "runs/v9_defB_mel8",
+    "epochs": 150,
+    "batch_size": 64,
+    "lr": 0.003,
+    "weight_decay": 0.0001,
+    "workers": 0,
+    "cache_root": "E:\\26嵌赛\\model\\cache128",
+    "seed": 42,
+    "balance": "effective",
+    "patience": 30,
+    "select_by": "macro_f1",
+    "label_smoothing": 0.05,
+    "loss": "ce",
+    "focal_gamma": 2.0,
+    "oversample_classes": [
+      "MEL"
+    ],
+    "oversample_factor": 8,
+    "mean": [
+      0.66557,
+      0.522759,
+      0.462534
+    ],
+    "std": [
+      0.14092,
+      0.140212,
+      0.146932
+    ]
+  },
+  "args_field_count": 27,
+  "training_progress": {
+    "configured_max_epochs": 150,
+    "actually_run": 101,
+    "select_by": "macro_f1",
+    "best_epoch_by_select_by": 71
+  },
+  "reproducibility_boundary": {
+    "已记录（来自 checkpoint args）": [
+      "seed（随机种子）",
+      "lr / weight_decay / batch_size",
+      "epochs / patience",
+      "loss 类型 / label_smoothing",
+      "oversample_classes / oversample_factor",
+      "backbone / n_blocks / head_ch / width",
+      "balance（类别权重方案）",
+      "csv / split / img_root / cache_root 路径",
+      "mean / std（预处理统计）"
+    ],
+    "未记录 / 无法保证": [
+      "**逐比特复现**：即便 seed 已知，还需相同的 torch/cuda 版本、`cudnn.deterministic` 等确定性设置、以及完全相同的数据加载顺序，才能保证训练轨迹一致",
+      "**完整训练脚本未随包提供**（`source/` 只有模型定义与导出脚本）",
+      "**AMP/autocast 行为**依赖具体 GPU 型号与驱动"
+    ],
+    "结论": "**配置已完整记录**；但『配置可复现』不等于『训练轨迹可逐比特复现』。后者需要补齐确定性设置与训练脚本。本包**不声称训练过程已被独立复验**。"
+  }
+}

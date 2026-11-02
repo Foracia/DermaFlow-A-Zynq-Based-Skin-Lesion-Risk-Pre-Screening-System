@@ -1,0 +1,183 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Oct 31 22:12:21 2026
+| Host         : FallenStarStasion running 64-bit major release  (build 9200)
+| Command      : report_timing -from [filter [all_registers -clock clk_out1_base_cnn_clock_0 -cells] {NAME =~ base_i/cnn_accel_0/inst/core/*}] -to [filter [all_registers -clock clk_out1_base_cnn_clock_0 -cells] {NAME =~ base_i/cnn_accel_0/inst/core/*}] -delay_type min -max_paths 3 -file C:/Users/foracia/AppData/Local/Temp/r42_system_515068ce/system/cnn_core_hold.rpt
+| Design       : base_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Physopt postRoute
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.030ns  (arrival time - required time)
+  Source:                 base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/biases_2_U/q0_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_base_cnn_clock_0  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/shl_ln50_4_reg_1217_reg[12]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_base_cnn_clock_0  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             clk_out1_base_cnn_clock_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_base_cnn_clock_0 rise@0.000ns - clk_out1_base_cnn_clock_0 rise@0.000ns)
+  Data Path Delay:        0.299ns  (logic 0.148ns (49.517%)  route 0.151ns (50.483%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.266ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.195ns
+    Source Clock Delay      (SCD):    0.894ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_base_cnn_clock_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  base_i/ps7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    base_i/ps7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.026     0.336 r  base_i/ps7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=5121, routed)        0.597     0.933    base_i/cnn_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.150    -0.217 r  base_i/cnn_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.529     0.312    base_i/cnn_clock/inst/clk_out1_base_cnn_clock_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.338 r  base_i/cnn_clock/inst/clkout1_buf/O
+                         net (fo=8252, routed)        0.556     0.893    base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/biases_2_U/aclk
+    SLICE_X50Y4          FDRE                                         r  base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/biases_2_U/q0_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y4          FDRE (Prop_fdre_C_Q)         0.148     1.041 r  base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/biases_2_U/q0_reg[7]/Q
+                         net (fo=1, routed)           0.151     1.192    base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/q0[7]
+    SLICE_X49Y4          FDRE                                         r  base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/shl_ln50_4_reg_1217_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_base_cnn_clock_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  base_i/ps7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    base_i/ps7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.029     0.366 r  base_i/ps7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=5121, routed)        0.864     1.230    base_i/cnn_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.467    -0.237 r  base_i/cnn_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.576     0.339    base_i/cnn_clock/inst/clk_out1_base_cnn_clock_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.368 r  base_i/cnn_clock/inst/clkout1_buf/O
+                         net (fo=8252, routed)        0.827     1.195    base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/aclk
+    SLICE_X49Y4          FDRE                                         r  base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/shl_ln50_4_reg_1217_reg[12]/C
+                         clock pessimism             -0.035     1.160    
+    SLICE_X49Y4          FDRE (Hold_fdre_C_D)         0.002     1.162    base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/shl_ln50_4_reg_1217_reg[12]
+  -------------------------------------------------------------------
+                         required time                         -1.162    
+                         arrival time                           1.192    
+  -------------------------------------------------------------------
+                         slack                                  0.030    
+
+Slack (MET) :             0.040ns  (arrival time - required time)
+  Source:                 base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/biases_2_U/q0_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_base_cnn_clock_0  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/shl_ln50_4_reg_1217_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_base_cnn_clock_0  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             clk_out1_base_cnn_clock_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_base_cnn_clock_0 rise@0.000ns - clk_out1_base_cnn_clock_0 rise@0.000ns)
+  Data Path Delay:        0.372ns  (logic 0.164ns (44.035%)  route 0.208ns (55.965%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.266ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.195ns
+    Source Clock Delay      (SCD):    0.894ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_base_cnn_clock_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  base_i/ps7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    base_i/ps7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.026     0.336 r  base_i/ps7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=5121, routed)        0.597     0.933    base_i/cnn_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.150    -0.217 r  base_i/cnn_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.529     0.312    base_i/cnn_clock/inst/clk_out1_base_cnn_clock_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.338 r  base_i/cnn_clock/inst/clkout1_buf/O
+                         net (fo=8252, routed)        0.556     0.893    base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/biases_2_U/aclk
+    SLICE_X50Y4          FDRE                                         r  base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/biases_2_U/q0_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y4          FDRE (Prop_fdre_C_Q)         0.164     1.058 r  base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/biases_2_U/q0_reg[2]/Q
+                         net (fo=1, routed)           0.208     1.266    base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/q0[2]
+    SLICE_X48Y5          FDRE                                         r  base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/shl_ln50_4_reg_1217_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_base_cnn_clock_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  base_i/ps7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    base_i/ps7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.029     0.366 r  base_i/ps7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=5121, routed)        0.864     1.230    base_i/cnn_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.467    -0.237 r  base_i/cnn_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.576     0.339    base_i/cnn_clock/inst/clk_out1_base_cnn_clock_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.368 r  base_i/cnn_clock/inst/clkout1_buf/O
+                         net (fo=8252, routed)        0.827     1.195    base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/aclk
+    SLICE_X48Y5          FDRE                                         r  base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/shl_ln50_4_reg_1217_reg[7]/C
+                         clock pessimism             -0.035     1.160    
+    SLICE_X48Y5          FDRE (Hold_fdre_C_D)         0.066     1.226    base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/shl_ln50_4_reg_1217_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -1.226    
+                         arrival time                           1.266    
+  -------------------------------------------------------------------
+                         slack                                  0.040    
+
+Slack (MET) :             0.045ns  (arrival time - required time)
+  Source:                 base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/grp_conv_16_16_32_64_3_1_1_8_8_5_8_Pipeline_Dot_fu_311/k_10_reg_1033_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_base_cnn_clock_0  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/grp_conv_16_16_32_64_3_1_1_8_8_5_8_Pipeline_Dot_fu_311/k_10_reg_1033_pp0_iter5_reg_reg[8]_srl5/D
+                            (rising edge-triggered cell SRL16E clocked by clk_out1_base_cnn_clock_0  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             clk_out1_base_cnn_clock_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_base_cnn_clock_0 rise@0.000ns - clk_out1_base_cnn_clock_0 rise@0.000ns)
+  Data Path Delay:        0.244ns  (logic 0.141ns (57.770%)  route 0.103ns (42.230%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.220ns
+    Source Clock Delay      (SCD):    0.922ns
+    Clock Pessimism Removal (CPR):    0.282ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_base_cnn_clock_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  base_i/ps7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    base_i/ps7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.026     0.336 r  base_i/ps7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=5121, routed)        0.597     0.933    base_i/cnn_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.150    -0.217 r  base_i/cnn_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.529     0.312    base_i/cnn_clock/inst/clk_out1_base_cnn_clock_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.338 r  base_i/cnn_clock/inst/clkout1_buf/O
+                         net (fo=8252, routed)        0.584     0.922    base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/grp_conv_16_16_32_64_3_1_1_8_8_5_8_Pipeline_Dot_fu_311/aclk
+    SLICE_X60Y1          FDRE                                         r  base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/grp_conv_16_16_32_64_3_1_1_8_8_5_8_Pipeline_Dot_fu_311/k_10_reg_1033_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X60Y1          FDRE (Prop_fdre_C_Q)         0.141     1.063 r  base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/grp_conv_16_16_32_64_3_1_1_8_8_5_8_Pipeline_Dot_fu_311/k_10_reg_1033_reg[8]/Q
+                         net (fo=1, routed)           0.103     1.166    base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/grp_conv_16_16_32_64_3_1_1_8_8_5_8_Pipeline_Dot_fu_311/k_10_reg_1033[8]
+    SLICE_X62Y2          SRL16E                                       r  base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/grp_conv_16_16_32_64_3_1_1_8_8_5_8_Pipeline_Dot_fu_311/k_10_reg_1033_pp0_iter5_reg_reg[8]_srl5/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_base_cnn_clock_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  base_i/ps7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    base_i/ps7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.029     0.366 r  base_i/ps7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=5121, routed)        0.864     1.230    base_i/cnn_clock/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.467    -0.237 r  base_i/cnn_clock/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.576     0.339    base_i/cnn_clock/inst/clk_out1_base_cnn_clock_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.368 r  base_i/cnn_clock/inst/clkout1_buf/O
+                         net (fo=8252, routed)        0.852     1.220    base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/grp_conv_16_16_32_64_3_1_1_8_8_5_8_Pipeline_Dot_fu_311/aclk
+    SLICE_X62Y2          SRL16E                                       r  base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/grp_conv_16_16_32_64_3_1_1_8_8_5_8_Pipeline_Dot_fu_311/k_10_reg_1033_pp0_iter5_reg_reg[8]_srl5/CLK
+                         clock pessimism             -0.282     0.938    
+    SLICE_X62Y2          SRL16E (Hold_srl16e_CLK_D)
+                                                      0.183     1.120    base_i/cnn_accel_0/inst/core/conv_16_16_32_64_3_1_1_8_8_5_8_U0/grp_conv_16_16_32_64_3_1_1_8_8_5_8_Pipeline_Dot_fu_311/k_10_reg_1033_pp0_iter5_reg_reg[8]_srl5
+  -------------------------------------------------------------------
+                         required time                         -1.121    
+                         arrival time                           1.166    
+  -------------------------------------------------------------------
+                         slack                                  0.045    
+
+
+
+

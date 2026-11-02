@@ -1,0 +1,76 @@
+{
+  "status": "candidate_not_finally_locked",
+  "source": {
+    "package": "deliver_v12_20261008",
+    "onnx": "model.onnx",
+    "onnx_sha256": "39e60c35b055870a1c333507be662754124ad15a61a9aae730cd256c295b2785",
+    "checkpoint_sha256": "0fa8a7615037fc70de569cfb1ca94b8c83e9a012359ccf554d19957081d3775e",
+    "opset": 17
+  },
+  "conversion": {
+    "tool": "pnnx",
+    "version": "20260526",
+    "command": "pnnx model.onnx inputshape=[1,3,128,128] fp16=0",
+    "input_blob": "in0",
+    "output_blob": "out0",
+    "input_shape": [1, 3, 128, 128],
+    "graph_operators": ["Convolution", "Pooling", "Flatten", "InnerProduct"],
+    "source_onnx_operators": ["AveragePool", "Conv", "Flatten", "Gemm", "MaxPool", "Relu"]
+  },
+  "runtime_input": {
+    "dtype": "float32",
+    "layout": "NCHW",
+    "color_order": "RGB",
+    "shape": [1, 3, 128, 128],
+    "preprocess": "PIL RGB; resize directly to 128x128 with BILINEAR; x=(pixel/255-mean)/std",
+    "mean": [0.66557, 0.522759, 0.462534],
+    "std": [0.14092, 0.140212, 0.146932],
+    "note": "The ncnn model interface still accepts normalized float32. It does not accept raw uint8 as-is."
+  },
+  "quantization": {
+    "scheme": "ncnn post-training quantization",
+    "candidate_method": "KL",
+    "weights": {
+      "bit_width": 8,
+      "quantizer_details": "Encoded in ncnn model by ncnn2int8; generic per-tensor/per-channel scale and zero-point fields are not separately exported by this workflow."
+    },
+    "activations": {
+      "bit_width": 8,
+      "calibration_method": "KL",
+      "table": "model.table",
+      "input_layer_quantization": "The external model input remains float32 normalized NCHW; internal handling follows the ncnn model/runtime."
+    },
+    "calibration": {
+      "image_count": 298,
+      "source": "deliver_v12_20261008/calibration_list.txt",
+      "split": "train subset only",
+      "input_generation": "Same RGB + PIL BILINEAR 128x128 + normalized CHW definition as the contract",
+      "npy_shape_per_image": [3, 128, 128],
+      "npy_dtype": "float32",
+      "list": "calibration_npy_list.txt",
+      "manifest": "calibration_manifest.csv"
+    }
+  },
+  "postprocess_candidate": {
+    "logit_order": ["negative: 暂不需要就医", "positive: 建议就医"],
+    "positive_class_index": 1,
+    "probability": "float64 softmax(logits / temperature)",
+    "temperature": 0.8904876816537481,
+    "threshold": 0.6976737641875307,
+    "comparison": ">=",
+    "selection": "Temperature fit by validation NLL; threshold selected on validation to attain positive recall >= 0.90",
+    "warning": "Candidate operating point only; requires project-owner acceptance and is not a clinical threshold."
+  },
+  "artifacts": {
+    "fp32_param": "model.ncnn.param",
+    "fp32_bin": "model.ncnn.bin",
+    "int8_param": "model_int8.param",
+    "int8_bin": "model_int8.bin"
+  },
+  "limitations": [
+    "No inference on PYNQ-Z2 has been run.",
+    "No PL/HLS fixed-point conversion has been run.",
+    "A separate EQ candidate was generated with an isolated source-patched ncnn 20260526 quantization tool after identifying an upstream EQ input-indexing issue; see CPU_BASELINE_LOCAL_PROGRESS_2026-10-11.md and work_ncnn_fp32/eq_retry/ for patch notes and artifact hashes.",
+    "The source delivery identifies its test set as a development evaluation set, not an untouched final test set."
+  ]
+}

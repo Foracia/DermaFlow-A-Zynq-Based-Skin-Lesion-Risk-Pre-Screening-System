@@ -1,0 +1,188 @@
+{
+  "board_wall_clock_utc_unverified": "2025-05-03T18:54:33.724050+00:00",
+  "elapsed_clock": "time.perf_counter_ns (monotonic)",
+  "platform": "Linux-6.6.10-xilinx-v2024.1-g3c0eca68c652-armv7l-with-glibc2.35",
+  "python_executable": "/usr/local/share/pynq-venv/bin/python3",
+  "python_version": "3.10.4",
+  "numpy_version": "1.21.5",
+  "ncnn_version": "1.0.20260526",
+  "ncnn_path": "/home/xilinx/board_cpu_baseline/python_deps/ncnn/__init__.py",
+  "candidate": "eq",
+  "threads": 1,
+  "vulkan": false,
+  "batch": 1,
+  "warmup_per_phase": 30,
+  "runs_per_phase": 300,
+  "reference_inferences_before_warmup": 6,
+  "working_point": {
+    "temperature": 0.8762233805861245,
+    "threshold": 0.7212510715795385,
+    "source": "pc_eq_metrics.json; same working point as pc_eq_smoke.json"
+  },
+  "model_sha256": {
+    "model.param": "f5cc18532a06807bbb688f0a7cfbe11356facf385bb39600a31b8dff86d48164",
+    "model.bin": "b76e883bfaf599c5d37875fb97ac84c432d65579ecb6a1c5822853e0b271e39d"
+  },
+  "reference_check": {
+    "logits": [
+      [
+        -0.8088687062263489,
+        0.7750223875045776
+      ],
+      [
+        -0.3396979570388794,
+        0.3229638934135437
+      ],
+      [
+        -1.0015894174575806,
+        0.952117919921875
+      ],
+      [
+        1.771173357963562,
+        -1.742305874824524
+      ],
+      [
+        -1.6608593463897705,
+        1.6157015562057495
+      ],
+      [
+        1.539805293083191,
+        -1.5130512714385986
+      ]
+    ],
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "argmax_mismatch_count": 0,
+    "prediction": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "threshold_mismatch_count": 0
+  },
+  "before_model_load": {
+    "process_memory": {
+      "VmHWM_KiB": 25568,
+      "VmRSS_KiB": 25372
+    },
+    "process_peak_rss_KiB": 25568,
+    "load_average": [
+      1.0546875,
+      0.439453125,
+      0.224609375
+    ],
+    "frequency_governor_temperature_raw": {}
+  },
+  "model_load_ms": 17.206991,
+  "after_model_load": {
+    "process_memory": {
+      "VmHWM_KiB": 27036,
+      "VmRSS_KiB": 27036
+    },
+    "process_peak_rss_KiB": 27036,
+    "load_average": [
+      1.0546875,
+      0.439453125,
+      0.224609375
+    ],
+    "frequency_governor_temperature_raw": {}
+  },
+  "timing_scope": "fresh extractor + input + synchronous extract + NumPy output copy/check; prepared Mat conversion, loading, preprocessing and postprocessing excluded",
+  "memory_scope": "whole process including interpreter, libraries, inputs and model; not isolated model allocations",
+  "prepared_tensor": {
+    "phase_wall_ms_including_loop_and_progress": 21366.115814,
+    "cpu_user_seconds": 21.297187,
+    "cpu_system_seconds": 0.060078999999999994,
+    "process_snapshot_after_phase": {
+      "process_memory": {
+        "VmHWM_KiB": 32924,
+        "VmRSS_KiB": 32924
+      },
+      "process_peak_rss_KiB": 32924,
+      "load_average": [
+        1.03515625,
+        0.48583984375,
+        0.24658203125
+      ],
+      "frequency_governor_temperature_raw": {}
+    },
+    "inference_api_ms": {
+      "runs": 300,
+      "mean_ms": 71.17068973666666,
+      "median_ms": 70.9550825,
+      "p95_ms": 71.76896115000001,
+      "min_ms": 70.815981,
+      "max_ms": 80.425686
+    }
+  },
+  "image_source": "golden/images/00_ACK.png",
+  "pillow_version": "9.0.1",
+  "image_scope": "repeated PNG open/decode/RGB/resize/normalize/Mat/inference/postprocess; OS file cache not flushed; not camera capture or video throughput",
+  "image_pipeline": {
+    "phase_wall_ms_including_loop_and_progress": 28620.740092,
+    "cpu_user_seconds": 27.541784999999997,
+    "cpu_system_seconds": 1.069643,
+    "process_snapshot_after_phase": {
+      "process_memory": {
+        "VmHWM_KiB": 36652,
+        "VmRSS_KiB": 36012
+      },
+      "process_peak_rss_KiB": 36652,
+      "load_average": [
+        1.01806640625,
+        0.54443359375,
+        0.27685546875
+      ],
+      "frequency_governor_temperature_raw": {}
+    },
+    "decode_preprocess_mat_ms": {
+      "runs": 300,
+      "mean_ms": 22.777922806666666,
+      "median_ms": 22.6748335,
+      "p95_ms": 22.95303185,
+      "min_ms": 22.492689,
+      "max_ms": 27.257576
+    },
+    "inference_api_ms": {
+      "runs": 300,
+      "mean_ms": 71.38687318,
+      "median_ms": 71.261101,
+      "p95_ms": 71.67504655,
+      "min_ms": 71.133114,
+      "max_ms": 76.737673
+    },
+    "postprocess_ms": {
+      "runs": 300,
+      "mean_ms": 0.6132307633333334,
+      "median_ms": 0.604077,
+      "p95_ms": 0.6928255999999999,
+      "min_ms": 0.595582,
+      "max_ms": 0.81136
+    },
+    "end_to_end_ms": {
+      "runs": 300,
+      "mean_ms": 94.77802675,
+      "median_ms": 94.558997,
+      "p95_ms": 95.37733325,
+      "min_ms": 94.279852,
+      "max_ms": 103.975556
+    }
+  },
+  "after_all_phases": {
+    "process_memory": {
+      "VmHWM_KiB": 36652,
+      "VmRSS_KiB": 36012
+    },
+    "process_peak_rss_KiB": 36652,
+    "load_average": [
+      1.01806640625,
+      0.54443359375,
+      0.27685546875
+    ],
+    "frequency_governor_temperature_raw": {}
+  },
+  "validation_scope": "six golden inputs and optional single image; not complete dataset accuracy"
+}

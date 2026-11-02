@@ -1,0 +1,46 @@
+{
+ "mean": [
+  0.66557,
+  0.522759,
+  0.462534
+ ],
+ "std": [
+  0.14092,
+  0.140212,
+  0.146932
+ ],
+ "channel_order": "RGB",
+ "resize": [
+  128,
+  128
+ ],
+ "resize_interpolation": "PIL BILINEAR（torchvision Resize 默认）",
+ "aspect_ratio": "直接拉伸到 128x128，不保持长宽比，无 crop / 无 pad",
+ "normalize": "ToTensor() 后做 (x - mean) / std",
+ "input_range_per_channel": {
+  "R": [
+   -4.723,
+   2.3732
+  ],
+  "G": [
+   -3.7283,
+   3.4037
+  ],
+  "B": [
+   -3.1479,
+   3.6579
+  ]
+ },
+ "input_range_global": [
+  -4.723,
+  3.6579
+ ],
+ "computed_from": "split_v4 train only",
+ "n_images_used": 1610,
+ "class_counts": {
+  "0": 846,
+  "1": 764
+ },
+ "dataset": "dataset_v4.csv",
+ "note": "定义 B 沿用同一 mean/std（训练集图片集合未变）"
+}

@@ -1,0 +1,96 @@
+{
+  "status": "FOUR_FRAME_BOARD_GOLDEN_PASS",
+  "board_wall_clock_utc_unverified": "2025-05-05T03:46:25.147882+00:00",
+  "elapsed_clock": "time.perf_counter_ns",
+  "frames": [
+    {
+      "frame": 0,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "transaction_ms": 150.501846,
+      "hardware_transaction_cycles": 6486337,
+      "hardware_transaction_ms": 81.0792125,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1
+    },
+    {
+      "frame": 1,
+      "raw_hex": "ff00",
+      "expected_hex": "ff00",
+      "transaction_ms": 145.445637,
+      "hardware_transaction_cycles": 6611638,
+      "hardware_transaction_ms": 82.645475,
+      "logits": [
+        0.0,
+        -0.03125
+      ],
+      "positive_probability": 0.4911584197694913,
+      "prediction": 0
+    },
+    {
+      "frame": 2,
+      "raw_hex": "d12f",
+      "expected_hex": "d12f",
+      "transaction_ms": 146.799193,
+      "hardware_transaction_cycles": 6320774,
+      "hardware_transaction_ms": 79.009675,
+      "logits": [
+        1.46875,
+        -1.46875
+      ],
+      "positive_probability": 0.03473077930700862,
+      "prediction": 0
+    },
+    {
+      "frame": 3,
+      "raw_hex": "1ce3",
+      "expected_hex": "1ce3",
+      "transaction_ms": 148.741218,
+      "hardware_transaction_cycles": 6609881,
+      "hardware_transaction_ms": 82.6235125,
+      "logits": [
+        -0.90625,
+        0.875
+      ],
+      "positive_probability": 0.8824761477962183,
+      "prediction": 1
+    }
+  ],
+  "cleanup": {
+    "dma_reset_and_halted": true,
+    "core_reset_requested": true,
+    "hp1_mode_restored": true,
+    "errors": [],
+    "buffers_freed": true
+  },
+  "scope": "Four fixed raw golden inputs; not camera, complete dataset accuracy or continuous video throughput",
+  "timing_scope": "DIAGNOSTIC ONLY: START through completion includes persistent MMIO tracing; not a performance benchmark",
+  "manifest_sha256": "c6d25a8506368ef8fdf7d386dbae442cad548eaf81fc54adcb9fc8de1be36f4d",
+  "stage_trace": "/home/xilinx/cnn_system_trial_20261027/board_result_4f0eead1c7eb407b8de5c15f5e54b719.jsonl",
+  "overlay_load_ms": 4259.514818,
+  "fpga_rst_ctrl": 0,
+  "hp1_afi_mode": {
+    "before": {
+      "0": 0,
+      "20": 3840
+    },
+    "after": {
+      "0": 1,
+      "20": 3841
+    }
+  },
+  "buffers": [
+    {
+      "physical_address": 361037824,
+      "bytes": 65536
+    },
+    {
+      "physical_address": 361013248,
+      "bytes": 4
+    }
+  ]
+}

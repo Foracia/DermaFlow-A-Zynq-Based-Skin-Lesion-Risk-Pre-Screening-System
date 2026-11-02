@@ -1,0 +1,4 @@
+numpy
+Pillow
+psutil
+# PYNQ and the target-specific ncnn runtime are supplied by the existing board environment.
