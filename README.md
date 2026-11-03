@@ -145,13 +145,25 @@ DermaFlow-A-Zynq-Based-Skin-Lesion-Risk-Pre-Screening-System/
 │   ├── agent-engineering-handoff/          # 智能体协作与交接
 │   └── evidence_index.md                   # Skill 与工程证据的对应关系
 
-└── report/
+└── report/                                 # 正式报告、复现说明与实测结果
+    ├── technical_report.pdf               # 正式项目技术报告
+    ├── reproduction.md                    # 完整系统的部署、操作与功能检查
+    ├── measurements.md                    # 模型、CPU、PL 与整机测试结果
+    ├── images/                            # 正式报告中的相关插图及表格
     └── collaboration/
         ├── workflow.md                    # 智能体工作流设计
         ├── task-packet.md                 # 任务包模板
         ├── evidence-scope.md              # 记录来源与验证范围
         └── cases/                         # 四个协作与纠错案例
 ```
+
+## 正式报告与复现资料
+
+| 内容 | 文件 |
+|---|---|
+| 完整项目设计、优化过程与结论 | [正式技术报告](report/technical_report.pdf) |
+| 完整系统的环境准备、部署启动、按键操作与输出检查 | [系统复现说明](report/reproduction.md) |
+| 模型评估、CPU 基线、PL 计时、资源时序及整机连续运行 | [测试与实测结果](report/measurements.md) |
 
 ## CNN 模型、量化与硬件实现
 

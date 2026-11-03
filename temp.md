@@ -909,3 +909,10 @@ experimental_software_board_latency,,ms
 
 归档 manifest 重建为当前目录文件清单，保留源位流身份。旧清单原文已存于上节。LICENSE 仅位于工程根目录，提取已有训练交付的标准 MIT 正文；第三方内容保留原声明，说明集中于 third_party_notices.md。
 
+
+
+## 2026-11-03 正式报告整理
+
+接收《Zynq皮肤病变智能预筛终端-技术报告》70 页 PDF，以 report/technical_report.pdf 原样保留。提取第 8 章为 report/reproduction.md，结合现有入口补齐 --load --run 命令及实际输出路径；提取模型、CPU/PL 计时、资源时序、PS 优化和整机结果为 report/measurements.md，另保留 9 张原始报告插图。
+
+最终连续运行会话、独立界面响应批次、累计导出记录分别说明统计范围；整理文档不引入新的上板测试结论。Skill 及 report/collaboration/ 保持原样。发布目标为新的 DermaFlow public 仓库 main，旧仓库不随本次更新。仍保留后续从公开仓库完整下载并进行整机复现的操作提醒。
