@@ -8,7 +8,8 @@
 batch/
 ├── payload_manifest.json                    # 样本顺序、标签、输入 SHA、模型及工作点
 ├── board_batch.py                           # 精度遍历、预热与计时
-├── batch_metrics.py                         # 概率、混淆矩阵、召回、特异度及 AUC
+├── batch_metrics.py                         # 分类指标及 HLS 开发样本辅助命令
+├── dataset_io.py                            # 外部图像读取、固定划分及预处理
 ├── camera_input.py                          # 输入适配及打包
 ├── board_session.py                         # CNN 会话、设备检查和日志
 ├── board_accel.py                           # CNN 会话、设备检查和日志
@@ -28,3 +29,11 @@ sudo env XILINX_XRT=/usr /usr/local/share/pynq-venv/bin/python3 board/run_batch.
 ```
 
 结果写入 `batch_run_<标识>/`，包含 `summary.json`、各后端结果 JSON、逐样本 CSV 和 logits。精度遍历与计时分开；计时从归一化 FP32 输入开始，分列适配、后端和后处理。test 为开发评估集。已有结果见 [results](../results/README.md)。
+
+HLS 开发样本准备使用随包黄金输入、`data/models/` 的划分与预处理，以及外部图像目录。在具备 NumPy、Pillow 和 ONNX Runtime 的开发环境中执行：
+
+```bash
+python board/batch/batch_metrics.py prepare --image-root /path/to/images
+```
+
+`/path/to/images` 应直接包含 `split.json` 中记录的相对图像路径；默认位置为 `data/dataset/`。生成文件写入 `build/output/native_evaluation/`，其中 `fixtures/` 保存 6 个黄金样本和 342 个验证样本的辅助输入与参考。CPU／PL 常规批量评估使用上面的 `board/run_batch.py` 命令。

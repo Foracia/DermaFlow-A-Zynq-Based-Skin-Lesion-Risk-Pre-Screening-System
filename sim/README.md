@@ -8,6 +8,7 @@ sim/
 ├── cnn/hls/                                 # C 测试台及普通／边界二进制向量
 ├── quality_gate/                            # AXI 质量门与视频叠加测试台
 ├── tests/test_deploy_build.py               # 重建部署脚本的文件检查与恢复测试
+├── tests/test_batch_paths.py                # 批量评估辅助路径测试
 ├── scripts/run_rtl.tcl                      # CNN RTL 编译、展开与仿真入口
 └── scripts/run_csim.tcl                     # HLS C 仿真入口
 ```

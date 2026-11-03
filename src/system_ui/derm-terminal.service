@@ -8,12 +8,12 @@ StartLimitBurst=1
 [Service]
 Type=simple
 User=root
-WorkingDirectory=/home/xilinx/fpga2026_release/board/system_ui
+WorkingDirectory=/home/xilinx/dermaflow/board/system_ui
 Environment=XILINX_XRT=/usr
 Environment=PYTHONUNBUFFERED=1
 Environment=PYTHONUTF8=1
 Environment=PATH=/usr/local/share/pynq-venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-ExecStart=/usr/local/share/pynq-venv/bin/python3 /home/xilinx/fpga2026_release/board/system_ui/board_terminal_service.py --root /home/xilinx/fpga2026_release/board/hardware --load --run
+ExecStart=/usr/local/share/pynq-venv/bin/python3 /home/xilinx/dermaflow/board/system_ui/board_terminal_service.py --root /home/xilinx/dermaflow/board/hardware --load --run
 Restart=no
 KillSignal=SIGTERM
 KillMode=control-group

@@ -7,7 +7,7 @@ system_ui/
 ├── board_terminal_service.py    # 统一生命周期、独占检查、加载及关机请求
 ├── terminal_deploy.py           # 校验当前包运行记录并安装服务
 ├── terminal_binding.json        # 启动环境检查信息
-├── derm-terminal.service        # 标准路径服务配置
+├── derm-terminal.service        # 服务配置示例（安装时按实际路径生成）
 ├── system_app.py                # 优化后的采集与结果页流程
 ├── runtime_options.py           # 当前应用的输入处理和界面策略
 ├── runtime_timing.py            # 分阶段运行统计

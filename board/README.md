@@ -23,7 +23,7 @@ board/
 ├── system_ui/                    # 当前常驻应用
 │   ├── board_terminal_service.py  # 启动、独占、应用生命周期与关机
 │   ├── terminal_deploy.py         # 自启服务安装工具
-│   ├── derm-terminal.service      # 项目标准部署位置的服务配置
+│   ├── derm-terminal.service      # 服务配置示例
 │   ├── system_app.py              # 优化后的采集、处理及显示
 │   ├── board_system_ui.py         # 菜单和设备操作基础实现
 │   └── system_result_store.py     # 图像、JSON、CSV 和导出保存
@@ -69,6 +69,6 @@ sudo systemctl enable --now derm-terminal.service
 sudo journalctl -u derm-terminal.service -n 30 --no-pager
 ```
 
-将示例记录路径替换为当前包生成的成功记录。服务不依赖 PC、网络在线或 Jupyter 顺序启动；发生异常时不自动反复重启。安装器会保存原服务配置，`derm-terminal.service` 文件是标准路径示例，实际配置以安装器生成内容为准。
+将示例记录路径替换为当前包生成的成功记录。服务不依赖 PC、网络在线或 Jupyter 顺序启动；发生异常时不自动反复重启。安装器会保存原服务配置，`derm-terminal.service` 以 `/home/xilinx/dermaflow/` 为示例安装目录；安装器按工程实际位置生成服务。
 
 安装器使用当前工程的成功前台会话记录生成服务配置。随包启动钩子位于 `board/boot/`，由终端程序统一加载整机位流。

@@ -4,6 +4,17 @@
 
 复现使用已生成的整机位流、配套硬件描述和板端程序，无需先重新训练 CNN、量化模型或生成位流。复现内容包括实时取景、图像质量检测、自动抓拍、CNN 推理、单帧与三帧融合结果显示、文件保存和导出。
 
+## 获取工程
+
+公开仓库：[DermaFlow-A-Zynq-Based-Skin-Lesion-Risk-Pre-Screening-System](https://github.com/Foracia/DermaFlow-A-Zynq-Based-Skin-Lesion-Risk-Pre-Screening-System)。在需要保存工程的位置执行：
+
+```bash
+git clone https://github.com/Foracia/DermaFlow-A-Zynq-Based-Skin-Lesion-Risk-Pre-Screening-System.git dermaflow
+cd dermaflow
+```
+
+也可以下载仓库文件后解压。下文“工程根目录”均指直接包含 `src/`、`board/`、`data/` 等目录及根 README 的位置；示例工程文件夹名为 `dermaflow`。
+
 ## 运行平台与外部连接
 
 | 项目 | 配置 |
@@ -22,7 +33,7 @@
 
 ## 复现文件
 
-本仓库根目录就是完整工程。正式报告中使用的 `fpga2026_release` 是工程目录的原名称，在本仓库中对应下表所列目录所在的根目录。
+以下文件位置均相对于工程根目录。
 
 | 文件或目录 | 用途 |
 |---|---|

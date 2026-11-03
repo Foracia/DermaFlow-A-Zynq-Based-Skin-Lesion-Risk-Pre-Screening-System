@@ -9,9 +9,13 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
-RESULTS = ROOT / 'data/evaluation'
-FIXTURES = ROOT / 'data/golden/model'
-SOURCE = ROOT / 'data/models/model.onnx'
+RESULTS = ROOT / 'build/output/native_evaluation'
+FIXTURES = RESULTS / 'fixtures'
+MODELS = ROOT / 'data/models'
+GOLDEN_INPUT = ROOT / 'data/golden/model/input.npy'
+GOLDEN_REFERENCE = ROOT / 'data/golden/model/onnx_out.npy'
+OPERATING_POINT = ROOT / 'data/golden/model/meta.json'
+SOURCE = MODELS / 'model.onnx'
 EXPECTED_SOURCE = '39e60c35b055870a1c333507be662754124ad15a61a9aae730cd256c295b2785'
 
 
@@ -20,6 +24,7 @@ def sha(path):
 
 
 def save_json(path, payload):
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
     Path(path).write_text(json.dumps(payload, indent=2, ensure_ascii=True) + '\n', encoding='utf-8')
 
 
@@ -80,22 +85,22 @@ def compare(actual, reference, temperature, threshold):
             'mean_abs_positive_probability_error': float(np.abs(ap-rp).mean())}
 
 
-def prepare():
+def prepare(image_root=None):
     """Use the existing CPU environment's PIL, not a new dependency in PL venv."""
     save_json(RESULTS / 'fixed_eval_fixtures.json', {'status': 'PREPARING'})
     import onnxruntime as ort
-    from quantization.dataset_io import read_split, load_image_tensor
-    package = ROOT / 'data/models'
+    from dataset_io import read_split, load_image_tensor
+    package = MODELS
     if sha(SOURCE) != EXPECTED_SOURCE:
         raise ValueError('Delivered source CNN identity changed')
-    image_root = ROOT / '_FPGA2026_dataset_source/FPGA2026-数据集/图片'
-    rows = read_split(package / 'data/split.json', 'val', image_root)
+    image_root = Path(image_root).resolve() if image_root is not None else ROOT / 'data/dataset'
+    rows = read_split(package / 'split.json', 'val', image_root)
     if len(rows) != 342:
         raise ValueError('Expected the frozen 342-image validation split')
-    pp = json.loads((package / 'data/preprocess.json').read_text(encoding='utf-8'))
+    pp = json.loads((package / 'preprocess.json').read_text(encoding='utf-8'))
     if pp['channel_order'] != 'RGB' or pp['resize'] != [128, 128]:
         raise ValueError('Unexpected preprocessing contract')
-    golden = np.load(ROOT / 'quantization/work_ncnn_fp32/golden_vectors/input.npy', allow_pickle=False)
+    golden = np.load(GOLDEN_INPUT, allow_pickle=False)
     values = [golden]
     records = []
     for i, row in enumerate(rows):
@@ -113,7 +118,7 @@ def prepare():
     session = ort.InferenceSession(str(SOURCE), options, providers=['CPUExecutionProvider'])
     name = session.get_inputs()[0].name
     outputs = np.concatenate([session.run(None, {name: x[None]})[0] for x in nchw])
-    golden_reference = np.load(RESULTS / 'reference_logits.npy', allow_pickle=False)
+    golden_reference = np.load(GOLDEN_REFERENCE, allow_pickle=False)
     if np.max(np.abs(outputs[:6] - golden_reference)) > 1e-5:
         raise ValueError('Fresh original ONNX reference disagrees with frozen golden')
     FIXTURES.mkdir(parents=True, exist_ok=True)
@@ -123,17 +128,17 @@ def prepare():
     np.save(refs, outputs)
     labels = FIXTURES / 'labels.npy'
     np.save(labels, np.array([x.label for x in rows], dtype=np.int64))
-    op = json.loads((package / 'operating_point.json').read_text(encoding='utf-8'))
+    op = json.loads(OPERATING_POINT.read_text(encoding='utf-8'))
     manifest = {'status': 'PREPARED', 'source_sha256': sha(SOURCE),
                 'sample_count': 348, 'golden_count': 6, 'validation_count': 342,
                 'partition': 'val', 'test_used': False, 'input_layout': 'NHWC',
                 'input_format': 'little-endian float32 raw; [348,128,128,3]',
                 'inputs': str(inputs), 'reference': str(refs), 'labels': str(labels),
                 'inputs_sha256': sha(inputs), 'reference_sha256': sha(refs), 'labels_sha256': sha(labels),
-                'golden_input_sha256': sha(ROOT / 'quantization/work_ncnn_fp32/golden_vectors/input.npy'),
-                'split_sha256': sha(package / 'data/split.json'),
-                'preprocess_sha256': sha(package / 'data/preprocess.json'),
-                'operating_point_sha256': sha(package / 'operating_point.json'),
+                'golden_input_sha256': sha(GOLDEN_INPUT),
+                'split_sha256': sha(package / 'split.json'),
+                'preprocess_sha256': sha(package / 'preprocess.json'),
+                'operating_point_sha256': sha(OPERATING_POINT),
                 'temperature': op['temperature'], 'threshold': op['frozen_threshold'],
                 'records': records, 'prepare_script_sha256': sha(__file__)}
     save_json(RESULTS / 'fixed_eval_fixtures.json', manifest)
@@ -201,16 +206,15 @@ def validate_fixtures(manifest):
     for key in ('inputs', 'reference', 'labels'):
         if sha(manifest[key]) != manifest[key+'_sha256']:
             raise ValueError(f'Fixture hash changed: {key}')
-    package = ROOT / 'data/models'
-    for key, path in (('split', package/'data/split.json'), ('preprocess', package/'data/preprocess.json'),
-                      ('operating_point', package/'operating_point.json'),
-                      ('golden_input', ROOT/'quantization/work_ncnn_fp32/golden_vectors/input.npy')):
+    package = MODELS
+    for key, path in (('split', package/'split.json'), ('preprocess', package/'preprocess.json'),
+                      ('operating_point', OPERATING_POINT), ('golden_input', GOLDEN_INPUT)):
         if sha(path) != manifest[key+'_sha256']:
             raise ValueError(f'Frozen contract hash changed: {key}')
-    op = json.loads((package/'operating_point.json').read_text(encoding='utf-8'))
+    op = json.loads(OPERATING_POINT.read_text(encoding='utf-8'))
     validate_operating_point(manifest, op)
 
-    rows = json.loads((package/'data/split.json').read_text(encoding='utf-8'))['val']
+    rows = json.loads((package/'split.json').read_text(encoding='utf-8'))['val']
     labels = np.load(manifest['labels'], allow_pickle=False)
     if len(rows) != 342 or not np.array_equal(labels, [r[1] for r in rows]):
         raise ValueError('Fixture labels differ from frozen validation split')
@@ -342,7 +346,9 @@ def finish(kind, native_exit):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='command', required=True)
-    sub.add_parser('prepare')
+    prep = sub.add_parser('prepare')
+    prep.add_argument('--image-root', type=Path, default=ROOT / 'data/dataset',
+                      help='External image root containing the paths recorded in data/models/split.json')
     inst = sub.add_parser('install')
     inst.add_argument('--generation-report', type=Path, required=True)
     inst.add_argument('--count', type=int, choices=(6, 348), default=6)
@@ -351,7 +357,7 @@ def main():
     done.add_argument('--native-exit-code', type=int, required=True)
     args = parser.parse_args()
     if args.command == 'prepare':
-        prepare()
+        prepare(args.image_root)
     elif args.command == 'install':
         install(args.generation_report, args.count)
     else:

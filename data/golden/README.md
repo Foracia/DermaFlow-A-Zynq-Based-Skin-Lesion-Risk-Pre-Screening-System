@@ -4,11 +4,12 @@
 
 ```text
 golden/
-├── model/input.npy                          # 六张预处理后的 NCHW float32 输入
-├── model/pytorch_out.npy                    # PyTorch 与 ONNX logits
-├── onnx_out.npy                             # PyTorch 与 ONNX logits
-├── model/prob.npy                           # 概率参考及样本说明
-└── meta.json                                # 概率参考及样本说明
+└── model/
+    ├── input.npy                           # 六张预处理后的 NCHW float32 输入
+    ├── pytorch_out.npy                     # PyTorch logits
+    ├── onnx_out.npy                        # ONNX logits
+    ├── prob.npy                            # 概率参考
+    └── meta.json                           # 样本与预处理说明
 ```
 
 各 ncnn 候选参考另存于 [board/cpu/references](../../board/cpu/references/)，PL 原码参考位于 [expected.hex](../../board/hardware/expected.hex)。黄金样本用于功能核对，完整评估结果见 [evaluation](../evaluation/README.md)。

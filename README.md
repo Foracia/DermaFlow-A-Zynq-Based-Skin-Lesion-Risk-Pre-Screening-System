@@ -4,7 +4,7 @@
 
 系统包含视频采集、质量门控、CNN 推理、交互显示和结果保存五个部分。采集图像通过质量检查后送入 CNN，系统显示风险判定并保存图像及结果。支持单帧判定，以及对三张合格图像分别推理后融合结果的三帧模式。
 
-本工程根目录为 `DermaFlow-A-Zynq-Based-Skin-Lesion-Risk-Pre-Screening-System/`。模型与数据放在 `data/`，设计源码放在 `src/`，板端可运行文件放在 `board/`；仿真、构建、Skill 和报告材料分别放在同名目录。
+本 README 所在目录为工程根目录。模型与数据放在 `data/`，设计源码放在 `src/`，板端可运行文件放在 `board/`；仿真、构建、Skill 和报告材料分别放在同名目录。
 
 ## 目录规划
 
@@ -15,7 +15,7 @@
 下图标出各模块、主要文件及其作用。CNN 生成的计算子模块和 ROM 数据集中保存在 `src/cnn/rtl/`。
 
 ```text
-DermaFlow-A-Zynq-Based-Skin-Lesion-Risk-Pre-Screening-System/
+dermaflow/
 ├── README.md                              # 项目说明、模块位置及运行入口
 ├── requirements.txt                       # Python 依赖
 ├── LICENSE                                # 团队原创内容的 MIT 许可
@@ -59,6 +59,9 @@ DermaFlow-A-Zynq-Based-Skin-Lesion-Risk-Pre-Screening-System/
 │   │   ├── simulate.log                    # 已有 RTL 仿真日志
 │   │   └── hls/                           # C 测试台、普通与边界二进制向量
 │   ├── quality_gate/                      # 质量门及视频叠加测试台
+│   ├── tests/                             # 本地部署及路径衔接测试
+│   │   ├── test_deploy_build.py            # 重建部署脚本测试
+│   │   └── test_batch_paths.py             # 批量评估辅助路径测试
 │   └── scripts/
 │       ├── run_rtl.tcl                     # CNN RTL 仿真入口
 │       └── run_csim.tcl                    # HLS C 仿真入口
@@ -191,7 +194,7 @@ CPU baseline 单独提供 FP32、KL INT8、EQ INT8 三套 ncnn 模型，用于�
 
 首次部署时，先按 [PYNQ 启动配置](board/boot/README.md)安装随包 `boot.py` 并重启，再执行以下系统启动命令。
 
-运行平台为 PYNQ-Z2，芯片为 Zynq-7000 XC7Z020（`xc7z020clg400-1`），使用项目 PYNQ 3.1.1、Python 3.10.4 环境。相机和显示器需在启动前连接。将完整工程复制到板端并进入 `DermaFlow-A-Zynq-Based-Skin-Lesion-Risk-Pre-Screening-System/`，先停止占用视频及 DMA 的其他应用。
+运行平台为 PYNQ-Z2，芯片为 Zynq-7000 XC7Z020（`xc7z020clg400-1`），使用项目 PYNQ 3.1.1、Python 3.10.4 环境。相机和显示器需在启动前连接。将完整工程复制到板端并进入工程根目录，先停止占用视频及 DMA 的其他应用。
 
 1. **检查部署文件**：
 

@@ -6,18 +6,20 @@
 
 ```text
 quality_gate/
-├── rtl/axis_quality_gate.sv                 # 流式统计核心
-├── rtl/axis_quality_gate_axi.sv             # AXI 控制包装
-├── rtl/quality_gate_bd.v                    # 整机连接包装
-├── python/quality_gate_driver.py            # 寄存器配置及统计读取
-├── python/reference.py                      # 整数参考及保留图像的质量复核
-├── frame_quality.py                         # 整数参考及保留图像的质量复核
-├── python/capture_session.py                # 采集、稳定性及标定采集辅助
-├── stability_capture.py                     # 采集、稳定性及标定采集辅助
-├── calibration_capture.py                   # 采集、稳定性及标定采集辅助
-├── python/calibration.py                    # 离线标定候选计算
-├── python/accelerator_input.py              # 输入适配及预览
-└── preview_hud.py                           # 输入适配及预览
+├── rtl/
+│   ├── axis_quality_gate.sv                # 流式统计核心
+│   ├── axis_quality_gate_axi.sv            # AXI 控制包装
+│   └── quality_gate_bd.v                   # 整机连接包装
+└── python/
+    ├── quality_gate_driver.py              # 寄存器配置及统计读取
+    ├── reference.py                        # 整数参考
+    ├── frame_quality.py                    # 实际图像质量复核
+    ├── capture_session.py                  # 采集会话
+    ├── stability_capture.py                # 稳定性检查
+    ├── calibration_capture.py              # 标定采集
+    ├── calibration.py                      # 离线标定
+    ├── accelerator_input.py                # 输入适配
+    └── preview_hud.py                      # 预览叠加
 ```
 
 测试台位于 [sim/quality_gate](../../sim/quality_gate/)，集成运行入口见 [板端部署](../../board/README.md)。

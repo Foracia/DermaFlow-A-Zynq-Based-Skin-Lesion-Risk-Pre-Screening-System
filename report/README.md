@@ -22,6 +22,6 @@ report/
 | 查看模型、CPU 与 PL 性能、资源时序及整机实测 | [测试与实测结果](measurements.md) |
 | 查看大模型协作方法与案例 | [协作工作流](collaboration/workflow.md) |
 
-两份 Markdown 从正式报告中提取整理，启动命令与本仓库统一入口对齐。报告中的 `fpga2026_release` 指工程根目录，在公开仓库中直接对应根目录下的 `board/`、`src/` 等文件夹。
+两份 Markdown 从正式报告中提取整理，启动命令与本仓库统一入口对齐。所有相对路径均以直接包含 `board/`、`src/` 等目录的工程根目录为起点。
 
 工程原始结果分别见 [实现报告](../build/reports/README.md)、[CPU 评估](../data/evaluation/README.md) 和 [板端实测](../board/results/README.md)。

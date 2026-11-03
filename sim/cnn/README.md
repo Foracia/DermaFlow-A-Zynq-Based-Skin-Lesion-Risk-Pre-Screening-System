@@ -4,14 +4,16 @@
 
 ```text
 cnn/
-├── real_core_tb.sv                          # 实际 CNN RTL 及 AXI 包装的测试台
-├── input.hex                                # 四帧输入与 raw 输出参考
-├── expected.hex                             # 四帧输入与 raw 输出参考
-├── simulate.log                             # 原研发仿真日志
-├── hls/test.cpp                             # HLS C 测试台
-├── hls/inputs.bin                           # 普通及边界测试向量
-├── expected.bin                             # 普通及边界测试向量
-└── boundary_*.bin                           # 普通及边界测试向量
+├── real_core_tb.sv                         # CNN RTL 与 AXI 包装测试台
+├── input.hex                              # 四帧输入
+├── expected.hex                           # 原始输出参考
+├── simulate.log                           # 仿真日志
+└── hls/
+    ├── test.cpp                           # HLS C 测试台
+    ├── inputs.bin                         # 普通输入向量
+    ├── expected.bin                       # 普通输出参考
+    ├── boundary_inputs.bin                # 边界输入向量
+    └── boundary_expected.bin              # 边界输出参考
 ```
 
 四帧参考依次为 `1ce3 / ff00 / d12f / 1ce3`。执行命令和输出路径见 [仿真说明](../README.md)。
