@@ -39,6 +39,15 @@ def main():
                 errors.append('Python syntax: ' + rel.as_posix() + ': ' + str(error))
         if p.name == 'README.md' and re.search(r'(?i)\b(?:round\s*\d+|sys[-_]round|ver\s*\d+|v\d+\.\d+)', read(p)):
             errors.append('README contains iteration naming: ' + rel.as_posix())
+    boot = ROOT / 'board/boot/boot.py'
+    if not boot.is_file():
+        errors.append('Missing boot configuration: board/boot/boot.py')
+    else:
+        boot_sha = hashlib.sha256(boot.read_bytes()).hexdigest()
+        for directory in ['src/system_ui', 'board/system_ui']:
+            binding = json.loads((ROOT / directory / 'terminal_binding.json').read_text(encoding='utf-8'))
+            if binding['expected_nonloading_boot_sha256'] != boot_sha:
+                errors.append('Boot configuration binding: ' + directory)
     specs = [ROOT / 'board/hardware/manifest.json', ROOT / 'board/cpu/manifest.json']
     specs += [ROOT / d / 'system_tools_manifest.json' for d in ['src/system_ui', 'board/system_ui']]
     specs += [ROOT / 'board/batch/batch_tools_manifest.json']

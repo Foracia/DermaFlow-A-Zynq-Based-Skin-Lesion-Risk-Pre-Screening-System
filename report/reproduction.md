@@ -28,6 +28,7 @@
 |---|---|
 | `README.md` | 项目功能、目录结构及主要运行入口 |
 | `requirements.txt` | NumPy、Pillow、psutil 等 Python 依赖 |
+| `board/boot/boot.py` | PYNQ 启动配置，由系统入口统一管理 FPGA 加载 |
 | `board/run_ui.py` | 完整系统统一入口，执行文件检查或启动交互程序 |
 | `board/hardware/cnn_system.bit` | 包含视频、质量门、CNN 和 DMA 的整机位流 |
 | `board/hardware/cnn_system.hwh` | 与位流配套的硬件接口描述 |
@@ -40,9 +41,20 @@
 
 将完整工程复制到板端，保持目录结构。位流、HWH、程序及参数作为一套文件使用。完整外部数据集用于固定划分的模型评估，运行摄像头采集与推理流程无需下载完整数据集。
 
+## 从源码重建后部署
+
+直接运行随包硬件时使用下一节。需要重新生成整机硬件时，在安装 Vivado 2025.2 的 PC 上，从工程根目录依次执行：
+
+```bash
+vivado -mode batch -source build/scripts/build_system.tcl
+python build/scripts/deploy_build.py
+```
+
+第一条在 `build/output/` 生成 `system.bit` 和 `system.hwh`；第二条核对器件及关键接口，将两者部署为 `board/hardware/cnn_system.bit` 和 `cnn_system.hwh`，并刷新硬件、界面及批处理的关联清单。完成后把整个工程复制到板端。详细构建方法见 [构建说明](../build/README.md)。
+
 ## 部署与启动
 
-以下命令均在板端工程根目录执行。Python 路径对应项目使用的 PYNQ 镜像。
+以下命令均在板端工程根目录执行。Python 路径对应项目使用的 PYNQ 镜像。首次部署先按 [PYNQ 启动配置](../board/boot/README.md)备份原 `/boot/boot.py`、安装随包文件、核对 SHA256 并重启；随后执行以下步骤。
 
 1. 连接摄像头与显示器，进入工程根目录。在项目 PYNQ Python 环境中准备依赖：
 

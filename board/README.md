@@ -10,6 +10,7 @@
 
 ```text
 board/
+├── boot/                         # PYNQ 启动配置及安装说明
 ├── run_ui.py                     # 完整系统统一入口
 ├── run_batch.py                  # 固定输入开发测试入口
 ├── stage_batch_inputs.py         # 外部评估载荷复制及校验
@@ -29,12 +30,12 @@ board/
 │
 ├── cpu/                          # CPU 对照模型及测试程序
 ├── batch/                        # 批量评估工具
-└── results/                      # 原提交保留的验证资料
+└── results/                      # 模块测试与整机运行记录
 ```
 
 ## 前台运行
 
-将完整工程放到板端，进入 `fpga2026_release/`。先停止已运行的同设备程序；已有服务使用以下命令停止并等待清理完成：
+将完整工程放到板端并进入工程根目录。首次部署先按 [启动配置说明](boot/README.md)安装 `board/boot/boot.py` 并重启。随后停止已运行的同设备程序；已有服务使用以下命令停止并等待清理完成：
 
 ```bash
 sudo systemctl stop derm-terminal.service
@@ -70,4 +71,4 @@ sudo journalctl -u derm-terminal.service -n 30 --no-pager
 
 将示例记录路径替换为当前包生成的成功记录。服务不依赖 PC、网络在线或 Jupyter 顺序启动；发生异常时不自动反复重启。安装器会保存原服务配置，`derm-terminal.service` 文件是标准路径示例，实际配置以安装器生成内容为准。
 
-安装器使用当前包的成功前台会话记录核对身份。启动程序核对项目使用的“不加载 BaseOverlay”启动钩子；采用其他镜像时应使启动配置与工程要求一致。
+安装器使用当前工程的成功前台会话记录生成服务配置。随包启动钩子位于 `board/boot/`，由终端程序统一加载整机位流。

@@ -4,7 +4,7 @@
 
 提供 FP32、INT8 KL 和 INT8 EQ 三套 ncnn 模型。各 `models/<候选>/` 包含网络结构 `model.param` 和权重 `model.bin`。
 
-运行环境为对应平台的 ncnn（历史版本 `1.0.20260526`）与 NumPy；图片处理使用 Pillow，PC 计时使用 psutil。ARM 运行使用板端 Python 环境及匹配架构的 ncnn。
+运行环境为对应平台的 ncnn `1.0.20260526`与 NumPy；图片处理使用 Pillow，PC 计时使用 psutil。ARM 运行使用板端 Python 环境及匹配架构的 ncnn。
 
 ```text
 cpu/

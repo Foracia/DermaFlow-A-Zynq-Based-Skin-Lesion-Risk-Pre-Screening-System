@@ -17,6 +17,10 @@ def save(path, value):
 
 def main():
     source, target = ROOT / 'src/system_ui', ROOT / 'board/system_ui'
+    binding_path = source / 'terminal_binding.json'
+    binding = json.loads(binding_path.read_text(encoding='utf-8'))
+    binding['expected_nonloading_boot_sha256'] = digest(ROOT / 'board/boot/boot.py')
+    save(binding_path, binding)
     for p in source.iterdir():
         if p.is_file() and (p.suffix in {'.py', '.service'} or p.name.startswith('ui_font_') or p.name == 'terminal_binding.json'):
             shutil.copy2(p, target / p.name)

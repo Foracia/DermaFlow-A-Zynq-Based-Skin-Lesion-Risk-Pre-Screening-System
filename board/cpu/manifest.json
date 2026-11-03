@@ -21,7 +21,7 @@
     "models/fp32/model.param": "a5d0f68aae53b94b4e6f5ff2ecedf2efb9ffd89dbcbbfa84271b7965844e0e10",
     "models/kl/model.bin": "34384935b7bb83b60ab2a199c1b0af7f8a6048130e1bb52e8a72f109077572de",
     "models/kl/model.param": "f5cc18532a06807bbb688f0a7cfbe11356facf385bb39600a31b8dff86d48164",
-    "README.md": "60475802ca33cfcbfee21d2094af724802e6fe15e46a84983cb142e0d387b764",
+    "README.md": "4075556e6d4030475525302361b3338a116d6c4ef52e47678cc31a3a1a987087",
     "references/eq_logits.npy": "674be5182ef2d0e22412f9b89a5fd47acbd1498ee56a9bb8db23608f7feaf994",
     "references/fp32_logits.npy": "4e839250f701ba45d7f13884b3d84fe10a1f2dd1ec0e1862db3c5e6d291dedc7",
     "references/kl_logits.npy": "77719a943a0e8243bffd596fa498ef1a680b387128158b8289e6721a748854f4",

@@ -69,6 +69,7 @@ DermaFlow-A-Zynq-Based-Skin-Lesion-Risk-Pre-Screening-System/
 │   │   ├── build_system.tcl                # 整机综合、实现与位流生成
 │   │   ├── synthesize_cnn.tcl              # 独立 CNN HLS 综合
 │   │   ├── prepare_runtime.py              # 刷新系统软件部署副本及文件清单
+│   │   ├── deploy_build.py                  # 重建位流部署、接口核对及清单刷新
 │   │   └── check_layout.py                 # 发布目录、语法和清单检查
 │   └── reports/
 │       ├── cnn/                           # 独立 CNN 核的资源／时序报告
@@ -76,6 +77,9 @@ DermaFlow-A-Zynq-Based-Skin-Lesion-Risk-Pre-Screening-System/
 │       └── pending/                       # 报告扩展目录
 
 ├── board/                                 # 板端部署与运行
+│   ├── boot/                              # PYNQ 启动配置与安装说明
+│   │   ├── boot.py                        # 项目统一管理 FPGA 配置加载
+│   │   └── README.md                      # 首次安装、核对及重启步骤
 │   ├── run_ui.py                          # 完整系统界面入口
 │   ├── run_batch.py                       # CPU／PL 固定输入评估入口
 │   ├── stage_batch_inputs.py              # 校验并复制外部评估载荷
@@ -185,6 +189,8 @@ CPU baseline 单独提供 FP32、KL INT8、EQ INT8 三套 ncnn 模型，用于�
 
 ## 完整系统的部署与启动
 
+首次部署时，先按 [PYNQ 启动配置](board/boot/README.md)安装随包 `boot.py` 并重启，再执行以下系统启动命令。
+
 运行平台为 PYNQ-Z2，芯片为 Zynq-7000 XC7Z020（`xc7z020clg400-1`），使用项目 PYNQ 3.1.1、Python 3.10.4 环境。相机和显示器需在启动前连接。将完整工程复制到板端并进入 `DermaFlow-A-Zynq-Based-Skin-Lesion-Risk-Pre-Screening-System/`，先停止占用视频及 DMA 的其他应用。
 
 1. **检查部署文件**：
@@ -217,6 +223,7 @@ KEY0／KEY1 切换菜单，KEY2 确认。在功能页按 KEY3 返回；在首页
 | CPU／PL 固定划分评估 | `board/run_batch.py` | 逐样本指标及分阶段计时 |
 | C／RTL 仿真 | `sim/scripts/run_csim.tcl`、`run_rtl.tcl` | 算法、输出与协议验证日志 |
 | 硬件构建 | `build/scripts/build_system.tcl` | 整机位流、HWH 和实现报告 |
+| 重建产物部署 | `build/scripts/deploy_build.py` | BIT／HWH 接入板端目录并刷新关联清单 |
 
 验证资料位于 `board/results/` 和 `data/evaluation/`，综合与实现报告位于 `build/reports/`。完整数据集、校准张量和批量输入载荷由外部提供。
 

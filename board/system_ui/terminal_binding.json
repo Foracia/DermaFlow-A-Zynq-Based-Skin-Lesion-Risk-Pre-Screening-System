@@ -1,5 +1,5 @@
 {
-  "expected_nonloading_boot_sha256": "903a18bee448c1f1ba3f59485af94ad8ea7fc93c3d766154ba18b2194f48a18b",
+  "expected_nonloading_boot_sha256": "a95e19a7c5795fa1321614ff7ec5238fc58b8d7313dfa1b157d7fba2cb058112",
   "standalone_controls": true,
   "startup_downloads": 1,
   "result_output": "runs/",

@@ -26,4 +26,4 @@ system_ui/
 
 由工程根目录的 `board/run_ui.py` 调用 `board_terminal_service.py`。默认检查文件；`--load --run` 加载一次硬件并常驻运行；`--seconds` 设置可选时限，`--output` 指定结果目录。操作、关机及服务安装见上级 `board/README.md`。
 
-源码位于 `src/system_ui/`。应用只保留有界的内存诊断摘要，采集图像和成功结果继续保存到磁盘。首页关机确认通过后，先完成 DMA 和缓冲清理再向 Linux 请求关机。
+源码位于 `src/system_ui/`，启动配置位于 [board/boot](../boot/README.md)。应用将运行摘要、采集图像和结果保存到磁盘。首页关机确认通过后，先完成 DMA 和缓冲清理再向 Linux 请求关机。
