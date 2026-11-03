@@ -40,14 +40,17 @@ cd dermaflow
 | `README.md` | 项目功能、目录结构及主要运行入口 |
 | `requirements.txt` | NumPy、Pillow、psutil 等 Python 依赖 |
 | `board/boot/boot.py` | PYNQ 启动配置，由系统入口统一管理 FPGA 加载 |
+| `board/boot/README.md` | 首次安装、启动配置核对及重启步骤 |
 | `board/run_ui.py` | 完整系统统一入口，执行文件检查或启动交互程序 |
 | `board/hardware/cnn_system.bit` | 包含视频、质量门、CNN 和 DMA 的整机位流 |
 | `board/hardware/cnn_system.hwh` | 与位流配套的硬件接口描述 |
 | `board/hardware/manifest.json` | 部署文件的身份及完整性清单 |
+| `board/hardware/board_stage_probe.py` | HWH、位流加载与控制接口的分阶段诊断工具 |
 | `board/system_ui/` | 菜单、按键、视频采集、质量复核、推理、保存和导出程序 |
 | `data/models/` | 模型接口、预处理参数、数据划分及 PL 定点参数 |
 | `board/results/` | 已有板端测试原始记录 |
 | `src/`、`sim/`、`build/` | 设计源码、开发验证材料和构建文件 |
+| `build/scripts/deploy_build.py` | 重建 BIT／HWH 部署、接口核对及关联清单刷新 |
 | `skill/`、`report/` | 技能包、协作材料、正式报告及说明 |
 
 将完整工程复制到板端，保持目录结构。位流、HWH、程序及参数作为一套文件使用。完整外部数据集用于固定划分的模型评估，运行摄像头采集与推理流程无需下载完整数据集。

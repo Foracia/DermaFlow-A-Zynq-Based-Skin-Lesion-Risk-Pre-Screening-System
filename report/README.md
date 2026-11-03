@@ -24,4 +24,6 @@ report/
 
 两份 Markdown 从正式报告中提取整理，启动命令与本仓库统一入口对齐。所有相对路径均以直接包含 `board/`、`src/` 等目录的工程根目录为起点。
 
+板端操作使用[系统复现说明](reproduction.md)中的完整命令，其中列出了 PYNQ Python 环境、管理员权限以及首次启动配置步骤。
+
 工程原始结果分别见 [实现报告](../build/reports/README.md)、[CPU 评估](../data/evaluation/README.md) 和 [板端实测](../board/results/README.md)。
